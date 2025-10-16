@@ -1,6 +1,6 @@
 //
 //  WatchMenuView.swift
-//  Stress Watch
+//  Stress (WatchOS)
 //
 //  Created by Claire Kraft on 10/15/25.
 //
@@ -13,58 +13,26 @@
 
 import SwiftUI
 
-struct WatchMenuView: View {
-    @State private var selectedExercise: ExerciseType? = nil
-    
-    // Define the exercises
-    enum ExerciseType: String, CaseIterable, Identifiable {
-        var id: String { self.rawValue }
-        
-        case fiveFourThreeTwoOne = "5-4-3-2-1 Grounding"
-        case oneByThirty = "Focus on 1 Stimulus (30s)"
-        case fourByFour = "Box Breathing 4x4"
-        case categorize = "Categorize Prompt"
-        case touchGrass = "Touch Grass / Physical Grounding"
-    }
-    
+struct WatchExercisesMenuView: View {
+    @State private var selectedExercise: ExerciseItem? = nil
+
     var body: some View {
         ScrollView {
-            VStack(spacing: 12) {
-                ForEach(ExerciseType.allCases) { exercise in
-                    Button(action: {
-                        selectedExercise = exercise
-                    }) {
-                        Text(exercise.rawValue)
-                            .frame(maxWidth: .infinity)
+            VStack(spacing: 10) {
+                ForEach(ExerciseData.allExercises) { exercise in
+                    Button(action: { selectedExercise = exercise }) {
+                        Text(exercise.title)
+                            .font(.headline)
                             .padding()
-                            .background(Color.blue.opacity(0.2))
-                            .cornerRadius(8)
+                            .frame(maxWidth: .infinity)
+                            .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue.opacity(0.2)))
                     }
                 }
             }
             .padding()
         }
-        .sheet(item: $selectedExercise) { exercise in
-            switch exercise {
-            case .fiveFourThreeTwoOne:
-                FiveFourThreeTwoOneView()
-            case .oneByThirty:
-                OneByThirtyView()
-            case .fourByFour:
-                FourByFourView()
-            case .categorize:
-                CategorizeView()
-            case .touchGrass:
-                TouchGrassView()
-            }
+        .sheet(item: $selectedExercise) { item in
+            item.view
         }
     }
 }
-
-#if DEBUG
-struct WatchMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchMenuView()
-    }
-}
-#endif
