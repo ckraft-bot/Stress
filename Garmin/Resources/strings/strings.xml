@@ -1,5 +1,5 @@
 <resources>
-  <string id="app_name">Grounding Widget</string>
+  <string id="app_name">Stress</string>
   <string id="prompt_stress_detected">Stress detected</string>
   <string id="prompt_score">Score: %d</string>
   <string id="menu_breathing">Breathing Exercise</string>

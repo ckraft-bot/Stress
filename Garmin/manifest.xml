@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.garmin.com/xml/connectiq"
+             id="com.claire.stress"
+             name="Stress"
+             type="app"
+             version="1.0.0"
+             minSdkVersion="8.0.0"
+             maxSdkVersion="8.3.0"
+             targetSdkVersion="8.3.0">
+
+    <!-- Device support -->
+    <devices>
+        <device id="fr265" />
+    </devices>
+
+    <!-- App resources -->
+    <resources>
+        <strings>
+            <string id="app_name">Stress</string>
+            <string id="prompt_stress_detected">Stress detected</string>
+            <string id="prompt_score">Score: %d</string>
+            <string id="menu_breathing">Breathing Exercise</string>
+            <string id="menu_grounding">5-4-3-2-1 Grounding</string>
+            <string id="breathing_title">Box Breathing</string>
+            <string id="grounding_title">Grounding (%d/5)</string>
+            <string id="finished">Finished — Well done</string>
+            <string id="low_stress">Stress: %d — You're doing fine</string>
+        </strings>
+
+        <!-- Language support -->
+        <languages>
+            <language>en-US</language>
+        </languages>
+    </resources>
+
+    <!-- App icons -->
+    <icons>
+        <icon src="resources/images/icon.png" />
+    </icons>
+
+</application>
