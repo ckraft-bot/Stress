@@ -1,0 +1,7 @@
+{
+  "name": "Stress Garmin",
+  "type": "app",
+  "device": "forerunner265",
+  "manifest": "manifest.xml",
+  "source": "source"
+}
