@@ -1,0 +1,11 @@
+<resources>
+  <string id="app_name">Grounding Widget</string>
+  <string id="prompt_stress_detected">Stress detected</string>
+  <string id="prompt_score">Score: %d</string>
+  <string id="menu_breathing">Breathing Exercise</string>
+  <string id="menu_grounding">5-4-3-2-1 Grounding</string>
+  <string id="breathing_title">Box Breathing</string>
+  <string id="grounding_title">Grounding (%d/5)</string>
+  <string id="finished">Finished — Well done</string>
+  <string id="low_stress">Stress: %d — You're doing fine</string>
+</resources>

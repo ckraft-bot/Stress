@@ -1,0 +1,20 @@
+<iq:application xmlns:iq="http://www.garmin.com/xml/connectiq">
+  <iq:id>com.example.groundingwidget</iq:id>
+  <iq:name>Grounding Widget</iq:name>
+  <iq:type>widget</iq:type>
+  <iq:version>1.0.0</iq:version>
+  <iq:api-level>5</iq:api-level>
+
+  <iq:permissions>
+    <iq:permission>access_activity</iq:permission>
+    <iq:permission>access_sensors</iq:permission>
+  </iq:permissions>
+
+  <iq:languages>
+    <iq:language>en</iq:language>
+  </iq:languages>
+
+  <iq:resources>
+    <iq:resource>resources/strings/strings.xml</iq:resource>
+  </iq:resources>
+</iq:application>
