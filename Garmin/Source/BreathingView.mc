@@ -1,7 +1,7 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Timer as Timer;
 using Toybox.Graphics as Graphics;
-using Toybox.Attention as Attention; // vibration API on many devices
+using Toybox.Attention as Attention;
 
 class BreathingView extends WatchUi.View {
     var stage = 0; // 0: inhale, 1: hold, 2: exhale, 3: hold
@@ -26,15 +26,8 @@ class BreathingView extends WatchUi.View {
         stage = s;
         this.repaint();
 
-        // V1: vibration cue at stage start (only if device supports it)
-        try {
-            if (Attention != null && Attention.hasVibration()) {
-                // Many devices accept an array of short vibes; this is a simple cross-device approach
-                Attention.vibrate(1); // single short vibe (SDKs sometimes accept small int patterns)
-            }
-        } catch (e) {
-            // If Attention API differs on the device, safely ignore.
-        }
+        // Trigger vibration cue at the start of each stage
+        triggerVibration();
 
         timer.start(method(:onStageComplete), stageMillis[stage], false);
     }
@@ -42,6 +35,16 @@ class BreathingView extends WatchUi.View {
     function onStageComplete() {
         var next = (stage + 1) % 4;
         startStage(next);
+    }
+
+    function triggerVibration() {
+        try {
+            // Define a simple vibration profile
+            var vibeProfile = new Attention.VibeProfile(100, 500); // 100% duty cycle for 500ms
+            Attention.vibrate([vibeProfile]);
+        } catch (e) {
+            // Handle any errors gracefully
+        }
     }
 
     function onUpdate(dc) {
