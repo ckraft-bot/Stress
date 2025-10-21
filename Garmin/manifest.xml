@@ -15,17 +15,8 @@
 
     <!-- App resources -->
     <resources>
-        <strings>
-            <string id="app_name">Stress</string>
-            <string id="prompt_stress_detected">Stress detected</string>
-            <string id="prompt_score">Score: %d</string>
-            <string id="menu_breathing">Breathing Exercise</string>
-            <string id="menu_grounding">5-4-3-2-1 Grounding</string>
-            <string id="breathing_title">Box Breathing</string>
-            <string id="grounding_title">Grounding (%d/5)</string>
-            <string id="finished">Finished — Well done</string>
-            <string id="low_stress">Stress: %d — You're doing fine</string>
-        </strings>
+        <!-- Link to external strings file -->
+        <strings src="Resources/Strings/strings.xml" />
 
         <!-- Language support -->
         <languages>
@@ -35,7 +26,13 @@
 
     <!-- App icons -->
     <icons>
-        <icon src="resources/images/icon.png" />
+        <icon src="Resources/images/icon.png" />
     </icons>
+
+    <!-- Permissions (needed if accessing HRV/heart rate sensors) -->
+    <permissions>
+        <permission>ACTIVITY_TRACKER</permission>
+        <permission>SENSOR_HEARTRATE</permission>
+    </permissions>
 
 </application>
