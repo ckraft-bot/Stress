@@ -37,7 +37,7 @@ class MenuView extends WatchUi.View {
             if (cursor == 0) {
                 WatchUi.pushView(new BreathingView());
             } else {
-                WatchUi.pushView(new FiveFourThreeTwoOne(1));
+                WatchUi.pushView(new FiveFourThremoeTwoOne(1));
             }
         } else if (key == WatchUi.KEY_BACK) {
             WatchUi.popView();
