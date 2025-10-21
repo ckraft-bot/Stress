@@ -1,0 +1,176 @@
+// hr detection, stress detcetion, grounding initiation, haptic simulation, sound for grounding prompt transition
+
+
+import SwiftUI
+import Foundation
+import AVFoundation
+
+// MARK: - Data Model
+struct HRVSample: Identifiable {
+    let id = UUID()
+    let timestamp: Date
+    let heartRate: Double
+    let hrv: Double
+    let stressDetected: Bool
+}
+
+// MARK: - Stress Detector
+class StressDetector: ObservableObject {
+    @Published var hrBaseline: Double
+    @Published var hrvBaseline: Double
+    @Published var samples: [HRVSample] = []
+    @Published var isGroundingActive: Bool = false
+    @Published var currentStep: String? = nil
+    @Published var stepProgress: Double = 0.0
+    
+    private let groundingSteps = [
+        "See 5 things",
+        "Feel 4 things",
+        "Hear 3 things", 
+        "Smell 2 things",
+        "Taste 1 thing"
+    ]
+    
+    private var audioPlayer: AVAudioPlayer?
+    
+    init(hrBaseline: Double, hrvBaseline: Double) {
+        self.hrBaseline = hrBaseline
+        self.hrvBaseline = hrvBaseline
+    }
+    
+    func addSample(heartRate: Double, hrv: Double) {
+        guard !isGroundingActive else {
+            let sample = HRVSample(timestamp: Date(), heartRate: heartRate, hrv: hrv, stressDetected: false)
+            samples.append(sample)
+            return
+        }
+        
+        var stressDetected = false
+        if heartRate > hrBaseline + 10 && hrv < hrvBaseline - 5 {
+            stressDetected = true
+            triggerGroundingPrompt()
+        }
+        
+        let sample = HRVSample(timestamp: Date(), heartRate: heartRate, hrv: hrv, stressDetected: stressDetected)
+        samples.append(sample)
+    }
+    
+    private func triggerGroundingPrompt() {
+        isGroundingActive = true
+        print("⚠️ Stress detected! Starting 5-4-3-2-1 grounding technique.")
+        triggerHaptic()
+        startGroundingSteps()
+    }
+    
+    private func triggerHaptic() {
+        print("💓 (Simulated haptic)")
+    }
+    
+    private func playSound() {
+        // Use a system sound or bundled short file
+        AudioServicesPlaySystemSound(SystemSoundID(1104)) // Tock sound
+    }
+    
+    private func startGroundingSteps() {
+        let stepDuration: TimeInterval = 5
+        var stepIndex = 0
+        
+        Timer.scheduledTimer(withTimeInterval: stepDuration, repeats: true) { timer in
+            if stepIndex < self.groundingSteps.count {
+                self.currentStep = self.groundingSteps[stepIndex]
+                self.stepProgress = 0.0
+                self.triggerHaptic()
+                self.playSound() // 🔊 Play sound at each step
+                
+                // Animate progress bar
+                Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { progressTimer in
+                    self.stepProgress += 0.1 / stepDuration
+                    if self.stepProgress >= 1.0 {
+                        progressTimer.invalidate()
+                    }
+                }
+                
+                stepIndex += 1
+            } else {
+                timer.invalidate()
+                self.currentStep = nil
+                self.isGroundingActive = false
+                print("✅ Grounding complete!")
+            }
+        }
+    }
+}
+
+// MARK: - Dashboard View
+struct StressDashboardView: View {
+    @ObservedObject var detector: StressDetector
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Stress Detection")
+                .font(.title)
+            
+            if detector.isGroundingActive, let step = detector.currentStep {
+                VStack(spacing: 10) {
+                    Text("🧘 Grounding: \(step)")
+                        .font(.headline)
+                        .foregroundColor(.green)
+                    ProgressView(value: detector.stepProgress)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .green))
+                        .frame(height: 10)
+                        .padding(.horizontal)
+                }
+            }
+            
+            List(detector.samples.reversed()) { sample in
+                HStack {
+                    Text("\(sample.timestamp, formatter: dateFormatter)")
+                        .font(.caption)
+                    Spacer()
+                    Text("HR: \(Int(sample.heartRate))")
+                    Text("HRV: \(Int(sample.hrv))")
+                    if sample.stressDetected {
+                        Text("⚠️").foregroundColor(.red)
+                    }
+                }
+            }
+        }
+        .padding()
+    }
+}
+
+// MARK: - Date Formatter
+let dateFormatter: DateFormatter = {
+    let df = DateFormatter()
+    df.timeStyle = .medium
+    df.dateStyle = .none
+    return df
+}()
+
+// MARK: - Main Playground View
+struct StressPlaygroundView: View {
+    @StateObject private var detector = StressDetector(hrBaseline: 70, hrvBaseline: 50)
+    
+    var body: some View {
+        StressDashboardView(detector: detector)
+            .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+                    let simulatedHR = Double.random(in: 65...95)
+                    let simulatedHRV = Double.random(in: 35...60)
+                    detector.addSample(heartRate: simulatedHR, hrv: simulatedHRV)
+                }
+            }
+    }
+}
+
+// MARK: - Entry Point
+@main
+struct StressApp: App {
+    var body: some Scene {
+        WindowGroup {
+            StressPlaygroundView()
+        }
+    }
+}
+
+
