@@ -1,6 +1,6 @@
 {
-    "monkeyC.jungleFiles": [
-        "${workspaceFolder}/project.jungle"
-    ],
+    "monkeyC.sdkPath": "C:\\Users\\Clair\\AppData\\Roaming\\Garmin\\ConnectIQ\\Sdks\\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0",
+    "monkeyC.developerKeyPath": "${workspaceFolder}\\developer_key",
+    "monkeyC.jungleFiles": ["${workspaceFolder}\\project.jungle"],
     "monkeyC.defaultProduct": "fr265"
 }
