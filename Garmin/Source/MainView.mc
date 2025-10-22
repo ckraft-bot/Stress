@@ -1,62 +1,56 @@
+// How it works
+// stress is simuplated every 5 seconds
+// stress > 0.7 --> trigger breathing exercise
+// stress > 0.4 <=.7 --> trigger grounding exercise
+// stress <= 0.4 --> no exercise
+
+
 using Toybox.WatchUi as WatchUi;
-using Toybox.ActivityMonitor as ActivityMonitor;
-using Toybox.Timer as Timer;
-using Toybox.Graphics as Graphics;
-using Toybox.Lang as Lang;
+using Toybox.Graphics as Gfx;
+using Toybox.Application as App;
 
 class MainView extends WatchUi.View {
-    const STRICT_THRESHOLD = 70; // T1
-    var pollTimer;
 
-    function initialize() {
+    hidden var stressLevel;
+
+    function initialize(level) {
         WatchUi.View.initialize();
-        pollTimer = new Timer.Timer();
+        stressLevel = level;
     }
 
     function onShow() {
-        // Start polling every 1500ms while visible (light, predictable)
-        pollTimer.start(method(:onPoll), 1500, true);
-        this.repaint();
+        updateDisplay();
     }
 
-    function onHide() {
-        pollTimer.stop();
+    function updateStress(level) {
+        stressLevel = level;
+        updateDisplay();
     }
 
-    function onPoll() {
-        var info = ActivityMonitor.getInfo();
-        var stress = null;
-        if (info != null && info.stressScore != null) {
-            stress = info.stressScore;
-        }
+    function updateDisplay() {
+        var g = getGraphics();
+        g.clear();
 
-        if (stress != null && stress >= STRICT_THRESHOLD) {
-            pollTimer.stop();
-            WatchUi.pushView(new PromptView(stress));
+        var stressPercent = (stressLevel * 100).toInt();
+        g.drawText(10, 10, "Stress: " + stressPercent + "%");
+
+        if (stressLevel > 0.7) {
+            g.drawText(10, 30, "High Stress — Breathing");
+        } else if (stressLevel > 0.4) {
+            g.drawText(10, 30, "Moderate Stress — Grounding");
         } else {
-            // keep showing UI; the onUpdate draws current value
-            this.repaint();
+            g.drawText(10, 30, "You are calm");
         }
+
+        update();
     }
 
-    function onUpdate(dc) {
-        dc.clear();
-        dc.setColor(Graphics.COLOR_WHITE);
-        dc.drawText(dc.getWidth()/2, 8, Graphics.FONT_LARGE, "Grounding Widget", Graphics.TEXT_JUSTIFY_CENTER);
-
-        var info = ActivityMonitor.getInfo();
-        var status = "No stress data";
-        if (info != null && info.stressScore != null) {
-            status = "Stress: " + info.stressScore;
-        }
-        dc.drawText(5, 40, Graphics.FONT_MEDIUM, status);
-        dc.drawText(5, 70, Graphics.FONT_SMALL, "Open to choose exercise");
-    }
-
-    // handle basic keys: select opens menu
     function onKey(key) {
-        if (key == WatchUi.KEY_SELECT) {
-            WatchUi.pushView(new MenuView());
+        // Manual navigation still works
+        if (key == WatchUi.KEY_UP) {
+            App.WatchApp.pushView(new BreathingView());
+        } else if (key == WatchUi.KEY_DOWN) {
+            App.WatchApp.pushView(new GroundingView());
         }
     }
 }
