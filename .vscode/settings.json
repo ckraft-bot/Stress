@@ -1,0 +1,6 @@
+{
+    "monkeyC.jungleFiles": [
+        "${workspaceFolder}/project.jungle"
+    ],
+    "monkeyC.defaultProduct": "fr265"
+}
