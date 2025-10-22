@@ -8,9 +8,7 @@
              targetSdkVersion="8.3.0">
 
     <!-- App description -->
-    <description>
-        Monitor stress levels and utilizes grounding techniques to stay calm
-    </description>
+    <description>Monitor stress levels and utilize grounding techniques to stay calm</description>
 
     <!-- Device support - Popular Garmin watches -->
     <devices>
@@ -47,10 +45,7 @@
 
     <!-- App resources -->
     <resources>
-        <!-- Link to external strings file -->
         <strings src="Resources/Strings/strings.xml" />
-
-        <!-- Language support -->
         <languages>
             <language>eng</language>
         </languages>

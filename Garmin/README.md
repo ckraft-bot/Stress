@@ -1,16 +1,12 @@
 Project structure
 
-PS C:\Users\Clair\Documents\GitHub\Stress> tree /F
-Folder PATH listing for volume OS
-Volume serial number is D6CA-EF43
-C:.
 ├───Apple
 │   │   .gitignore
 │   │   README.md
 │   │   Stress Research.pdf
 │   │   Stressed Sim
 │   │   WatchMenuView.swift
-│   │
+│   │   
 │   └───Shared
 │       ├───Exercises
 │       │       Categorize.swift
@@ -41,6 +37,8 @@ C:.
     │
     ├───Resources
     │   ├───Images
+    │   │       stress-app-icon.png
+    │   │
     │   └───Strings
     │           strings.xml
     │
@@ -51,7 +49,7 @@ C:.
             MainView.mc
             MenuView.mc
 
-# For testing 
+# For testing (in the terminal)
 1. cd to project root `cd C:\Users\<path>\Garmin`
 2. ctrl + shift + p
    - Monkey C: Verify Installation

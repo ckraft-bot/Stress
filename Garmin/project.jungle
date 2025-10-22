@@ -1,7 +1,4 @@
-{
-  "name": "stress_app",
-  "type": "app",
-  "device": "forerunner265",
-  "manifest": "manifest.xml",
-  "source": "Source"
-}
+project.manifest = manifest.xml
+
+base.sourcePath = Source
+base.resourcePath = Resources
