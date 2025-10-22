@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://www.garmin.com/xml/connectiq"
              id="com.claire.stress"
-             name="Stress"
-             type="app"
+             name="Stress Relief"
+             type="watch-app"
              version="1.0.0"
-             minSdkVersion="8.0.0"
-             maxSdkVersion="8.3.0"
+             minSdkVersion="4.0.0"
              targetSdkVersion="8.3.0">
 
-    <!-- Device support -->
+    <!-- App description -->
+    <description>
+        Monitor stress levels and utilizes grounding techniques to stay calm
+    </description>
+
+    <!-- Device support - Popular Garmin watches -->
     <devices>
+        <!-- Forerunner Series -->
         <device id="fr265" />
+        <device id="fr265s" />
+        <device id="fr965" />
+        <device id="fr955" />
+        <device id="fr255" />
+        <device id="fr255s" />
+        <device id="fr245" />
+        <device id="fr245m" />
+        
+        <!-- Fenix Series -->
+        <device id="fenix7" />
+        <device id="fenix7s" />
+        <device id="fenix7x" />
+        <device id="fenix6" />
+        <device id="fenix6s" />
+        <device id="fenix6xpro" />
+        
+        <!-- Venu Series -->
+        <device id="venu3" />
+        <device id="venu3s" />
+        <device id="venu2" />
+        <device id="venu2s" />
+        <device id="venusq2" />
+        
+        <!-- Vivoactive -->
+        <device id="vivoactive5" />
+        <device id="vivoactive4" />
+        <device id="vivoactive4s" />
     </devices>
 
     <!-- App resources -->
@@ -20,19 +52,19 @@
 
         <!-- Language support -->
         <languages>
-            <language>en-US</language>
+            <language>eng</language>
         </languages>
     </resources>
 
-    <!-- App icons -->
+    <!-- App icons (launcher icon) -->
     <icons>
-        <icon src="Resources/images/icon.png" />
+        <icon src="Resources/Images/launcher_icon.png" />
     </icons>
 
-    <!-- Permissions (needed if accessing HRV/heart rate sensors) -->
+    <!-- Permissions -->
     <permissions>
-        <permission>ACTIVITY_TRACKER</permission>
-        <permission>SENSOR_HEARTRATE</permission>
+        <permission id="SensorHistory" />
+        <permission id="Sensor" />
     </permissions>
 
 </application>

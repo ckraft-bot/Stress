@@ -1,17 +1,55 @@
 Project structure
 
-stress-widget/
-├─ manifest.xml
-├─ resources/
-│  ├─ strings/
-│  │  └─ strings.xml
-│  └─ images/        # (optional icons)
-└─ source/
-   ├─ App.mc
-   ├─ MainView.mc
-   ├─ MenuView.mc
-   ├─ BreathingView.mc
-   └─ GroundingStepView.mc
+PS C:\Users\Clair\Documents\GitHub\Stress> tree /F
+Folder PATH listing for volume OS
+Volume serial number is D6CA-EF43
+C:.
+├───Apple
+│   │   .gitignore
+│   │   README.md
+│   │   Stress Research.pdf
+│   │   Stressed Sim
+│   │   WatchMenuView.swift
+│   │
+│   └───Shared
+│       ├───Exercises
+│       │       Categorize.swift
+│       │       ExerciseData.swift
+│       │       FiveFourThreeTwoOne.swift
+│       │       FourByFour.swift
+│       │       OneByThirty.swift
+│       │       TouchGrass.swift
+│       │
+│       ├───Models
+│       │       HRVSample.swift
+│       │       StressDetector.swift
+│       │
+│       └───Views
+│           │   ExercisesMenuView.swift
+│           │   StressView.swift
+│           │
+│           └───Components
+│                   Countdown.swift
+│                   ProgressCircle.swift
+│                   Square.swift
+│
+└───Garmin
+    │   developer_key
+    │   manifest.xml
+    │   project.jungle
+    │   README.md
+    │
+    ├───Resources
+    │   ├───Images
+    │   └───Strings
+    │           strings.xml
+    │
+    └───Source
+            App.mc
+            BreathingView.mc
+            FiveFourThreeTwoOne.mc
+            MainView.mc
+            MenuView.mc
 
 # For testing 
 1. cd to project root `cd C:\Users\<path>\Garmin`
