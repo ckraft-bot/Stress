@@ -55,3 +55,4 @@ Project structure
    - Monkey C: Verify Installation
    - Monkey C: Build Current Project
    - Developer: Reload Window
+3. Run the simulator ```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\simulator.exe"```
