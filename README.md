@@ -12,7 +12,7 @@ StressApp (iOS target)
 │   ├─ Models/
 │   │    ├─ HRVSample.swift            # Heart rate & HRV model
 │   │    └─ StressDetector.swift       # Stress detection & grounding initiation
-│   │
+│   │a
 │   ├─ Exercises/
 │   │    ├─ FiveFourThreeTwoOne.swift  # 5-4-3-2-1 grounding technique
 │   │    ├─ OneByThirty.swift          # Focus on 1 stimulus for 30s
