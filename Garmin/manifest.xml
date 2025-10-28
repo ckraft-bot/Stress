@@ -1,65 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="http://www.garmin.com/xml/connectiq"
-             id="com.claire.stress"
-             name="Stress Relief"
-             type="watch-app"
-             version="1.0.0"
-             minSdkVersion="4.0.0"
-             targetSdkVersion="8.3.0">
+<Project name="StressApp" platform="iOS + watchOS" version="1.0">
+  <Description>
+    Manifest describing the structure of the StressApp project for iOS and watchOS,
+    including shared Swift files and WatchKit components.
+  </Description>
 
-    <!-- App description -->
-    <description>Monitor stress levels and utilize grounding techniques to stay calm</description>
+  <Targets>
+    <Target
+      name="StressApp"
+      platform="iOS"
+      deployment="15.0"
+      bundle="com.claire.stressapp" />
+      
+    <Target
+      name="StressApp WatchKit App"
+      platform="watchOS"
+      deployment="9.0"
+      bundle="com.claire.stressapp.watch" />
+  </Targets>
 
-    <!-- Device support - Popular Garmin watches -->
-    <devices>
-        <!-- Forerunner Series -->
-        <device id="fr265" />
-        <device id="fr265s" />
-        <device id="fr965" />
-        <device id="fr955" />
-        <device id="fr255" />
-        <device id="fr255s" />
-        <device id="fr245" />
-        <device id="fr245m" />
-        
-        <!-- Fenix Series -->
-        <device id="fenix7" />
-        <device id="fenix7s" />
-        <device id="fenix7x" />
-        <device id="fenix6" />
-        <device id="fenix6s" />
-        <device id="fenix6xpro" />
-        
-        <!-- Venu Series -->
-        <device id="venu3" />
-        <device id="venu3s" />
-        <device id="venu2" />
-        <device id="venu2s" />
-        <device id="venusq2" />
-        
-        <!-- Vivoactive -->
-        <device id="vivoactive5" />
-        <device id="vivoactive4" />
-        <device id="vivoactive4s" />
-    </devices>
+  <Shared>
+    <Models>
+      <File name="HRVSample.swift" />
+      <File name="StressDetector.swift" />
+    </Models>
 
-    <!-- App resources -->
-    <resources>
-        <strings src="Resources/Strings/strings.xml" />
-        <languages>
-            <language>eng</language>
-        </languages>
-    </resources>
+    <Exercises>
+      <File name="FiveFourThreeTwoOne.swift" />
+      <File name="OneByThirty.swift" />
+      <File name="FourByFour.swift" />
+      <File name="Categorize.swift" />
+      <File name="TouchGrass.swift" />
+      <File name="ExerciseData.swift" />
+    </Exercises>
 
-    <!-- App icons (launcher icon) -->
-    <icons>
-        <icon src="Resources/Images/launcher_icon.png" />
-    </icons>
+    <Views>
+      <File name="StressView.swift" />
+      <File name="ExercisesMenuView.swift" />
+      
+      <Components>
+        <File name="Countdown.swift" />
+        <File name="ProgressCircle.swift" />
+        <File name="Square.swift" />
+      </Components>
+    </Views>
+  </Shared>
 
-    <!-- Permissions -->
-    <permissions>
-        <permission id="SensorHistory" />
-        <permission id="Sensor" />
-    </permissions>
-
-</application>
+  <WatchKitApp>
+    <File name="InterfaceController.swift" />
+    <File name="WatchMenuView.swift" />
+    
+    <Folder name="Watch App Scenes" />
+  </WatchKitApp>
+</Project>
