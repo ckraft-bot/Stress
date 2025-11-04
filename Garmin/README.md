@@ -56,8 +56,10 @@ Project structure
 `mkdir bin -ErrorAction SilentlyContinue`
 `New-Item -ItemType Directory -Force -Path bin`
 
-- Build the app
-`java -jar "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.jar" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\garmin_developer_key`
+- use monkeyc.bat instead of jar to build the app
+this will compile all my `.mc` files and create `bin\stress.prg`
+```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\garmin_developer_key```
+
 - launch in sim
 ```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```
 
