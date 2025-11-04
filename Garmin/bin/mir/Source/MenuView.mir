@@ -2,8 +2,8 @@
 using Toybox.WatchUi as :WatchUi;
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; @symbol_usingAlias = [Gfx,2,25,28]; ]
 using Toybox.Graphics as :Gfx;
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 4; @symbol_classdef = [MainView,4,6,14]; @symbol_extends<0> = [WatchUi,4,23,30]; @symbol_extends<1> = [View,4,31,35]; ]
-class MainView extends WatchUi.View {
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 4; @symbol_classdef = [MenuView,4,6,14]; @symbol_extends<0> = [WatchUi,4,23,30]; @symbol_extends<1> = [View,4,31,35]; ]
+class MenuView extends WatchUi.View {
     [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 4; ]
     <init> {
     }
@@ -62,9 +62,9 @@ C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_18_33_21_4_stop
     }
     [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 23; @symbol_functiondef = [onUpdate,23,13,21]; @symbol_param<0> = [dc,23,22,24]; ]
     function onUpdate(dc) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_start:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 24 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_stop" ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_stop" ]
         %width.1 = local;
         symbol [ width %width.1 24 12 17 ];
         %tmp.1 = lgetv %dc;
@@ -75,7 +75,7 @@ C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_star
         lputv %width.1 %tmp.3;
         symbol [ width %width.1 24 12 17 ];
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 25 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_stop" ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_stop" ]
         %height.2 = local;
         symbol [ height %height.2 25 12 18 ];
         %tmp.4 = lgetv %dc;
@@ -86,7 +86,7 @@ C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_star
         lputv %height.2 %tmp.6;
         symbol [ height %height.2 25 12 18 ];
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 26 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_stop" ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_stop" ]
         %centerX.3 = local;
         symbol [ centerX %centerX.3 26 12 19 ];
         %tmp.7 = lgetv %width.1;
@@ -95,333 +95,307 @@ C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_star
         %tmp.9 = div %tmp.7 %tmp.8;
         lputv %centerX.3 %tmp.9;
         symbol [ centerX %centerX.3 26 12 19 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 29 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 28 8 ]
         %tmp.10 = lgetv %dc;
-        symbol [ dc %tmp.10 29 8 10 ];
-        symbol [ setColor %tmp.11 29 11 19 ];
+        symbol [ dc %tmp.10 28 8 10 ];
+        symbol [ setColor %tmp.11 28 11 19 ];
         %tmp.11 = getv function %tmp.10 :setColor;
-        symbol [ Gfx %tmp.12 29 20 23 ];
+        symbol [ Gfx %tmp.12 28 20 23 ];
         %tmp.12 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.13 29 24 35 ];
+        symbol [ COLOR_BLACK %tmp.13 28 24 35 ];
         %tmp.13 = getv %tmp.12 :COLOR_BLACK;
-        symbol [ Gfx %tmp.14 29 37 40 ];
+        symbol [ Gfx %tmp.14 28 37 40 ];
         %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.15 29 41 52 ];
+        symbol [ COLOR_BLACK %tmp.15 28 41 52 ];
         %tmp.15 = getv %tmp.14 :COLOR_BLACK;
         invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 30 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 29 8 ]
         %tmp.16 = lgetv %dc;
-        symbol [ dc %tmp.16 30 8 10 ];
-        symbol [ clear %tmp.17 30 11 16 ];
+        symbol [ dc %tmp.16 29 8 10 ];
+        symbol [ clear %tmp.17 29 11 16 ];
         %tmp.17 = getv function %tmp.16 :clear;
         invoke %tmp.16 %tmp.17();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 33 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_stop" ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 31 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_stop" ]
         %stressPercent.4 = local;
-        symbol [ stressPercent %stressPercent.4 33 12 25 ];
-        symbol [ stressLevel %tmp.19 33 29 40 ];
+        symbol [ stressPercent %stressPercent.4 31 12 25 ];
+        symbol [ stressLevel %tmp.19 31 29 40 ];
         %tmp.19 = getv ? :stressLevel;
         %tmp.20 = 100;
         %tmp.21 = mul %tmp.19 %tmp.20;
-        symbol [ toNumber %tmp.22 33 48 56 ];
+        symbol [ toNumber %tmp.22 31 48 56 ];
         %tmp.22 = getv function %tmp.21 :toNumber;
         %tmp.23 = invoke %tmp.21 %tmp.22();
         lputv %stressPercent.4 %tmp.23;
-        symbol [ stressPercent %stressPercent.4 33 12 25 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 34 8 ]
+        symbol [ stressPercent %stressPercent.4 31 12 25 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 32 8 ]
         %tmp.24 = lgetv %dc;
-        symbol [ dc %tmp.24 34 8 10 ];
-        symbol [ setColor %tmp.25 34 11 19 ];
+        symbol [ dc %tmp.24 32 8 10 ];
+        symbol [ setColor %tmp.25 32 11 19 ];
         %tmp.25 = getv function %tmp.24 :setColor;
         %tmp.26 = self;
-        symbol [ getStressColor %tmp.27 34 20 34 ];
+        symbol [ getStressColor %tmp.27 32 20 34 ];
         %tmp.27 = getv function %tmp.26 :getStressColor;
-        symbol [ stressLevel %tmp.29 34 35 46 ];
+        symbol [ stressLevel %tmp.29 32 35 46 ];
         %tmp.29 = getv ? :stressLevel;
         %tmp.30 = invoke %tmp.26 %tmp.27(%tmp.29);
-        symbol [ Gfx %tmp.31 34 49 52 ];
+        symbol [ Gfx %tmp.31 32 49 52 ];
         %tmp.31 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.32 34 53 70 ];
+        symbol [ COLOR_TRANSPARENT %tmp.32 32 53 70 ];
         %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
         invoke %tmp.24 %tmp.25(%tmp.30, %tmp.32);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 35 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 33 8 ]
         %tmp.33 = lgetv %dc;
-        symbol [ dc %tmp.33 35 8 10 ];
-        symbol [ drawText %tmp.34 35 11 19 ];
+        symbol [ dc %tmp.33 33 8 10 ];
+        symbol [ drawText %tmp.34 33 11 19 ];
         %tmp.34 = getv function %tmp.33 :drawText;
         %tmp.35 = lgetv %centerX.3;
-        symbol [ centerX %tmp.35 35 20 27 ];
+        symbol [ centerX %tmp.35 33 20 27 ];
         %tmp.36 = lgetv %height.2;
-        symbol [ height %tmp.36 35 29 35 ];
+        symbol [ height %tmp.36 33 29 35 ];
         %tmp.37 = 0.3;
         %tmp.38 = mul %tmp.36 %tmp.37;
-        symbol [ Gfx %tmp.39 35 41 44 ];
+        symbol [ Gfx %tmp.39 33 41 44 ];
         %tmp.39 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_HOT %tmp.40 35 45 60 ];
+        symbol [ FONT_NUMBER_HOT %tmp.40 33 45 60 ];
         %tmp.40 = getv %tmp.39 :FONT_NUMBER_HOT;
         %tmp.41 = lgetv %stressPercent.4;
-        symbol [ stressPercent %tmp.41 35 62 75 ];
-        symbol [ format %tmp.42 35 76 82 ];
+        symbol [ stressPercent %tmp.41 33 62 75 ];
+        symbol [ format %tmp.42 33 76 82 ];
         %tmp.42 = getv function %tmp.41 :format;
         %tmp.43 = "%d";
         %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
         %tmp.45 = "%";
         %tmp.46 = add %tmp.44 %tmp.45;
-        symbol [ Gfx %tmp.47 35 96 99 ];
+        symbol [ Gfx %tmp.47 33 96 99 ];
         %tmp.47 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.48 35 100 119 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.48 33 100 119 ];
         %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.33 %tmp.34(%tmp.35, %tmp.38, %tmp.40, %tmp.46, %tmp.48);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 38 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 35 8 ]
         %tmp.49 = lgetv %dc;
-        symbol [ dc %tmp.49 38 8 10 ];
-        symbol [ setColor %tmp.50 38 11 19 ];
+        symbol [ dc %tmp.49 35 8 10 ];
+        symbol [ setColor %tmp.50 35 11 19 ];
         %tmp.50 = getv function %tmp.49 :setColor;
-        symbol [ Gfx %tmp.51 38 20 23 ];
+        symbol [ Gfx %tmp.51 35 20 23 ];
         %tmp.51 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.52 38 24 35 ];
+        symbol [ COLOR_WHITE %tmp.52 35 24 35 ];
         %tmp.52 = getv %tmp.51 :COLOR_WHITE;
-        symbol [ Gfx %tmp.53 38 37 40 ];
+        symbol [ Gfx %tmp.53 35 37 40 ];
         %tmp.53 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.54 38 41 58 ];
+        symbol [ COLOR_TRANSPARENT %tmp.54 35 41 58 ];
         %tmp.54 = getv %tmp.53 :COLOR_TRANSPARENT;
         invoke %tmp.49 %tmp.50(%tmp.52, %tmp.54);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 39 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 36 8 ]
         %tmp.55 = lgetv %dc;
-        symbol [ dc %tmp.55 39 8 10 ];
-        symbol [ drawText %tmp.56 39 11 19 ];
+        symbol [ dc %tmp.55 36 8 10 ];
+        symbol [ drawText %tmp.56 36 11 19 ];
         %tmp.56 = getv function %tmp.55 :drawText;
         %tmp.57 = lgetv %centerX.3;
-        symbol [ centerX %tmp.57 39 20 27 ];
+        symbol [ centerX %tmp.57 36 20 27 ];
         %tmp.58 = lgetv %height.2;
-        symbol [ height %tmp.58 39 29 35 ];
+        symbol [ height %tmp.58 36 29 35 ];
         %tmp.59 = 0.5;
         %tmp.60 = mul %tmp.58 %tmp.59;
-        symbol [ Gfx %tmp.61 39 41 44 ];
+        symbol [ Gfx %tmp.61 36 41 44 ];
         %tmp.61 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.62 39 45 55 ];
+        symbol [ FONT_SMALL %tmp.62 36 45 55 ];
         %tmp.62 = getv %tmp.61 :FONT_SMALL;
         %tmp.63 = "STRESS LEVEL";
-        symbol [ Gfx %tmp.64 39 73 76 ];
+        symbol [ Gfx %tmp.64 36 73 76 ];
         %tmp.64 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.65 39 77 96 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.65 36 77 96 ];
         %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.55 %tmp.56(%tmp.57, %tmp.60, %tmp.62, %tmp.63, %tmp.65);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 42 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_stop" ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 38 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_stop" ]
         %message.5 = local;
-        symbol [ message %message.5 42 12 19 ];
+        symbol [ message %message.5 38 12 19 ];
         %tmp.66 = self;
-        symbol [ getStressMessage %tmp.67 42 22 38 ];
+        symbol [ getStressMessage %tmp.67 38 22 38 ];
         %tmp.67 = getv function %tmp.66 :getStressMessage;
-        symbol [ stressLevel %tmp.69 42 39 50 ];
+        symbol [ stressLevel %tmp.69 38 39 50 ];
         %tmp.69 = getv ? :stressLevel;
         %tmp.70 = invoke %tmp.66 %tmp.67(%tmp.69);
         lputv %message.5 %tmp.70;
-        symbol [ message %message.5 42 12 19 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 43 8 ]
+        symbol [ message %message.5 38 12 19 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 39 8 ]
         %tmp.71 = lgetv %dc;
-        symbol [ dc %tmp.71 43 8 10 ];
-        symbol [ drawText %tmp.72 43 11 19 ];
+        symbol [ dc %tmp.71 39 8 10 ];
+        symbol [ drawText %tmp.72 39 11 19 ];
         %tmp.72 = getv function %tmp.71 :drawText;
         %tmp.73 = lgetv %centerX.3;
-        symbol [ centerX %tmp.73 43 20 27 ];
+        symbol [ centerX %tmp.73 39 20 27 ];
         %tmp.74 = lgetv %height.2;
-        symbol [ height %tmp.74 43 29 35 ];
+        symbol [ height %tmp.74 39 29 35 ];
         %tmp.75 = 0.7;
         %tmp.76 = mul %tmp.74 %tmp.75;
-        symbol [ Gfx %tmp.77 43 41 44 ];
+        symbol [ Gfx %tmp.77 39 41 44 ];
         %tmp.77 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.78 43 45 54 ];
+        symbol [ FONT_TINY %tmp.78 39 45 54 ];
         %tmp.78 = getv %tmp.77 :FONT_TINY;
         %tmp.79 = lgetv %message.5;
-        symbol [ message %tmp.79 43 56 63 ];
-        symbol [ Gfx %tmp.80 43 65 68 ];
+        symbol [ message %tmp.79 39 56 63 ];
+        symbol [ Gfx %tmp.80 39 65 68 ];
         %tmp.80 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.81 43 69 88 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.81 39 69 88 ];
         %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.71 %tmp.72(%tmp.73, %tmp.76, %tmp.78, %tmp.79, %tmp.81);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 46 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 41 8 ]
         %tmp.82 = lgetv %dc;
-        symbol [ dc %tmp.82 46 8 10 ];
-        symbol [ drawText %tmp.83 46 11 19 ];
+        symbol [ dc %tmp.82 41 8 10 ];
+        symbol [ drawText %tmp.83 41 11 19 ];
         %tmp.83 = getv function %tmp.82 :drawText;
         %tmp.84 = lgetv %centerX.3;
-        symbol [ centerX %tmp.84 46 20 27 ];
+        symbol [ centerX %tmp.84 41 20 27 ];
         %tmp.85 = lgetv %height.2;
-        symbol [ height %tmp.85 46 29 35 ];
+        symbol [ height %tmp.85 41 29 35 ];
         %tmp.86 = 20;
         %tmp.87 = sub %tmp.85 %tmp.86;
-        symbol [ Gfx %tmp.88 46 42 45 ];
+        symbol [ Gfx %tmp.88 41 42 45 ];
         %tmp.88 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.89 46 46 56 ];
+        symbol [ FONT_XTINY %tmp.89 41 46 56 ];
         %tmp.89 = getv %tmp.88 :FONT_XTINY;
-        %tmp.90 = "Press SELECT to choose exercise";
-        symbol [ Gfx %tmp.91 46 93 96 ];
+        %tmp.90 = "Select exercise from menu";
+        symbol [ Gfx %tmp.91 41 87 90 ];
         %tmp.91 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.92 46 97 116 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.92 41 91 110 ];
         %tmp.92 = getv %tmp.91 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.82 %tmp.83(%tmp.84, %tmp.87, %tmp.89, %tmp.90, %tmp.92);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_47_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_23_26_42_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 49; @symbol_functiondef = [getStressColor,49,13,27]; @symbol_param<0> = [level,49,28,33]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 44; @symbol_functiondef = [getStressColor,44,13,27]; @symbol_param<0> = [level,44,28,33]; ]
     function getStressColor(level) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_49_35_57_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 50 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_8_56_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_44_35_52_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 45 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_8_51_8_if_stmt:
         %tmp.1 = lgetv %level;
-        symbol [ level %tmp.1 50 12 17 ];
+        symbol [ level %tmp.1 45 12 17 ];
         %tmp.2 = 0.7;
         %tmp.3 = gt %tmp.1 %tmp.2;
-        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_8_56_8_if_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_8_56_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_25_52_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 51 12 ]
-        symbol [ Gfx %tmp.4 51 19 22 ];
+        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_8_51_8_if_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_8_51_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_25_47_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 46 12 ]
+        symbol [ Gfx %tmp.4 46 19 22 ];
         %tmp.4 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.5 51 23 32 ];
+        symbol [ COLOR_RED %tmp.5 46 23 32 ];
         %tmp.5 = getv %tmp.4 :COLOR_RED;
         ret %tmp.5;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_25_52_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_8_56_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_8_56_8_if_false:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 52 15 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_15_56_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_25_47_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_8_51_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_8_51_8_if_false:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 47 15 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_15_51_8_if_stmt:
         %tmp.6 = lgetv %level;
-        symbol [ level %tmp.6 52 19 24 ];
+        symbol [ level %tmp.6 47 19 24 ];
         %tmp.7 = 0.4;
         %tmp.8 = gt %tmp.6 %tmp.7;
-        bf %tmp.8 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_15_56_8_if_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_15_56_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_32_54_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 53 12 ]
-        symbol [ Gfx %tmp.9 53 19 22 ];
+        bf %tmp.8 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_15_51_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_15_51_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_32_49_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 48 12 ]
+        symbol [ Gfx %tmp.9 48 19 22 ];
         %tmp.9 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.10 53 23 35 ];
+        symbol [ COLOR_ORANGE %tmp.10 48 23 35 ];
         %tmp.10 = getv %tmp.9 :COLOR_ORANGE;
         ret %tmp.10;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_32_54_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_15_56_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_15_56_8_if_else_false:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_54_15_56_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 55 12 ]
-        symbol [ Gfx %tmp.11 55 19 22 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_32_49_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_15_51_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_15_51_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_49_15_51_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 50 12 ]
+        symbol [ Gfx %tmp.11 50 19 22 ];
         %tmp.11 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.12 55 23 34 ];
+        symbol [ COLOR_GREEN %tmp.12 50 23 34 ];
         %tmp.12 = getv %tmp.11 :COLOR_GREEN;
         ret %tmp.12;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_54_15_56_8_stop:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_52_15_56_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_50_8_56_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_49_35_57_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_49_15_51_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_47_15_51_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_45_8_51_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_44_35_52_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 59; @symbol_functiondef = [getStressMessage,59,13,29]; @symbol_param<0> = [level,59,30,35]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 54; @symbol_functiondef = [getStressMessage,54,13,29]; @symbol_param<0> = [level,54,30,35]; ]
     function getStressMessage(level) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_59_37_67_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 60 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_8_66_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_54_37_62_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 55 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_8_61_8_if_stmt:
         %tmp.1 = lgetv %level;
-        symbol [ level %tmp.1 60 12 17 ];
+        symbol [ level %tmp.1 55 12 17 ];
         %tmp.2 = 0.7;
         %tmp.3 = gt %tmp.1 %tmp.2;
-        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_8_66_8_if_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_8_66_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_25_62_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 61 12 ]
+        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_8_61_8_if_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_8_61_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_25_57_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 56 12 ]
         %tmp.4 = "High Stress";
         ret %tmp.4;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_25_62_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_8_66_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_8_66_8_if_false:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 62 15 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_15_66_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_25_57_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_8_61_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_8_61_8_if_false:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 57 15 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_15_61_8_if_stmt:
         %tmp.5 = lgetv %level;
-        symbol [ level %tmp.5 62 19 24 ];
+        symbol [ level %tmp.5 57 19 24 ];
         %tmp.6 = 0.4;
         %tmp.7 = gt %tmp.5 %tmp.6;
-        bf %tmp.7 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_15_66_8_if_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_15_66_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_32_64_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 63 12 ]
+        bf %tmp.7 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_15_61_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_15_61_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_32_59_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 58 12 ]
         %tmp.8 = "Moderate Stress";
         ret %tmp.8;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_32_64_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_15_66_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_15_66_8_if_else_false:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_64_15_66_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 65 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_32_59_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_15_61_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_15_61_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_59_15_61_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 60 12 ]
         %tmp.9 = "You are calm";
         ret %tmp.9;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_64_15_66_8_stop:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_62_15_66_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_60_8_66_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_59_37_67_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_59_15_61_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_57_15_61_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_55_8_61_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_54_37_62_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 70; @symbol_functiondef = [onSelect,70,13,21]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 65; @symbol_functiondef = [onSelect,65,13,21]; ]
     function onSelect() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_70_24_74_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 71 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_70_24_74_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_70_24_74_4_stop" ]
-        %menu.1 = local;
-        symbol [ menu %menu.1 71 12 16 ];
-        symbol [ MenuView %tmp.4 71 23 31 ];
-        %tmp.4 = getv ? :MenuView;
-        %tmp.1 = newc %tmp.4 ();
-        lputv %menu.1 %tmp.1;
-        symbol [ menu %menu.1 71 12 16 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 72 8 ]
-        symbol [ WatchUi %tmp.5 72 8 15 ];
-        %tmp.5 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.6 72 16 24 ];
-        %tmp.6 = getv function %tmp.5 :pushView;
-        %tmp.7 = lgetv %menu.1;
-        symbol [ menu %tmp.7 72 25 29 ];
-        symbol [ MenuViewDelegate %tmp.11 72 35 51 ];
-        %tmp.11 = getv ? :MenuViewDelegate;
-        %tmp.12 = lgetv %menu.1;
-        symbol [ menu %tmp.12 72 52 56 ];
-        %tmp.8 = newc %tmp.11 (%tmp.12);
-        symbol [ WatchUi %tmp.13 72 59 66 ];
-        %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_UP %tmp.14 72 67 75 ];
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8, %tmp.14);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 73 8 ]
-        %tmp.15 = true;
-        ret %tmp.15;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_70_24_74_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_65_24_68_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 67 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_65_24_68_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 76; @symbol_functiondef = [onMenu,76,13,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 70; @symbol_functiondef = [onMenu,70,13,19]; ]
     function onMenu() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_76_22_78_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 77 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_70_22_72_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 71 8 ]
         %tmp.1 = self;
-        symbol [ onSelect %tmp.2 77 15 23 ];
+        symbol [ onSelect %tmp.2 71 15 23 ];
         %tmp.2 = getv function %tmp.1 :onSelect;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         ret %tmp.3;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_76_22_78_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_70_22_72_4_stop:
     }
 }
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 81; @symbol_classdef = [MainViewDelegate,81,6,22]; @symbol_extends<0> = [WatchUi,81,31,38]; @symbol_extends<1> = [BehaviorDelegate,81,39,55]; ]
-class MainViewDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 81; ]
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 75; @symbol_classdef = [MenuViewDelegate,75,6,22]; @symbol_extends<0> = [WatchUi,75,31,38]; @symbol_extends<1> = [BehaviorDelegate,75,39,55]; ]
+class MenuViewDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 75; ]
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 81; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 75; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 82; @symbol_functiondef = [initialize,82,13,23]; ]
-    function initialize() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_82_26_84_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 83 8 ]
-        symbol [ BehaviorDelegate %tmp.2 83 8 24 ];
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 76; @symbol_functiondef = [initialize,76,13,23]; @symbol_param<0> = [view,76,24,28]; ]
+    function initialize(view) as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_76_30_78_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc" 77 8 ]
+        symbol [ BehaviorDelegate %tmp.2 77 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 83 25 35 ];
+        symbol [ initialize %tmp.3 77 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_82_26_84_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MenuView_mc_76_30_78_4_stop:
     }
 }
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MenuView.mc"; @line = 1; ]

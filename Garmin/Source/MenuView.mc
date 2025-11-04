@@ -25,25 +25,20 @@ class MenuView extends WatchUi.View {
         var height = dc.getHeight();
         var centerX = width / 2;
 
-        // clear screen
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
-        // stress %
         var stressPercent = (stressLevel * 100).toNumber();
         dc.setColor(getStressColor(stressLevel), Gfx.COLOR_TRANSPARENT);
         dc.drawText(centerX, height*0.3, Gfx.FONT_NUMBER_HOT, stressPercent.format("%d") + "%", Gfx.TEXT_JUSTIFY_CENTER);
 
-        // label
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(centerX, height*0.5, Gfx.FONT_SMALL, "STRESS LEVEL", Gfx.TEXT_JUSTIFY_CENTER);
 
-        // message
         var message = getStressMessage(stressLevel);
         dc.drawText(centerX, height*0.7, Gfx.FONT_TINY, message, Gfx.TEXT_JUSTIFY_CENTER);
 
-        // hint
-        dc.drawText(centerX, height - 20, Gfx.FONT_XTINY, "Press SELECT to choose exercise", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, height - 20, Gfx.FONT_XTINY, "Select exercise from menu", Gfx.TEXT_JUSTIFY_CENTER);
     }
 
     function getStressColor(level) {
@@ -68,13 +63,12 @@ class MenuView extends WatchUi.View {
 
     // --- Button handlers ---
     function onSelect() {
-        var menu = new MenuView(stressLevel);
-        WatchUi.pushView(menu, new MenuViewDelegate(menu), WatchUi.SLIDE_UP);
+        // Add your menu interaction logic here
         return true;
     }
 
     function onMenu() {
-        return onSelect(); // MENU button does same
+        return onSelect();
     }
 }
 
