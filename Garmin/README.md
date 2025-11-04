@@ -2,20 +2,22 @@ Project structure
 
 Garmin/
 │
-├── bin/                # Compiled output or builds
+├── manifest.xml
+├── project.jungle          <- UTF-8, LF, no BOM
+├── run_garmin.ps1
+├── README.md
 │
-├── source/             # All your .mc (Monkey C) source files
-│   └── main.mc         # Example entry point
+├── bin/
 │
-├── resource/           # Images, strings, etc.
-│   ├── images/
-│   │   └── icon.png
-│   └── strings/
-│       └── en-US.txt
+├── Source/
+│   └── StressApp.mc
 │
-├── manifest.xml        # Garmin app manifest
-├── README.md           # Project info
-└── run_garmin.ps1      # PowerShell script to build/run app
+└── Resources/
+    ├── drawables.xml
+    ├── images/
+    │   └── launcher_icon.png
+    └── strings/
+        └── strings.xml
 
 
 # Build and run the app in the CIQ simulator 

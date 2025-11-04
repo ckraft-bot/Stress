@@ -1,25 +1,11 @@
-# ==========================
-# Stress App Jungle Config
-# ==========================
+# project.manifest=manifest.xml
+# base.sourcePath=Source
+# base.resourcePath=Resources
+# build.output=bin
+# device=fr265
 
-project.manifest = manifest.xml
-base.sourcePath = source
-base.resourcePath = resource
-build.output = bin
-
-# --- Output file ---
-build.outputFile = bin/stress.prg
-
-# --- Target device ---
-device = fr265
-
-# --- Modules ---
-sources = [
-    source/StressApp.mc
-]
-
-# --- Resources ---
-resources = [
-    resource/strings/strings.xml,
-    resource/drawables.xml
-]
+project.manifest manifest.xml
+base.sourcePath Source
+base.resourcePath Resources
+build.output bin/StressApp.prg
+device fr265
