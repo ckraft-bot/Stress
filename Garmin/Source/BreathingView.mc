@@ -1,172 +1,40 @@
-using Toybox.WatchUi as WatchUi;
-using Toybox.Graphics as Gfx;
+using Toybox.Timer as Timer;
 using Toybox.System as Sys;
-using Toybox.Timer;
 
 class BreathingView extends WatchUi.View {
-    hidden var step = 0;
-    hidden var timer;
-    hidden var animationTimer;
-    hidden var stepDuration = 4000; // 4 seconds per step
-    hidden var isActive = false;
-    hidden var animationProgress = 0.0;
+    var _timer;
+    var _step = 0;
 
-    hidden var STEPS = [
-        "Breathe In",
-        "Hold",
-        "Breathe Out", 
-        "Hold"
-    ];
+    const STEP_DURATION = 4000;
+    const STEPS = ["Breathe In", "Hold", "Breathe Out", "Hold"];
 
     function initialize() {
         View.initialize();
-    }
-
-    function onLayout(dc) {
-        // No layout needed
+        _timer = new Timer.Timer(); // create once
     }
 
     function onShow() {
-        step = 0;
-        isActive = true;
-        startBreathingCycle();
-    }
-
-    function onUpdate(dc) {
-        var width = dc.getWidth();
-        var height = dc.getHeight();
-        var centerX = width / 2;
-        var centerY = height / 2;
-
-        // Background
-        dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
-        dc.clear();
-
-        var instruction = STEPS[step];
-        var color = getStepColor(step);
-        dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-
-        // Instruction text
-        dc.drawText(
-            centerX,
-            centerY - 40,
-            Gfx.FONT_LARGE,
-            instruction,
-            Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
-        );
-
-        // Animated circle
-        var radius = getCircleRadius(step);
-        dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-        dc.fillCircle(centerX, centerY + 30, radius);
-
-        // Step counter
-        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(
-            centerX,
-            height - 40,
-            Gfx.FONT_TINY,
-            "Step " + (step + 1) + " of 4",
-            Gfx.TEXT_JUSTIFY_CENTER
-        );
-
-        // Exit hint
-        dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(
-            centerX,
-            height - 20,
-            Gfx.FONT_XTINY,
-            "BACK to exit",
-            Gfx.TEXT_JUSTIFY_CENTER
-        );
-    }
-
-    function startBreathingCycle() {
-        WatchUi.requestUpdate();
-        animationProgress = 0.0;
-
-        // Animation timer (updates every 50 ms)
-        if (animationTimer == null) {
-            animationTimer = new Timer.Timer();
-        } else {
-            animationTimer.stop();
-        }
-        animationTimer.start(method(:updateAnimation), 50, true);
-
-        // Step timer (every 4 s)
-        if (timer == null) {
-            timer = new Timer.Timer();
-        } else {
-            timer.stop();
-        }
-        timer.start(method(:nextStep), stepDuration, false);
-    }
-
-    function updateAnimation() as Void {
-        if (!isActive) return;
-
-        animationProgress += 0.05;
-        if (animationProgress > 1.0) {
-            animationProgress = 1.0;
-        }
-        WatchUi.requestUpdate();
-    }
-
-    function nextStep() as Void {
-        if (!isActive) return;
-
-        step = (step + 1) % 4;
-        animationProgress = 0.0;
-        WatchUi.requestUpdate();
-
-        if (timer == null) {
-            timer = new Timer.Timer();
-        } else {
-            timer.stop();
-        }
-        timer.start(method(:nextStep), stepDuration, false);
-    }
-
-    function getStepColor(currentStep) {
-        if (currentStep == 0) {
-            return Gfx.COLOR_BLUE;
-        } else if (currentStep == 1) {
-            return Gfx.COLOR_YELLOW;
-        } else if (currentStep == 2) {
-            return Gfx.COLOR_GREEN;
-        } else {
-            return Gfx.COLOR_ORANGE;
-        }
-    }
-
-    function getCircleRadius(currentStep) {
-        var minRadius = 15;
-        var maxRadius = 40;
-
-        if (currentStep == 0) {
-            return minRadius + ((maxRadius - minRadius) * animationProgress);
-        } else if (currentStep == 2) {
-            return maxRadius - ((maxRadius - minRadius) * animationProgress);
-        } else {
-            return (currentStep == 1) ? maxRadius : minRadius;
-        }
+        _step = 0;
+        runStep();
     }
 
     function onHide() {
-        isActive = false;
-
-        if (timer != null) {
-            timer.stop();
-            timer = null;
-        }
-        if (animationTimer != null) {
-            animationTimer.stop();
-            animationTimer = null;
+        if (_timer != null) {
+            _timer.stop();
         }
     }
 
-    function onKey(key) {
-        // Exit on BACK
-        WatchUi.popView();
+    function runStep() {
+        // display/log current step
+        Sys.println(STEPS[_step]);
+
+        // schedule next step
+        _timer.stop(); // safety — ensures only one active
+        _timer.start(method(:nextStep), STEP_DURATION, false);
+    }
+
+    function nextStep() {
+        _step = (_step + 1) % STEPS.size(); // loop back after 4
+        runStep();
     }
 }
