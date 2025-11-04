@@ -12,7 +12,7 @@ $connectIqSdk= "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-s
 
 $monkeyc  = "$connectIqSdk\bin\monkeyc.bat"
 $monkeydo = "$connectIqSdk\bin\monkeydo.bat"
-$simulator= "$connectIqSdk\bin\simulator.exe"
+$simulator = "$connectIqSdk\bin\simulator.exe"
 
 # -------------------------------
 # Check for running simulator
