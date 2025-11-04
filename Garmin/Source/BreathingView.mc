@@ -10,11 +10,11 @@ class BreathingView extends WatchUi.View {
     hidden var isActive = false;
     hidden var animationProgress = 0.0;
     
-    hidden const STEPS = [
-        WatchUi.loadResource(Rez.Strings.breathe_in),
-        WatchUi.loadResource(Rez.Strings.hold),
-        WatchUi.loadResource(Rez.Strings.breathe_out),
-        WatchUi.loadResource(Rez.Strings.hold)
+    hidden var STEPS = [
+        "Breathe In",
+        "Hold",
+        "Breathe Out", 
+        "Hold"
     ];
 
     function initialize() {
@@ -88,7 +88,7 @@ class BreathingView extends WatchUi.View {
         animationProgress = 0.0;
         
         // Faster updates for smooth animation
-        animationtimer = new Sys.Timer();
+        animationTimer = new Sys.Timer();
         animationTimer.start(method(:updateAnimation), 50, true); // 50ms updates
         
         // Step timer
@@ -101,7 +101,7 @@ class BreathingView extends WatchUi.View {
     function updateAnimation() {
         if (!isActive) { return; }
         
-        animationProgress += 0.05;
+        animationProgress = animationProgress + 0.05;
         if (animationProgress > 1.0) {
             animationProgress = 1.0;
         }
@@ -120,13 +120,15 @@ class BreathingView extends WatchUi.View {
     }
 
     function getStepColor(currentStep) {
-        switch(currentStep) {
-            case 0: return Gfx.COLOR_BLUE;    // Breathe In
-            case 1: return Gfx.COLOR_YELLOW;  // Hold
-            case 2: return Gfx.COLOR_GREEN;   // Breathe Out
-            case 3: return Gfx.COLOR_ORANGE;  // Hold
+        if (currentStep == 0) {
+            return Gfx.COLOR_BLUE;    // Breathe In
+        } else if (currentStep == 1) {
+            return Gfx.COLOR_YELLOW;  // Hold
+        } else if (currentStep == 2) {
+            return Gfx.COLOR_GREEN;   // Breathe Out
+        } else {
+            return Gfx.COLOR_ORANGE;  // Hold
         }
-        return Gfx.COLOR_WHITE;
     }
 
     function getCircleRadius(currentStep) {
