@@ -1,7 +1,7 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Gfx;
 
-class MainView extends WatchUi.View {
+class MenuView extends WatchUi.View {
     hidden var stressLevel;
 
     function initialize(level) {
@@ -68,7 +68,7 @@ class MainView extends WatchUi.View {
 
     // --- Button handlers ---
     function onSelect() {
-        var menu = new MenuView();
+        var menu = new MenuView(stressLevel);
         WatchUi.pushView(menu, new MenuViewDelegate(menu), WatchUi.SLIDE_UP);
         return true;
     }
@@ -78,8 +78,8 @@ class MainView extends WatchUi.View {
     }
 }
 
-class MainViewDelegate extends WatchUi.BehaviorDelegate {
-    function initialize() {
+class MenuViewDelegate extends WatchUi.BehaviorDelegate {
+    function initialize(view) {
         BehaviorDelegate.initialize();
     }
 }
