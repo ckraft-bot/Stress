@@ -1,6 +1,7 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.Timer;
 
 class BreathingView extends WatchUi.View {
     hidden var step = 0;
@@ -88,17 +89,17 @@ class BreathingView extends WatchUi.View {
         animationProgress = 0.0;
         
         // Faster updates for smooth animation
-        animationTimer = new Sys.Timer();
+        animationTimer = new Timer.Timer();
         animationTimer.start(method(:updateAnimation), 50, true); // 50ms updates
         
         // Step timer
         if (isActive) {
-            timer = new Sys.Timer();
+            timer = new Timer.Timer();
             timer.start(method(:nextStep), stepDuration, false);
         }
     }
 
-    function updateAnimation() {
+    function updateAnimation() as Void {
         if (!isActive) { return; }
         
         animationProgress = animationProgress + 0.05;
@@ -108,14 +109,14 @@ class BreathingView extends WatchUi.View {
         WatchUi.requestUpdate();
     }
 
-    function nextStep() {
+    function nextStep() as Void {
         if (!isActive) { return; }
         
         step = (step + 1) % 4;
         animationProgress = 0.0;
         WatchUi.requestUpdate();
         
-        timer = new Sys.Timer();
+        timer = new Timer.Timer();
         timer.start(method(:nextStep), stepDuration, false);
     }
 
@@ -174,3 +175,4 @@ class BreathingDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 }
+

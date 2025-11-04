@@ -1,6 +1,7 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.Timer;
 
 class FiveFourThreeTwoOneView extends WatchUi.View {
     hidden var step = 0;
@@ -122,12 +123,12 @@ class FiveFourThreeTwoOneView extends WatchUi.View {
 
     function startTimer() {
         if (isActive && step < STEPS.size()) {
-            timer = new Sys.Timer();
+            timer = new Timer.Timer();
             timer.start(method(:nextStep), stepDuration, false);
         }
     }
 
-    function nextStep() {
+    function nextStep() as Void {
         if (!isActive) {
             return;
         }
@@ -139,12 +140,12 @@ class FiveFourThreeTwoOneView extends WatchUi.View {
             startTimer();
         } else {
             // Exercise complete - auto-exit after 3 seconds
-            timer = new Sys.Timer();
+            timer = new Timer.Timer();
             timer.start(method(:autoExit), 3000, false);
         }
     }
 
-    function autoExit() {
+    function autoExit() as Void {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
     }
 
@@ -186,3 +187,4 @@ class FiveFourThreeTwoOneDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 }
+

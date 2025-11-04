@@ -56,21 +56,12 @@ Project structure
 `mkdir bin -ErrorAction SilentlyContinue`
 `New-Item -ItemType Directory -Force -Path bin`
 
-- use monkeyc.bat instead of jar to build the app
+- Build app: use monkeyc.bat instead of jar to build the app
 this will compile all my `.mc` files and create `bin\stress.prg`
-```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\garmin_developer_key```
-
-- launch in sim
-```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\Sandbox\garmin_developer_key```
-
-- Verify you're in the right place
-pwd
-
-- Check monkey.jungle exists
-Test-Path monkey.jungle
-
-- Check developer key exists  
-Test-Path C:\Users\Clair\Desktop\Sandbox\garmin_developer_key
+   - launch the connect IQ sim
+   - load the app on the fr265 virtual app
+   - start running stress monitoring app
+```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```
 
 # For testing (in the terminal)
 1. cd to project root `cd C:\Users\<path>\Garmin`
@@ -78,4 +69,5 @@ Test-Path C:\Users\Clair\Desktop\Sandbox\garmin_developer_key
    - Monkey C: Verify Installation
    - Monkey C: Build Current Project
    - Developer: Reload Window
-3. Run the simulator ```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\simulator.exe"```
+3. Launch the sim ```Start-Process "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\simulator.exe"```
+3. Run the simulator ```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```

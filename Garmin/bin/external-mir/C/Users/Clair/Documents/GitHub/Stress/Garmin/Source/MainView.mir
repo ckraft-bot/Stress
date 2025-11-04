@@ -312,60 +312,30 @@ C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_8_86_8_if_st
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_8_86_8_if_true:
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_25_82_8_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainView.mc" 81 12 ]
-        symbol [ WatchUi %tmp.4 81 19 26 ];
-        %tmp.4 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.5 81 27 39 ];
-        %tmp.5 = getv function %tmp.4 :loadResource;
-        symbol [ Rez %tmp.7 81 40 43 ];
-        %tmp.7 = getv ? :Rez;
-        symbol [ Strings %tmp.8 81 44 51 ];
-        %tmp.8 = getv %tmp.7 :Strings;
-        symbol [ high_stress %tmp.9 81 52 63 ];
-        %tmp.9 = getv %tmp.8 :high_stress;
-        %tmp.10 = invoke %tmp.4 %tmp.5(%tmp.9);
-        ret %tmp.10;
+        %tmp.4 = "High Stress\nBreathing Exercise";
+        ret %tmp.4;
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_25_82_8_stop:
         goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_8_86_8_if_end;
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_8_86_8_if_false:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainView.mc" 82 15 ]
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_stmt:
-        %tmp.11 = lgetv %level;
-        symbol [ level %tmp.11 82 19 24 ];
-        %tmp.12 = 0.4;
-        %tmp.13 = gt %tmp.11 %tmp.12;
-        bf %tmp.13 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_else_false;
+        %tmp.5 = lgetv %level;
+        symbol [ level %tmp.5 82 19 24 ];
+        %tmp.6 = 0.4;
+        %tmp.7 = gt %tmp.5 %tmp.6;
+        bf %tmp.7 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_else_false;
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_true:
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_32_84_8_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainView.mc" 83 12 ]
-        symbol [ WatchUi %tmp.14 83 19 26 ];
-        %tmp.14 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.15 83 27 39 ];
-        %tmp.15 = getv function %tmp.14 :loadResource;
-        symbol [ Rez %tmp.17 83 40 43 ];
-        %tmp.17 = getv ? :Rez;
-        symbol [ Strings %tmp.18 83 44 51 ];
-        %tmp.18 = getv %tmp.17 :Strings;
-        symbol [ moderate_stress %tmp.19 83 52 67 ];
-        %tmp.19 = getv %tmp.18 :moderate_stress;
-        %tmp.20 = invoke %tmp.14 %tmp.15(%tmp.19);
-        ret %tmp.20;
+        %tmp.8 = "Moderate Stress\nGrounding Exercise";
+        ret %tmp.8;
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_32_84_8_stop:
         goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_end;
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_else_false:
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_84_15_86_8_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainView.mc" 85 12 ]
-        symbol [ WatchUi %tmp.21 85 19 26 ];
-        %tmp.21 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.22 85 27 39 ];
-        %tmp.22 = getv function %tmp.21 :loadResource;
-        symbol [ Rez %tmp.24 85 40 43 ];
-        %tmp.24 = getv ? :Rez;
-        symbol [ Strings %tmp.25 85 44 51 ];
-        %tmp.25 = getv %tmp.24 :Strings;
-        symbol [ calm_status %tmp.26 85 52 63 ];
-        %tmp.26 = getv %tmp.25 :calm_status;
-        %tmp.27 = invoke %tmp.21 %tmp.22(%tmp.26);
-        ret %tmp.27;
+        %tmp.9 = "You are calm";
+        ret %tmp.9;
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_84_15_86_8_stop:
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_82_15_86_8_if_end:
 C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainView_mc_80_8_86_8_if_end:

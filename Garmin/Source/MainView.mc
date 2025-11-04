@@ -78,11 +78,11 @@ class MainView extends WatchUi.View {
 
     function getStressMessage(level) {
         if (level > 0.7) {
-            return WatchUi.loadResource(Rez.Strings.high_stress);
+            return "High Stress\nBreathing Exercise";
         } else if (level > 0.4) {
-            return WatchUi.loadResource(Rez.Strings.moderate_stress);
+            return "Moderate Stress\nGrounding Exercise";
         } else {
-            return WatchUi.loadResource(Rez.Strings.calm_status);
+            return "You are calm";
         }
     }
 }

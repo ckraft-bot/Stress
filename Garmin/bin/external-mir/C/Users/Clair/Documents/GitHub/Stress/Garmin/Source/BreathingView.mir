@@ -4,11 +4,13 @@ using Toybox.WatchUi as :WatchUi;
 using Toybox.Graphics as :Gfx;
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; @symbol_usingAlias = [Sys,3,23,26]; ]
 using Toybox.System as :Sys;
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 5; @symbol_classdef = [BreathingView,5,6,19]; @symbol_extends<0> = [WatchUi,5,28,35]; @symbol_extends<1> = [View,5,36,40]; ]
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Timer,4,13,18]; ]
+using Toybox.Timer;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 6; @symbol_classdef = [BreathingView,6,6,19]; @symbol_extends<0> = [WatchUi,6,28,35]; @symbol_extends<1> = [View,6,36,40]; ]
 class BreathingView extends WatchUi.View {
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 5; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 6; ]
     <init> {
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 13 15 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 14 15 ]
         %tmp.1 = newa 4;
         %tmp.2 = "Breathe In";
         %tmp.3 = dup %tmp.1;
@@ -24,757 +26,757 @@ class BreathingView extends WatchUi.View {
         %tmp.13 = aputv %tmp.12 3 %tmp.11;
         putv self :STEPS %tmp.13;
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 5; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 6; @position = 15; @symbol_vardef = [step,6,15,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 7; @position = 15; @symbol_vardef = [step,7,15,19]; ]
     protected
     var step = 0;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 7; @position = 15; @symbol_vardef = [timer,7,15,20]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 8; @position = 15; @symbol_vardef = [timer,8,15,20]; ]
     protected
     var timer;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 8; @position = 15; @symbol_vardef = [animationTimer,8,15,29]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 9; @position = 15; @symbol_vardef = [animationTimer,9,15,29]; ]
     protected
     var animationTimer;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 9; @position = 15; @symbol_vardef = [stepDuration,9,15,27]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 10; @position = 15; @symbol_vardef = [stepDuration,10,15,27]; ]
     protected
     var stepDuration = 4000;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 10; @position = 15; @symbol_vardef = [isActive,10,15,23]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 11; @position = 15; @symbol_vardef = [isActive,11,15,23]; ]
     protected
     var isActive = false;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 11; @position = 15; @symbol_vardef = [animationProgress,11,15,32]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 12; @position = 15; @symbol_vardef = [animationProgress,12,15,32]; ]
     protected
     var animationProgress = 0.0;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 13; @position = 15; @symbol_vardef = [STEPS,13,15,20]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 14; @position = 15; @symbol_vardef = [STEPS,14,15,20]; ]
     protected
     var STEPS;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 20; @symbol_functiondef = [initialize,20,13,23]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 21; @symbol_functiondef = [initialize,21,13,23]; ]
     function initialize() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_20_26_22_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 21 8 ]
-        symbol [ View %tmp.2 21 8 12 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_21_26_23_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 22 8 ]
+        symbol [ View %tmp.2 22 8 12 ];
         %tmp.2 = getv ? :View;
-        symbol [ initialize %tmp.3 21 13 23 ];
+        symbol [ initialize %tmp.3 22 13 23 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_20_26_22_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_21_26_23_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 24; @symbol_functiondef = [onLayout,24,13,21]; @symbol_param<0> = [dc,24,22,24]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 25; @symbol_functiondef = [onLayout,25,13,21]; @symbol_param<0> = [dc,25,22,24]; ]
     function onLayout(dc) {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 28; @symbol_functiondef = [onShow,28,13,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 29; @symbol_functiondef = [onShow,29,13,19]; ]
     function onShow() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_28_22_32_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 29 8 ]
-        %tmp.1 = 0;
-        symbol [ step ? 29 8 12 ];
-        putv self :step %tmp.1;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_29_22_33_4_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 30 8 ]
-        %tmp.2 = true;
-        symbol [ isActive ? 30 8 16 ];
-        putv self :isActive %tmp.2;
+        %tmp.1 = 0;
+        symbol [ step ? 30 8 12 ];
+        putv self :step %tmp.1;
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 31 8 ]
+        %tmp.2 = true;
+        symbol [ isActive ? 31 8 16 ];
+        putv self :isActive %tmp.2;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 32 8 ]
         %tmp.3 = self;
-        symbol [ startBreathingCycle %tmp.4 31 8 27 ];
+        symbol [ startBreathingCycle %tmp.4 32 8 27 ];
         %tmp.4 = getv function %tmp.3 :startBreathingCycle;
         invoke %tmp.3 %tmp.4();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_28_22_32_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_29_22_33_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 34; @symbol_functiondef = [onUpdate,34,13,21]; @symbol_param<0> = [dc,34,22,24]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 35; @symbol_functiondef = [onUpdate,35,13,21]; @symbol_param<0> = [dc,35,22,24]; ]
     function onUpdate(dc) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 35 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 36 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %width.1 = local;
-        symbol [ width %width.1 35 12 17 ];
+        symbol [ width %width.1 36 12 17 ];
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 35 20 22 ];
-        symbol [ getWidth %tmp.2 35 23 31 ];
+        symbol [ dc %tmp.1 36 20 22 ];
+        symbol [ getWidth %tmp.2 36 23 31 ];
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %width.1 %tmp.3;
-        symbol [ width %width.1 35 12 17 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 36 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+        symbol [ width %width.1 36 12 17 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 37 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %height.2 = local;
-        symbol [ height %height.2 36 12 18 ];
+        symbol [ height %height.2 37 12 18 ];
         %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 36 21 23 ];
-        symbol [ getHeight %tmp.5 36 24 33 ];
+        symbol [ dc %tmp.4 37 21 23 ];
+        symbol [ getHeight %tmp.5 37 24 33 ];
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         lputv %height.2 %tmp.6;
-        symbol [ height %height.2 36 12 18 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 37 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+        symbol [ height %height.2 37 12 18 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 38 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %centerX.3 = local;
-        symbol [ centerX %centerX.3 37 12 19 ];
+        symbol [ centerX %centerX.3 38 12 19 ];
         %tmp.7 = lgetv %width.1;
-        symbol [ width %tmp.7 37 22 27 ];
+        symbol [ width %tmp.7 38 22 27 ];
         %tmp.8 = 2;
         %tmp.9 = div %tmp.7 %tmp.8;
         lputv %centerX.3 %tmp.9;
-        symbol [ centerX %centerX.3 37 12 19 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 38 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+        symbol [ centerX %centerX.3 38 12 19 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 39 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %centerY.4 = local;
-        symbol [ centerY %centerY.4 38 12 19 ];
+        symbol [ centerY %centerY.4 39 12 19 ];
         %tmp.10 = lgetv %height.2;
-        symbol [ height %tmp.10 38 22 28 ];
+        symbol [ height %tmp.10 39 22 28 ];
         %tmp.11 = 2;
         %tmp.12 = div %tmp.10 %tmp.11;
         lputv %centerY.4 %tmp.12;
-        symbol [ centerY %centerY.4 38 12 19 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 41 8 ]
+        symbol [ centerY %centerY.4 39 12 19 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 42 8 ]
         %tmp.13 = lgetv %dc;
-        symbol [ dc %tmp.13 41 8 10 ];
-        symbol [ setColor %tmp.14 41 11 19 ];
+        symbol [ dc %tmp.13 42 8 10 ];
+        symbol [ setColor %tmp.14 42 11 19 ];
         %tmp.14 = getv function %tmp.13 :setColor;
-        symbol [ Gfx %tmp.15 41 20 23 ];
+        symbol [ Gfx %tmp.15 42 20 23 ];
         %tmp.15 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.16 41 24 35 ];
+        symbol [ COLOR_BLACK %tmp.16 42 24 35 ];
         %tmp.16 = getv %tmp.15 :COLOR_BLACK;
-        symbol [ Gfx %tmp.17 41 37 40 ];
+        symbol [ Gfx %tmp.17 42 37 40 ];
         %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.18 41 41 52 ];
+        symbol [ COLOR_BLACK %tmp.18 42 41 52 ];
         %tmp.18 = getv %tmp.17 :COLOR_BLACK;
         invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 42 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 43 8 ]
         %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 42 8 10 ];
-        symbol [ clear %tmp.20 42 11 16 ];
+        symbol [ dc %tmp.19 43 8 10 ];
+        symbol [ clear %tmp.20 43 11 16 ];
         %tmp.20 = getv function %tmp.19 :clear;
         invoke %tmp.19 %tmp.20();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 45 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 46 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %instruction.5 = local;
-        symbol [ instruction %instruction.5 45 12 23 ];
-        symbol [ STEPS %tmp.22 45 26 31 ];
+        symbol [ instruction %instruction.5 46 12 23 ];
+        symbol [ STEPS %tmp.22 46 26 31 ];
         %tmp.22 = getv ? :STEPS;
-        symbol [ step %tmp.24 45 32 36 ];
+        symbol [ step %tmp.24 46 32 36 ];
         %tmp.24 = getv ? :step;
         %tmp.25 = agetv %tmp.22 %tmp.24;
         lputv %instruction.5 %tmp.25;
-        symbol [ instruction %instruction.5 45 12 23 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 48 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+        symbol [ instruction %instruction.5 46 12 23 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 49 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %color.6 = local;
-        symbol [ color %color.6 48 12 17 ];
+        symbol [ color %color.6 49 12 17 ];
         %tmp.26 = self;
-        symbol [ getStepColor %tmp.27 48 20 32 ];
+        symbol [ getStepColor %tmp.27 49 20 32 ];
         %tmp.27 = getv function %tmp.26 :getStepColor;
-        symbol [ step %tmp.29 48 33 37 ];
+        symbol [ step %tmp.29 49 33 37 ];
         %tmp.29 = getv ? :step;
         %tmp.30 = invoke %tmp.26 %tmp.27(%tmp.29);
         lputv %color.6 %tmp.30;
-        symbol [ color %color.6 48 12 17 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 49 8 ]
+        symbol [ color %color.6 49 12 17 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 50 8 ]
         %tmp.31 = lgetv %dc;
-        symbol [ dc %tmp.31 49 8 10 ];
-        symbol [ setColor %tmp.32 49 11 19 ];
+        symbol [ dc %tmp.31 50 8 10 ];
+        symbol [ setColor %tmp.32 50 11 19 ];
         %tmp.32 = getv function %tmp.31 :setColor;
         %tmp.33 = lgetv %color.6;
-        symbol [ color %tmp.33 49 20 25 ];
-        symbol [ Gfx %tmp.34 49 27 30 ];
+        symbol [ color %tmp.33 50 20 25 ];
+        symbol [ Gfx %tmp.34 50 27 30 ];
         %tmp.34 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.35 49 31 48 ];
+        symbol [ COLOR_TRANSPARENT %tmp.35 50 31 48 ];
         %tmp.35 = getv %tmp.34 :COLOR_TRANSPARENT;
         invoke %tmp.31 %tmp.32(%tmp.33, %tmp.35);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 52 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 53 8 ]
         %tmp.36 = lgetv %dc;
-        symbol [ dc %tmp.36 52 8 10 ];
-        symbol [ drawText %tmp.37 52 11 19 ];
+        symbol [ dc %tmp.36 53 8 10 ];
+        symbol [ drawText %tmp.37 53 11 19 ];
         %tmp.37 = getv function %tmp.36 :drawText;
         %tmp.38 = lgetv %centerX.3;
-        symbol [ centerX %tmp.38 53 12 19 ];
+        symbol [ centerX %tmp.38 54 12 19 ];
         %tmp.39 = lgetv %centerY.4;
-        symbol [ centerY %tmp.39 54 12 19 ];
+        symbol [ centerY %tmp.39 55 12 19 ];
         %tmp.40 = 40;
         %tmp.41 = sub %tmp.39 %tmp.40;
-        symbol [ Gfx %tmp.42 55 12 15 ];
+        symbol [ Gfx %tmp.42 56 12 15 ];
         %tmp.42 = getm $.Toybox.Graphics;
-        symbol [ FONT_LARGE %tmp.43 55 16 26 ];
+        symbol [ FONT_LARGE %tmp.43 56 16 26 ];
         %tmp.43 = getv %tmp.42 :FONT_LARGE;
         %tmp.44 = lgetv %instruction.5;
-        symbol [ instruction %tmp.44 56 12 23 ];
-        symbol [ Gfx %tmp.45 57 12 15 ];
+        symbol [ instruction %tmp.44 57 12 23 ];
+        symbol [ Gfx %tmp.45 58 12 15 ];
         %tmp.45 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 57 16 35 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 58 16 35 ];
         %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
-        symbol [ Gfx %tmp.47 57 38 41 ];
+        symbol [ Gfx %tmp.47 58 38 41 ];
         %tmp.47 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.48 57 42 62 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.48 58 42 62 ];
         %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_VCENTER;
         %tmp.49 = bitor %tmp.46 %tmp.48;
         invoke %tmp.36 %tmp.37(%tmp.38, %tmp.41, %tmp.43, %tmp.44, %tmp.49);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 61 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop" ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 62 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop" ]
         %radius.7 = local;
-        symbol [ radius %radius.7 61 12 18 ];
+        symbol [ radius %radius.7 62 12 18 ];
         %tmp.50 = self;
-        symbol [ getCircleRadius %tmp.51 61 21 36 ];
+        symbol [ getCircleRadius %tmp.51 62 21 36 ];
         %tmp.51 = getv function %tmp.50 :getCircleRadius;
-        symbol [ step %tmp.53 61 37 41 ];
+        symbol [ step %tmp.53 62 37 41 ];
         %tmp.53 = getv ? :step;
         %tmp.54 = invoke %tmp.50 %tmp.51(%tmp.53);
         lputv %radius.7 %tmp.54;
-        symbol [ radius %radius.7 61 12 18 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 62 8 ]
+        symbol [ radius %radius.7 62 12 18 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 63 8 ]
         %tmp.55 = lgetv %dc;
-        symbol [ dc %tmp.55 62 8 10 ];
-        symbol [ setColor %tmp.56 62 11 19 ];
+        symbol [ dc %tmp.55 63 8 10 ];
+        symbol [ setColor %tmp.56 63 11 19 ];
         %tmp.56 = getv function %tmp.55 :setColor;
         %tmp.57 = lgetv %color.6;
-        symbol [ color %tmp.57 62 20 25 ];
-        symbol [ Gfx %tmp.58 62 27 30 ];
+        symbol [ color %tmp.57 63 20 25 ];
+        symbol [ Gfx %tmp.58 63 27 30 ];
         %tmp.58 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.59 62 31 48 ];
+        symbol [ COLOR_TRANSPARENT %tmp.59 63 31 48 ];
         %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
         invoke %tmp.55 %tmp.56(%tmp.57, %tmp.59);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 63 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 64 8 ]
         %tmp.60 = lgetv %dc;
-        symbol [ dc %tmp.60 63 8 10 ];
-        symbol [ fillCircle %tmp.61 63 11 21 ];
+        symbol [ dc %tmp.60 64 8 10 ];
+        symbol [ fillCircle %tmp.61 64 11 21 ];
         %tmp.61 = getv function %tmp.60 :fillCircle;
         %tmp.62 = lgetv %centerX.3;
-        symbol [ centerX %tmp.62 63 22 29 ];
+        symbol [ centerX %tmp.62 64 22 29 ];
         %tmp.63 = lgetv %centerY.4;
-        symbol [ centerY %tmp.63 63 31 38 ];
+        symbol [ centerY %tmp.63 64 31 38 ];
         %tmp.64 = 30;
         %tmp.65 = add %tmp.63 %tmp.64;
         %tmp.66 = lgetv %radius.7;
-        symbol [ radius %tmp.66 63 45 51 ];
+        symbol [ radius %tmp.66 64 45 51 ];
         invoke %tmp.60 %tmp.61(%tmp.62, %tmp.65, %tmp.66);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 66 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 67 8 ]
         %tmp.67 = lgetv %dc;
-        symbol [ dc %tmp.67 66 8 10 ];
-        symbol [ setColor %tmp.68 66 11 19 ];
+        symbol [ dc %tmp.67 67 8 10 ];
+        symbol [ setColor %tmp.68 67 11 19 ];
         %tmp.68 = getv function %tmp.67 :setColor;
-        symbol [ Gfx %tmp.69 66 20 23 ];
+        symbol [ Gfx %tmp.69 67 20 23 ];
         %tmp.69 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.70 66 24 35 ];
+        symbol [ COLOR_WHITE %tmp.70 67 24 35 ];
         %tmp.70 = getv %tmp.69 :COLOR_WHITE;
-        symbol [ Gfx %tmp.71 66 37 40 ];
+        symbol [ Gfx %tmp.71 67 37 40 ];
         %tmp.71 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.72 66 41 58 ];
+        symbol [ COLOR_TRANSPARENT %tmp.72 67 41 58 ];
         %tmp.72 = getv %tmp.71 :COLOR_TRANSPARENT;
         invoke %tmp.67 %tmp.68(%tmp.70, %tmp.72);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 67 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 68 8 ]
         %tmp.73 = lgetv %dc;
-        symbol [ dc %tmp.73 67 8 10 ];
-        symbol [ drawText %tmp.74 67 11 19 ];
+        symbol [ dc %tmp.73 68 8 10 ];
+        symbol [ drawText %tmp.74 68 11 19 ];
         %tmp.74 = getv function %tmp.73 :drawText;
         %tmp.75 = lgetv %centerX.3;
-        symbol [ centerX %tmp.75 68 12 19 ];
+        symbol [ centerX %tmp.75 69 12 19 ];
         %tmp.76 = lgetv %height.2;
-        symbol [ height %tmp.76 69 12 18 ];
+        symbol [ height %tmp.76 70 12 18 ];
         %tmp.77 = 40;
         %tmp.78 = sub %tmp.76 %tmp.77;
-        symbol [ Gfx %tmp.79 70 12 15 ];
+        symbol [ Gfx %tmp.79 71 12 15 ];
         %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.80 70 16 25 ];
+        symbol [ FONT_TINY %tmp.80 71 16 25 ];
         %tmp.80 = getv %tmp.79 :FONT_TINY;
         %tmp.81 = "Step ";
-        symbol [ step %tmp.83 71 23 27 ];
+        symbol [ step %tmp.83 72 23 27 ];
         %tmp.83 = getv ? :step;
         %tmp.84 = 1;
         %tmp.85 = add %tmp.83 %tmp.84;
         %tmp.86 = add %tmp.81 %tmp.85;
         %tmp.87 = " of 4";
         %tmp.88 = add %tmp.86 %tmp.87;
-        symbol [ Gfx %tmp.89 72 12 15 ];
+        symbol [ Gfx %tmp.89 73 12 15 ];
         %tmp.89 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.90 72 16 35 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.90 73 16 35 ];
         %tmp.90 = getv %tmp.89 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.73 %tmp.74(%tmp.75, %tmp.78, %tmp.80, %tmp.88, %tmp.90);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 76 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 77 8 ]
         %tmp.91 = lgetv %dc;
-        symbol [ dc %tmp.91 76 8 10 ];
-        symbol [ setColor %tmp.92 76 11 19 ];
+        symbol [ dc %tmp.91 77 8 10 ];
+        symbol [ setColor %tmp.92 77 11 19 ];
         %tmp.92 = getv function %tmp.91 :setColor;
-        symbol [ Gfx %tmp.93 76 20 23 ];
+        symbol [ Gfx %tmp.93 77 20 23 ];
         %tmp.93 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.94 76 24 37 ];
+        symbol [ COLOR_DK_GRAY %tmp.94 77 24 37 ];
         %tmp.94 = getv %tmp.93 :COLOR_DK_GRAY;
-        symbol [ Gfx %tmp.95 76 39 42 ];
+        symbol [ Gfx %tmp.95 77 39 42 ];
         %tmp.95 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.96 76 43 60 ];
+        symbol [ COLOR_TRANSPARENT %tmp.96 77 43 60 ];
         %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
         invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 77 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 78 8 ]
         %tmp.97 = lgetv %dc;
-        symbol [ dc %tmp.97 77 8 10 ];
-        symbol [ drawText %tmp.98 77 11 19 ];
+        symbol [ dc %tmp.97 78 8 10 ];
+        symbol [ drawText %tmp.98 78 11 19 ];
         %tmp.98 = getv function %tmp.97 :drawText;
         %tmp.99 = lgetv %centerX.3;
-        symbol [ centerX %tmp.99 78 12 19 ];
+        symbol [ centerX %tmp.99 79 12 19 ];
         %tmp.100 = lgetv %height.2;
-        symbol [ height %tmp.100 79 12 18 ];
+        symbol [ height %tmp.100 80 12 18 ];
         %tmp.101 = 20;
         %tmp.102 = sub %tmp.100 %tmp.101;
-        symbol [ Gfx %tmp.103 80 12 15 ];
+        symbol [ Gfx %tmp.103 81 12 15 ];
         %tmp.103 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.104 80 16 26 ];
+        symbol [ FONT_XTINY %tmp.104 81 16 26 ];
         %tmp.104 = getv %tmp.103 :FONT_XTINY;
         %tmp.105 = "BACK to exit";
-        symbol [ Gfx %tmp.106 82 12 15 ];
+        symbol [ Gfx %tmp.106 83 12 15 ];
         %tmp.106 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.107 82 16 35 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.107 83 16 35 ];
         %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.97 %tmp.98(%tmp.99, %tmp.102, %tmp.104, %tmp.105, %tmp.107);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_34_26_84_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_35_26_85_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 86; @symbol_functiondef = [startBreathingCycle,86,13,32]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 87; @symbol_functiondef = [startBreathingCycle,87,13,32]; ]
     function startBreathingCycle() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_86_35_99_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 87 8 ]
-        symbol [ WatchUi %tmp.1 87 8 15 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_87_35_100_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 88 8 ]
+        symbol [ WatchUi %tmp.1 88 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.2 87 16 29 ];
+        symbol [ requestUpdate %tmp.2 88 16 29 ];
         %tmp.2 = getv function %tmp.1 :requestUpdate;
         invoke %tmp.1 %tmp.2();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 88 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 89 8 ]
         %tmp.3 = 0.0;
-        symbol [ animationProgress ? 88 8 25 ];
+        symbol [ animationProgress ? 89 8 25 ];
         putv self :animationProgress %tmp.3;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 91 8 ]
-        symbol [ Sys %tmp.6 91 29 32 ];
-        %tmp.6 = getm $.Toybox.System;
-        symbol [ Timer %tmp.7 91 33 38 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 92 8 ]
+        symbol [ Timer %tmp.6 92 29 34 ];
+        %tmp.6 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.7 92 35 40 ];
         %tmp.7 = getv function ? %tmp.6 :Timer;
         %tmp.4 = newc %tmp.7 ();
-        symbol [ animationTimer ? 91 8 22 ];
+        symbol [ animationTimer ? 92 8 22 ];
         putv self :animationTimer %tmp.4;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 92 8 ]
-        symbol [ animationTimer %tmp.9 92 8 22 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 93 8 ]
+        symbol [ animationTimer %tmp.9 93 8 22 ];
         %tmp.9 = getv ? :animationTimer;
-        symbol [ start %tmp.10 92 23 28 ];
+        symbol [ start %tmp.10 93 23 28 ];
         %tmp.10 = getv function %tmp.9 :start;
         %tmp.11 = self;
-        symbol [ method %tmp.12 92 29 35 ];
+        symbol [ method %tmp.12 93 29 35 ];
         %tmp.12 = getv function %tmp.11 :method;
         %tmp.14 = const :updateAnimation;
-        symbol [ updateAnimation %tmp.14 92 37 52 const ];
+        symbol [ updateAnimation %tmp.14 93 37 52 const ];
         %tmp.15 = invoke %tmp.11 %tmp.12(%tmp.14);
         %tmp.16 = 50;
         %tmp.17 = true;
         invoke %tmp.9 %tmp.10(%tmp.15, %tmp.16, %tmp.17);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 95 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_8_98_8_if_stmt:
-        symbol [ isActive %tmp.19 95 12 20 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 96 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_8_99_8_if_stmt:
+        symbol [ isActive %tmp.19 96 12 20 ];
         %tmp.19 = getv ? :isActive;
-        bf %tmp.19 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_8_98_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_8_98_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_22_98_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 96 12 ]
-        symbol [ Sys %tmp.22 96 24 27 ];
-        %tmp.22 = getm $.Toybox.System;
-        symbol [ Timer %tmp.23 96 28 33 ];
+        bf %tmp.19 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_8_99_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_8_99_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_22_99_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 97 12 ]
+        symbol [ Timer %tmp.22 97 24 29 ];
+        %tmp.22 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.23 97 30 35 ];
         %tmp.23 = getv function ? %tmp.22 :Timer;
         %tmp.20 = newc %tmp.23 ();
-        symbol [ timer ? 96 12 17 ];
+        symbol [ timer ? 97 12 17 ];
         putv self :timer %tmp.20;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 97 12 ]
-        symbol [ timer %tmp.25 97 12 17 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 98 12 ]
+        symbol [ timer %tmp.25 98 12 17 ];
         %tmp.25 = getv ? :timer;
-        symbol [ start %tmp.26 97 18 23 ];
+        symbol [ start %tmp.26 98 18 23 ];
         %tmp.26 = getv function %tmp.25 :start;
         %tmp.27 = self;
-        symbol [ method %tmp.28 97 24 30 ];
+        symbol [ method %tmp.28 98 24 30 ];
         %tmp.28 = getv function %tmp.27 :method;
         %tmp.30 = const :nextStep;
-        symbol [ nextStep %tmp.30 97 32 40 const ];
+        symbol [ nextStep %tmp.30 98 32 40 const ];
         %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
-        symbol [ stepDuration %tmp.33 97 43 55 ];
+        symbol [ stepDuration %tmp.33 98 43 55 ];
         %tmp.33 = getv ? :stepDuration;
         %tmp.34 = false;
         invoke %tmp.25 %tmp.26(%tmp.31, %tmp.33, %tmp.34);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_22_98_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_8_98_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_95_8_98_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_86_35_99_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_22_99_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_8_99_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_96_8_99_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_87_35_100_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 101; @symbol_functiondef = [updateAnimation,101,13,28]; ]
-    function updateAnimation() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_101_31_109_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 102 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_8_102_33_if_stmt:
-        symbol [ isActive %tmp.2 102 13 21 ];
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 102; @symbol_functiondef = [updateAnimation,102,13,28]; ]
+    function updateAnimation() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_39_110_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 103 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_8_103_33_if_stmt:
+        symbol [ isActive %tmp.2 103 13 21 ];
         %tmp.2 = getv ? :isActive;
         %tmp.3 = not %tmp.2;
-        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_8_102_33_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_8_102_33_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_23_102_33_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 102 25 ]
+        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_8_103_33_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_8_103_33_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_23_103_33_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 103 25 ]
         ret ?;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_23_102_33_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_8_102_33_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_8_102_33_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 104 8 ]
-        symbol [ animationProgress %tmp.5 104 28 45 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_23_103_33_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_8_103_33_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_103_8_103_33_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 105 8 ]
+        symbol [ animationProgress %tmp.5 105 28 45 ];
         %tmp.5 = getv ? :animationProgress;
         %tmp.6 = 0.05;
         %tmp.7 = add %tmp.5 %tmp.6;
-        symbol [ animationProgress ? 104 8 25 ];
+        symbol [ animationProgress ? 105 8 25 ];
         putv self :animationProgress %tmp.7;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 105 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_8_107_8_if_stmt:
-        symbol [ animationProgress %tmp.9 105 12 29 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 106 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_8_108_8_if_stmt:
+        symbol [ animationProgress %tmp.9 106 12 29 ];
         %tmp.9 = getv ? :animationProgress;
         %tmp.10 = 1.0;
         %tmp.11 = gt %tmp.9 %tmp.10;
-        bf %tmp.11 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_8_107_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_8_107_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_37_107_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 106 12 ]
+        bf %tmp.11 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_8_108_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_8_108_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_37_108_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 107 12 ]
         %tmp.12 = 1.0;
-        symbol [ animationProgress ? 106 12 29 ];
+        symbol [ animationProgress ? 107 12 29 ];
         putv self :animationProgress %tmp.12;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_37_107_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_8_107_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_105_8_107_8_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 108 8 ]
-        symbol [ WatchUi %tmp.13 108 8 15 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_37_108_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_8_108_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_106_8_108_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 109 8 ]
+        symbol [ WatchUi %tmp.13 109 8 15 ];
         %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.14 108 16 29 ];
+        symbol [ requestUpdate %tmp.14 109 16 29 ];
         %tmp.14 = getv function %tmp.13 :requestUpdate;
         invoke %tmp.13 %tmp.14();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_101_31_109_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_102_39_110_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 111; @symbol_functiondef = [nextStep,111,13,21]; ]
-    function nextStep() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_111_24_120_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 112 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_8_112_33_if_stmt:
-        symbol [ isActive %tmp.2 112 13 21 ];
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 112; @symbol_functiondef = [nextStep,112,13,21]; ]
+    function nextStep() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_32_121_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 113 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_8_113_33_if_stmt:
+        symbol [ isActive %tmp.2 113 13 21 ];
         %tmp.2 = getv ? :isActive;
         %tmp.3 = not %tmp.2;
-        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_8_112_33_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_8_112_33_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_23_112_33_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 112 25 ]
+        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_8_113_33_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_8_113_33_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_23_113_33_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 113 25 ]
         ret ?;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_23_112_33_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_8_112_33_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_8_112_33_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 114 8 ]
-        symbol [ step %tmp.5 114 16 20 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_23_113_33_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_8_113_33_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_113_8_113_33_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 115 8 ]
+        symbol [ step %tmp.5 115 16 20 ];
         %tmp.5 = getv ? :step;
         %tmp.6 = 1;
         %tmp.7 = add %tmp.5 %tmp.6;
         %tmp.8 = 4;
         %tmp.9 = mod %tmp.7 %tmp.8;
-        symbol [ step ? 114 8 12 ];
+        symbol [ step ? 115 8 12 ];
         putv self :step %tmp.9;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 115 8 ]
-        %tmp.10 = 0.0;
-        symbol [ animationProgress ? 115 8 25 ];
-        putv self :animationProgress %tmp.10;
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 116 8 ]
-        symbol [ WatchUi %tmp.11 116 8 15 ];
+        %tmp.10 = 0.0;
+        symbol [ animationProgress ? 116 8 25 ];
+        putv self :animationProgress %tmp.10;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 117 8 ]
+        symbol [ WatchUi %tmp.11 117 8 15 ];
         %tmp.11 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.12 116 16 29 ];
+        symbol [ requestUpdate %tmp.12 117 16 29 ];
         %tmp.12 = getv function %tmp.11 :requestUpdate;
         invoke %tmp.11 %tmp.12();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 118 8 ]
-        symbol [ Sys %tmp.15 118 20 23 ];
-        %tmp.15 = getm $.Toybox.System;
-        symbol [ Timer %tmp.16 118 24 29 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 119 8 ]
+        symbol [ Timer %tmp.15 119 20 25 ];
+        %tmp.15 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.16 119 26 31 ];
         %tmp.16 = getv function ? %tmp.15 :Timer;
         %tmp.13 = newc %tmp.16 ();
-        symbol [ timer ? 118 8 13 ];
+        symbol [ timer ? 119 8 13 ];
         putv self :timer %tmp.13;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 119 8 ]
-        symbol [ timer %tmp.18 119 8 13 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 120 8 ]
+        symbol [ timer %tmp.18 120 8 13 ];
         %tmp.18 = getv ? :timer;
-        symbol [ start %tmp.19 119 14 19 ];
+        symbol [ start %tmp.19 120 14 19 ];
         %tmp.19 = getv function %tmp.18 :start;
         %tmp.20 = self;
-        symbol [ method %tmp.21 119 20 26 ];
+        symbol [ method %tmp.21 120 20 26 ];
         %tmp.21 = getv function %tmp.20 :method;
         %tmp.23 = const :nextStep;
-        symbol [ nextStep %tmp.23 119 28 36 const ];
+        symbol [ nextStep %tmp.23 120 28 36 const ];
         %tmp.24 = invoke %tmp.20 %tmp.21(%tmp.23);
-        symbol [ stepDuration %tmp.26 119 39 51 ];
+        symbol [ stepDuration %tmp.26 120 39 51 ];
         %tmp.26 = getv ? :stepDuration;
         %tmp.27 = false;
         invoke %tmp.18 %tmp.19(%tmp.24, %tmp.26, %tmp.27);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_111_24_120_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_112_32_121_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 122; @symbol_functiondef = [getStepColor,122,13,25]; @symbol_param<0> = [currentStep,122,26,37]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 123; @symbol_functiondef = [getStepColor,123,13,25]; @symbol_param<0> = [currentStep,123,26,37]; ]
     function getStepColor(currentStep) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_122_39_132_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 123 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_8_131_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_39_133_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 124 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_8_132_8_if_stmt:
         %tmp.1 = lgetv %currentStep;
-        symbol [ currentStep %tmp.1 123 12 23 ];
+        symbol [ currentStep %tmp.1 124 12 23 ];
         %tmp.2 = 0;
         %tmp.3 = eq %tmp.1 %tmp.2;
-        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_8_131_8_if_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_8_131_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_30_125_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 124 12 ]
-        symbol [ Gfx %tmp.4 124 19 22 ];
+        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_8_132_8_if_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_8_132_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_30_126_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 125 12 ]
+        symbol [ Gfx %tmp.4 125 19 22 ];
         %tmp.4 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.5 124 23 33 ];
+        symbol [ COLOR_BLUE %tmp.5 125 23 33 ];
         %tmp.5 = getv %tmp.4 :COLOR_BLUE;
         ret %tmp.5;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_30_125_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_8_131_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_8_131_8_if_false:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 125 15 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_15_131_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_30_126_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_8_132_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_8_132_8_if_false:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 126 15 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_15_132_8_if_stmt:
         %tmp.6 = lgetv %currentStep;
-        symbol [ currentStep %tmp.6 125 19 30 ];
+        symbol [ currentStep %tmp.6 126 19 30 ];
         %tmp.7 = 1;
         %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_15_131_8_if_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_15_131_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_37_127_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 126 12 ]
-        symbol [ Gfx %tmp.9 126 19 22 ];
+        bf %tmp.8 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_15_132_8_if_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_15_132_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_37_128_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 127 12 ]
+        symbol [ Gfx %tmp.9 127 19 22 ];
         %tmp.9 = getm $.Toybox.Graphics;
-        symbol [ COLOR_YELLOW %tmp.10 126 23 35 ];
+        symbol [ COLOR_YELLOW %tmp.10 127 23 35 ];
         %tmp.10 = getv %tmp.9 :COLOR_YELLOW;
         ret %tmp.10;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_37_127_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_15_131_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_15_131_8_if_false:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 127 15 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_15_131_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_37_128_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_15_132_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_15_132_8_if_false:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 128 15 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_15_132_8_if_stmt:
         %tmp.11 = lgetv %currentStep;
-        symbol [ currentStep %tmp.11 127 19 30 ];
+        symbol [ currentStep %tmp.11 128 19 30 ];
         %tmp.12 = 2;
         %tmp.13 = eq %tmp.11 %tmp.12;
-        bf %tmp.13 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_15_131_8_if_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_15_131_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_37_129_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 128 12 ]
-        symbol [ Gfx %tmp.14 128 19 22 ];
+        bf %tmp.13 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_15_132_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_15_132_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_37_130_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 129 12 ]
+        symbol [ Gfx %tmp.14 129 19 22 ];
         %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.15 128 23 34 ];
+        symbol [ COLOR_GREEN %tmp.15 129 23 34 ];
         %tmp.15 = getv %tmp.14 :COLOR_GREEN;
         ret %tmp.15;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_37_129_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_15_131_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_15_131_8_if_else_false:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_129_15_131_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 130 12 ]
-        symbol [ Gfx %tmp.16 130 19 22 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_37_130_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_15_132_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_15_132_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_130_15_132_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 131 12 ]
+        symbol [ Gfx %tmp.16 131 19 22 ];
         %tmp.16 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.17 130 23 35 ];
+        symbol [ COLOR_ORANGE %tmp.17 131 23 35 ];
         %tmp.17 = getv %tmp.16 :COLOR_ORANGE;
         ret %tmp.17;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_129_15_131_8_stop:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_127_15_131_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_125_15_131_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_8_131_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_122_39_132_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_130_15_132_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_128_15_132_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_126_15_132_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_124_8_132_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_123_39_133_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 134; @symbol_functiondef = [getCircleRadius,134,13,28]; @symbol_param<0> = [currentStep,134,29,40]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 135; @symbol_functiondef = [getCircleRadius,135,13,28]; @symbol_param<0> = [currentStep,135,29,40]; ]
     function getCircleRadius(currentStep) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_134_42_145_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 135 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_134_42_145_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_134_42_145_4_stop" ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_135_42_146_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 136 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_135_42_146_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_135_42_146_4_stop" ]
         %minRadius.1 = local;
-        symbol [ minRadius %minRadius.1 135 12 21 ];
+        symbol [ minRadius %minRadius.1 136 12 21 ];
         %tmp.1 = 15;
         lputv %minRadius.1 %tmp.1;
-        symbol [ minRadius %minRadius.1 135 12 21 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 136 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_134_42_145_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_134_42_145_4_stop" ]
+        symbol [ minRadius %minRadius.1 136 12 21 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 137 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_135_42_146_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_135_42_146_4_stop" ]
         %maxRadius.2 = local;
-        symbol [ maxRadius %maxRadius.2 136 12 21 ];
+        symbol [ maxRadius %maxRadius.2 137 12 21 ];
         %tmp.2 = 40;
         lputv %maxRadius.2 %tmp.2;
-        symbol [ maxRadius %maxRadius.2 136 12 21 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 138 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_8_144_8_if_stmt:
+        symbol [ maxRadius %maxRadius.2 137 12 21 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 139 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_8_145_8_if_stmt:
         %tmp.3 = lgetv %currentStep;
-        symbol [ currentStep %tmp.3 138 12 23 ];
+        symbol [ currentStep %tmp.3 139 12 23 ];
         %tmp.4 = 0;
         %tmp.5 = eq %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_8_144_8_if_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_8_144_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_30_140_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 139 12 ]
+        bf %tmp.5 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_8_145_8_if_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_8_145_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_30_141_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 140 12 ]
         %tmp.6 = lgetv %minRadius.1;
-        symbol [ minRadius %tmp.6 139 19 28 ];
+        symbol [ minRadius %tmp.6 140 19 28 ];
         %tmp.7 = lgetv %maxRadius.2;
-        symbol [ maxRadius %tmp.7 139 33 42 ];
+        symbol [ maxRadius %tmp.7 140 33 42 ];
         %tmp.8 = lgetv %minRadius.1;
-        symbol [ minRadius %tmp.8 139 45 54 ];
+        symbol [ minRadius %tmp.8 140 45 54 ];
         %tmp.9 = sub %tmp.7 %tmp.8;
-        symbol [ animationProgress %tmp.11 139 58 75 ];
+        symbol [ animationProgress %tmp.11 140 58 75 ];
         %tmp.11 = getv ? :animationProgress;
         %tmp.12 = mul %tmp.9 %tmp.11;
         %tmp.13 = add %tmp.6 %tmp.12;
         ret %tmp.13;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_30_140_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_8_144_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_8_144_8_if_false:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 140 15 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_15_144_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_30_141_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_8_145_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_8_145_8_if_false:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 141 15 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_15_145_8_if_stmt:
         %tmp.14 = lgetv %currentStep;
-        symbol [ currentStep %tmp.14 140 19 30 ];
+        symbol [ currentStep %tmp.14 141 19 30 ];
         %tmp.15 = 2;
         %tmp.16 = eq %tmp.14 %tmp.15;
-        bf %tmp.16 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_15_144_8_if_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_15_144_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_37_142_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 141 12 ]
+        bf %tmp.16 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_15_145_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_15_145_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_37_143_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 142 12 ]
         %tmp.17 = lgetv %maxRadius.2;
-        symbol [ maxRadius %tmp.17 141 19 28 ];
+        symbol [ maxRadius %tmp.17 142 19 28 ];
         %tmp.18 = lgetv %maxRadius.2;
-        symbol [ maxRadius %tmp.18 141 33 42 ];
+        symbol [ maxRadius %tmp.18 142 33 42 ];
         %tmp.19 = lgetv %minRadius.1;
-        symbol [ minRadius %tmp.19 141 45 54 ];
+        symbol [ minRadius %tmp.19 142 45 54 ];
         %tmp.20 = sub %tmp.18 %tmp.19;
-        symbol [ animationProgress %tmp.22 141 58 75 ];
+        symbol [ animationProgress %tmp.22 142 58 75 ];
         %tmp.22 = getv ? :animationProgress;
         %tmp.23 = mul %tmp.20 %tmp.22;
         %tmp.24 = sub %tmp.17 %tmp.23;
         ret %tmp.24;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_37_142_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_15_144_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_15_144_8_if_else_false:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_142_15_144_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 143 12 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_begin:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_37_143_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_15_145_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_15_145_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_15_145_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 144 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_begin:
         %tmp.25 = lgetv %currentStep;
-        symbol [ currentStep %tmp.25 143 20 31 ];
+        symbol [ currentStep %tmp.25 144 20 31 ];
         %tmp.26 = 1;
         %tmp.27 = eq %tmp.25 %tmp.26;
-        bf %tmp.27 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_true:
+        bf %tmp.27 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_true:
         %tmp.28 = lgetv %maxRadius.2;
-        symbol [ maxRadius %tmp.28 143 40 49 ];
+        symbol [ maxRadius %tmp.28 144 40 49 ];
         push %tmp.28;
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_else_false:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_else_false:
         %tmp.29 = lgetv %minRadius.1;
-        symbol [ minRadius %tmp.29 143 52 61 ];
+        symbol [ minRadius %tmp.29 144 52 61 ];
         push %tmp.29;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_end:
-        %tmp.30 = phi [%tmp.27 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_begin] [%tmp.28 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_true] [%tmp.29 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_else_false] [%tmp.30 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_19_143_52_end];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_end:
+        %tmp.30 = phi [%tmp.27 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_begin] [%tmp.28 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_true] [%tmp.29 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_else_false] [%tmp.30 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_144_19_144_52_end];
         ret %tmp.30;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_142_15_144_8_stop:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_140_15_144_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_138_8_144_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_134_42_145_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_143_15_145_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_141_15_145_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_139_8_145_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_135_42_146_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 147; @symbol_functiondef = [onHide,147,13,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 148; @symbol_functiondef = [onHide,148,13,19]; ]
     function onHide() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_147_22_157_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 148 8 ]
-        %tmp.1 = false;
-        symbol [ isActive ? 148 8 16 ];
-        putv self :isActive %tmp.1;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_148_22_158_4_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 149 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_8_152_8_if_stmt:
-        symbol [ timer %tmp.3 149 12 17 ];
+        %tmp.1 = false;
+        symbol [ isActive ? 149 8 16 ];
+        putv self :isActive %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 150 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_8_153_8_if_stmt:
+        symbol [ timer %tmp.3 150 12 17 ];
         %tmp.3 = getv ? :timer;
         %tmp.4 = null;
         %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_8_152_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_8_152_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_27_152_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 150 12 ]
-        symbol [ timer %tmp.7 150 12 17 ];
+        bf %tmp.5 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_8_153_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_8_153_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_27_153_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 151 12 ]
+        symbol [ timer %tmp.7 151 12 17 ];
         %tmp.7 = getv ? :timer;
         %tmp.8 = as %tmp.7 { (!Null) };
-        symbol [ stop %tmp.9 150 18 22 ];
+        symbol [ stop %tmp.9 151 18 22 ];
         %tmp.9 = getv function %tmp.8 :stop;
         invoke %tmp.8 %tmp.9();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 151 12 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 152 12 ]
         %tmp.10 = null;
-        symbol [ timer ? 151 12 17 ];
+        symbol [ timer ? 152 12 17 ];
         putv self :timer %tmp.10;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_27_152_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_8_152_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_149_8_152_8_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 153 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_8_156_8_if_stmt:
-        symbol [ animationTimer %tmp.12 153 12 26 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_27_153_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_8_153_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_150_8_153_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 154 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_8_157_8_if_stmt:
+        symbol [ animationTimer %tmp.12 154 12 26 ];
         %tmp.12 = getv ? :animationTimer;
         %tmp.13 = null;
         %tmp.14 = ne %tmp.12 %tmp.13;
-        bf %tmp.14 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_8_156_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_8_156_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_36_156_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 154 12 ]
-        symbol [ animationTimer %tmp.16 154 12 26 ];
+        bf %tmp.14 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_8_157_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_8_157_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_36_157_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 155 12 ]
+        symbol [ animationTimer %tmp.16 155 12 26 ];
         %tmp.16 = getv ? :animationTimer;
         %tmp.17 = as %tmp.16 { (!Null) };
-        symbol [ stop %tmp.18 154 27 31 ];
+        symbol [ stop %tmp.18 155 27 31 ];
         %tmp.18 = getv function %tmp.17 :stop;
         invoke %tmp.17 %tmp.18();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 155 12 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 156 12 ]
         %tmp.19 = null;
-        symbol [ animationTimer ? 155 12 26 ];
+        symbol [ animationTimer ? 156 12 26 ];
         putv self :animationTimer %tmp.19;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_36_156_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_8_156_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_153_8_156_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_147_22_157_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_36_157_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_8_157_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_154_8_157_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_148_22_158_4_stop:
     }
 }
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 160; @symbol_classdef = [BreathingDelegate,160,6,23]; @symbol_extends<0> = [WatchUi,160,32,39]; @symbol_extends<1> = [BehaviorDelegate,160,40,56]; ]
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 161; @symbol_classdef = [BreathingDelegate,161,6,23]; @symbol_extends<0> = [WatchUi,161,32,39]; @symbol_extends<1> = [BehaviorDelegate,161,40,56]; ]
 class BreathingDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 160; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 161; ]
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 160; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 161; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 162; @symbol_functiondef = [initialize,162,13,23]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 163; @symbol_functiondef = [initialize,163,13,23]; ]
     function initialize() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_162_26_164_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 163 8 ]
-        symbol [ BehaviorDelegate %tmp.2 163 8 24 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_163_26_165_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 164 8 ]
+        symbol [ BehaviorDelegate %tmp.2 164 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 163 25 35 ];
+        symbol [ initialize %tmp.3 164 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_162_26_164_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_163_26_165_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 166; @symbol_functiondef = [onBack,166,13,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 167; @symbol_functiondef = [onBack,167,13,19]; ]
     function onBack() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_166_22_169_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 167 8 ]
-        symbol [ WatchUi %tmp.1 167 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 167 16 23 ];
-        %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 167 24 31 ];
-        %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.4 167 32 42 ];
-        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
-        invoke %tmp.1 %tmp.2(%tmp.4);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_167_22_170_4_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 168 8 ]
-        %tmp.5 = true;
-        ret %tmp.5;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_166_22_169_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 171; @symbol_functiondef = [onSelect,171,13,21]; ]
-    function onSelect() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_171_24_175_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 173 8 ]
-        symbol [ WatchUi %tmp.1 173 8 15 ];
+        symbol [ WatchUi %tmp.1 168 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 173 16 23 ];
+        symbol [ popView %tmp.2 168 16 23 ];
         %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 173 24 31 ];
+        symbol [ WatchUi %tmp.3 168 24 31 ];
         %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.4 173 32 42 ];
+        symbol [ SLIDE_DOWN %tmp.4 168 32 42 ];
         %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 174 8 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 169 8 ]
         %tmp.5 = true;
         ret %tmp.5;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_171_24_175_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_167_22_170_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 172; @symbol_functiondef = [onSelect,172,13,21]; ]
+    function onSelect() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_172_24_176_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 174 8 ]
+        symbol [ WatchUi %tmp.1 174 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 174 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 174 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.4 174 32 42 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc" 175 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_BreathingView_mc_172_24_176_4_stop:
     }
 }
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\BreathingView.mc"; @line = 1; ]

@@ -1,6 +1,7 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Application as App;
 using Toybox.System as Sys;
+using Toybox.Timer;
 
 class StressApp extends App.AppBase {
 
@@ -15,7 +16,7 @@ class StressApp extends App.AppBase {
 
     function onStart(state) {
         // Start a timer to simulate stress changes
-        timerId = new Sys.Timer();
+        timerId = new Timer.Timer();
         timerId.start(method(:simulateStress), 5000, true); // every 5 sec, repeating
     }
 
@@ -31,7 +32,7 @@ class StressApp extends App.AppBase {
         return [mainView, new MainViewDelegate()];
     }
 
-    function simulateStress() {
+    function simulateStress() as Void {
         // Random stress for testing
         stressLevel = Math.rand() % 100 / 100.0; // 0.0 to 1.0
 
@@ -61,3 +62,4 @@ class StressApp extends App.AppBase {
 function getApp() {
     return App.getApp();
 }
+
