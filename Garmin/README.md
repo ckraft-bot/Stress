@@ -49,25 +49,30 @@ Project structure
             MainView.mc
             MenuView.mc
 
-# Build the app for the sim
-`cd C:\Users\Clair\Documents\GitHub\Stress\Garmin`
-
-- Create bin folder (one time event)
-`mkdir bin -ErrorAction SilentlyContinue`
-`New-Item -ItemType Directory -Force -Path bin`
-
-- Build app: use monkeyc.bat instead of jar to build the app
-this will compile all my `.mc` files and create `bin\stress.prg`
-   - launch the connect IQ sim
-   - load the app on the fr265 virtual app
-   - start running stress monitoring app
-```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```
-
-# For testing (in the terminal)
+# Build and run the app in the CIQ simulator 
 1. cd to project root `cd C:\Users\<path>\Garmin`
 2. ctrl + shift + p
    - Monkey C: Verify Installation
    - Monkey C: Build Current Project
    - Developer: Reload Window
-3. Launch the sim ```Start-Process "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\simulator.exe"```
-3. Run the simulator ```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```
+3. create `bin` folder 
+```
+mkdir bin -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path bin
+```
+4. Build the app (including dev key) 
+```
+& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -f "C:\Users\Clair\Documents\GitHub\Stress\Garmin\project.jungle" -y "C:\Users\Clair\Desktop\Sandbox\garmin_developer_key" -o "C:\Users\Clair\Documents\GitHub\Stress\Garmin\bin\stress.prg"
+```
+5. Launch sim
+```
+Start-Process "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\simulator.exe"
+```
+6. Run app
+```
+& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265
+```
+7. Kill sim
+`taskkill /IM ConnectIQ.exe /F`
+8. Just run the powershell that handles steps 1-7
+`.\run_garmin.ps1`

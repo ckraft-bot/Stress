@@ -1,0 +1,180 @@
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; @symbol_usingAlias = [WatchUi,1,24,31]; ]
+using Toybox.WatchUi as :WatchUi;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Application,2,13,24]; @symbol_usingAlias = [App,2,28,31]; ]
+using Toybox.Application as :App;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Timer,3,13,18]; @symbol_usingAlias = [Timer,3,22,27]; ]
+using Toybox.Timer as :Timer;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [System,4,13,19]; @symbol_usingAlias = [Sys,4,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 6; @symbol_classdef = [StressApp,6,6,15]; @symbol_extends<0> = [App,6,24,27]; @symbol_extends<1> = [AppBase,6,28,35]; ]
+class StressApp extends App.AppBase {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 8; @position = 15; @symbol_vardef = [stressLevel,8,15,26]; ]
+    protected
+    var stressLevel = 0.0;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 9; @position = 15; @symbol_vardef = [timerId,9,15,22]; ]
+    protected
+    var timerId;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 10; @position = 15; @symbol_vardef = [mainView,10,15,23]; ]
+    protected
+    var mainView;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; ]
+    function initialize() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_12_26_14_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 13 8 ]
+        symbol [ AppBase %tmp.2 13 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 13 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_12_26_14_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 16; @symbol_functiondef = [onStart,16,13,20]; @symbol_param<0> = [state,16,21,26]; ]
+    function onStart(state) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_16_28_20_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 18 8 ]
+        symbol [ Timer %tmp.3 18 22 27 ];
+        %tmp.3 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.4 18 28 33 ];
+        %tmp.4 = getv function ? %tmp.3 :Timer;
+        %tmp.1 = newc %tmp.4 ();
+        symbol [ timerId ? 18 8 15 ];
+        putv self :timerId %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 19 8 ]
+        symbol [ timerId %tmp.6 19 8 15 ];
+        %tmp.6 = getv ? :timerId;
+        symbol [ start %tmp.7 19 16 21 ];
+        %tmp.7 = getv function %tmp.6 :start;
+        %tmp.8 = self;
+        symbol [ method %tmp.9 19 22 28 ];
+        %tmp.9 = getv function %tmp.8 :method;
+        %tmp.11 = const :simulateStress;
+        symbol [ simulateStress %tmp.11 19 30 44 const ];
+        %tmp.12 = invoke %tmp.8 %tmp.9(%tmp.11);
+        %tmp.13 = 5000;
+        %tmp.14 = true;
+        invoke %tmp.6 %tmp.7(%tmp.12, %tmp.13, %tmp.14);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_16_28_20_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 22; @symbol_functiondef = [onStop,22,13,19]; @symbol_param<0> = [state,22,20,25]; ]
+    function onStop(state) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_22_27_27_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 23 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_8_26_8_if_stmt:
+        symbol [ timerId %tmp.2 23 12 19 ];
+        %tmp.2 = getv ? :timerId;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_8_26_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_8_26_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_29_26_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 24 12 ]
+        symbol [ timerId %tmp.6 24 12 19 ];
+        %tmp.6 = getv ? :timerId;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ stop %tmp.8 24 20 24 ];
+        %tmp.8 = getv function %tmp.7 :stop;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 25 12 ]
+        %tmp.9 = null;
+        symbol [ timerId ? 25 12 19 ];
+        putv self :timerId %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_29_26_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_8_26_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_23_8_26_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_22_27_27_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 29; @symbol_functiondef = [getInitialView,29,13,27]; ]
+    function getInitialView() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_29_30_32_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 30 8 ]
+        symbol [ MainView %tmp.4 30 23 31 ];
+        %tmp.4 = getv ? :MainView;
+        symbol [ stressLevel %tmp.6 30 32 43 ];
+        %tmp.6 = getv ? :stressLevel;
+        %tmp.1 = newc %tmp.4 (%tmp.6);
+        symbol [ mainView ? 30 8 16 ];
+        putv self :mainView %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 31 8 ]
+        %tmp.7 = newa 2;
+        symbol [ mainView %tmp.9 31 16 24 ];
+        %tmp.9 = getv ? :mainView;
+        %tmp.10 = dup %tmp.7;
+        %tmp.11 = aputv %tmp.10 0 %tmp.9;
+        symbol [ MainViewDelegate %tmp.15 31 30 46 ];
+        %tmp.15 = getv ? :MainViewDelegate;
+        %tmp.12 = newc %tmp.15 ();
+        %tmp.16 = dup %tmp.11;
+        %tmp.17 = aputv %tmp.16 1 %tmp.12;
+        ret %tmp.17;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_29_30_32_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 34; @symbol_functiondef = [simulateStress,34,13,27]; ]
+    function simulateStress() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_34_38_43_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 36 8 ]
+        symbol [ Math %tmp.2 36 22 26 ];
+        %tmp.2 = getv ? :Math;
+        symbol [ rand %tmp.3 36 27 31 ];
+        %tmp.3 = getv function %tmp.2 :rand;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 100;
+        %tmp.6 = mod %tmp.4 %tmp.5;
+        %tmp.7 = 100.0;
+        %tmp.8 = div %tmp.6 %tmp.7;
+        symbol [ stressLevel ? 36 8 19 ];
+        putv self :stressLevel %tmp.8;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 38 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_8_40_8_if_stmt:
+        symbol [ mainView %tmp.10 38 12 20 ];
+        %tmp.10 = getv ? :mainView;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_8_40_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_8_40_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_30_40_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 39 12 ]
+        symbol [ mainView %tmp.14 39 12 20 ];
+        %tmp.14 = getv ? :mainView;
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ updateStress %tmp.16 39 21 33 ];
+        %tmp.16 = getv function %tmp.15 :updateStress;
+        symbol [ stressLevel %tmp.18 39 34 45 ];
+        %tmp.18 = getv ? :stressLevel;
+        invoke %tmp.15 %tmp.16(%tmp.18);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_30_40_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_8_40_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_38_8_40_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_34_38_43_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 45; @symbol_functiondef = [getStressLevel,45,13,27]; ]
+    function getStressLevel() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_45_30_47_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 46 8 ]
+        symbol [ stressLevel %tmp.2 46 15 26 ];
+        %tmp.2 = getv ? :stressLevel;
+        ret %tmp.2;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_45_30_47_4_stop:
+    }
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 50; @symbol_functiondef = [getApp,50,9,15]; ]
+function getApp() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_50_18_52_0_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc" 51 4 ]
+    symbol [ App %tmp.1 51 11 14 ];
+    %tmp.1 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.2 51 15 21 ];
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    ret %tmp.3;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_App_mc_50_18_52_0_stop:
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\App.mc"; @line = 1; ]
+<init> {
+}
