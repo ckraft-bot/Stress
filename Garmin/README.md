@@ -61,7 +61,16 @@ this will compile all my `.mc` files and create `bin\stress.prg`
 ```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\garmin_developer_key```
 
 - launch in sim
-```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```
+```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\Sandbox\garmin_developer_key```
+
+- Verify you're in the right place
+pwd
+
+- Check monkey.jungle exists
+Test-Path monkey.jungle
+
+- Check developer key exists  
+Test-Path C:\Users\Clair\Desktop\Sandbox\garmin_developer_key
 
 # For testing (in the terminal)
 1. cd to project root `cd C:\Users\<path>\Garmin`

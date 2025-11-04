@@ -122,7 +122,7 @@ class FiveFourThreeTwoOneView extends WatchUi.View {
 
     function startTimer() {
         if (isActive && step < STEPS.size()) {
-            timer = new Sys.Timer.new();
+            timer = new Sys.Timer();
             timer.start(method(:nextStep), stepDuration, false);
         }
     }
@@ -132,14 +132,14 @@ class FiveFourThreeTwoOneView extends WatchUi.View {
             return;
         }
 
-        step += 1;
+        step = step + 1;
         WatchUi.requestUpdate();
 
         if (step < STEPS.size()) {
             startTimer();
         } else {
             // Exercise complete - auto-exit after 3 seconds
-            timer = new Sys.Timer.new();
+            timer = new Sys.Timer();
             timer.start(method(:autoExit), 3000, false);
         }
     }

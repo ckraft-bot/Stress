@@ -88,12 +88,12 @@ class BreathingView extends WatchUi.View {
         animationProgress = 0.0;
         
         // Faster updates for smooth animation
-        animationTimer = new Sys.Timer.new();
+        animationtimer = new Sys.Timer();
         animationTimer.start(method(:updateAnimation), 50, true); // 50ms updates
         
         // Step timer
         if (isActive) {
-            timer = new Sys.Timer.new();
+            timer = new Sys.Timer();
             timer.start(method(:nextStep), stepDuration, false);
         }
     }
@@ -115,7 +115,7 @@ class BreathingView extends WatchUi.View {
         animationProgress = 0.0;
         WatchUi.requestUpdate();
         
-        timer = new Sys.Timer.new();
+        timer = new Sys.Timer();
         timer.start(method(:nextStep), stepDuration, false);
     }
 

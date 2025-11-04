@@ -15,7 +15,7 @@ class StressApp extends App.AppBase {
 
     function onStart(state) {
         // Start a timer to simulate stress changes
-        timerId = new Sys.Timer.new();
+        timerId = new Sys.Timer();
         timerId.start(method(:simulateStress), 5000, true); // every 5 sec, repeating
     }
 
@@ -28,7 +28,7 @@ class StressApp extends App.AppBase {
 
     function getInitialView() {
         mainView = new MainView(stressLevel);
-        return [mainView, new MainViewDelegate()]; // Return view AND delegate
+        return [mainView, new MainViewDelegate()];
     }
 
     function simulateStress() {
@@ -46,7 +46,8 @@ class StressApp extends App.AppBase {
             WatchUi.pushView(new BreathingView(), new BreathingDelegate(), WatchUi.SLIDE_UP);
         } else if (stressLevel > 0.4 && stressLevel <= 0.7 && lastExercise != "grounding") {
             lastExercise = "grounding";
-            WatchUi.pushView(new FiveFourThreeTwoOneView(), new FiveFourThreeTwoOneDelegate(), WatchUi.SLIDE_UP);
+            var groundingView = new FiveFourThreeTwoOneView();
+            WatchUi.pushView(groundingView, new FiveFourThreeTwoOneDelegate(groundingView), WatchUi.SLIDE_UP);
         } else if (stressLevel <= 0.4) {
             lastExercise = ""; // reset when stress is low
         }
