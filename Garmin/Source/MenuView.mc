@@ -1,15 +1,22 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Gfx;
 
-class MenuView extends WatchUi.View {
-    hidden var cursor = 0;
-    hidden const items = ["Breathing", "5-4-3-2-1"];
+class MainView extends WatchUi.View {
+    hidden var stressLevel;
 
-    function initialize() {
+    function initialize(level) {
         View.initialize();
+        stressLevel = level;
     }
 
+    function onLayout(dc) { }
+
     function onShow() {
+        WatchUi.requestUpdate();
+    }
+
+    function updateStress(level) {
+        stressLevel = level;
         WatchUi.requestUpdate();
     }
 
@@ -18,114 +25,53 @@ class MenuView extends WatchUi.View {
         var height = dc.getHeight();
         var centerX = width / 2;
 
-        // Clear screen
+        // clear screen
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
-        // Draw title
+        // stress %
+        var stressPercent = (stressLevel * 100).toNumber();
+        dc.setColor(getStressColor(stressLevel), Gfx.COLOR_TRANSPARENT);
+        dc.drawText(centerX, height*0.3, Gfx.FONT_NUMBER_HOT, stressPercent.format("%d") + "%", Gfx.TEXT_JUSTIFY_CENTER);
+
+        // label
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(
-            centerX,
-            height * 0.15,
-            Gfx.FONT_MEDIUM,
-            "Choose Exercise",
-            Gfx.TEXT_JUSTIFY_CENTER
-        );
+        dc.drawText(centerX, height*0.5, Gfx.FONT_SMALL, "STRESS LEVEL", Gfx.TEXT_JUSTIFY_CENTER);
 
-        // Draw menu items
-        var startY = height * 0.35;
-        var itemSpacing = height * 0.15;
+        // message
+        var message = getStressMessage(stressLevel);
+        dc.drawText(centerX, height*0.7, Gfx.FONT_TINY, message, Gfx.TEXT_JUSTIFY_CENTER);
 
-        for (var i = 0; i < items.size(); i++) {
-            var y = startY + (i * itemSpacing);
-            var isSelected = (i == cursor);
-
-            // Highlight selected item
-            if (isSelected) {
-                dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-                dc.fillRectangle(10, y - 5, width - 20, 30);
-                dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-            } else {
-                dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-            }
-
-            var prefix = isSelected ? "▶ " : "   ";
-            dc.drawText(
-                centerX,
-                y,
-                Gfx.FONT_SMALL,
-                prefix + items[i],
-                Gfx.TEXT_JUSTIFY_CENTER
-            );
-        }
-
-        // Draw instruction
-        dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(
-            centerX,
-            height * 0.85,
-            Gfx.FONT_XTINY,
-            "SELECT to start",
-            Gfx.TEXT_JUSTIFY_CENTER
-        );
+        // hint
+        dc.drawText(centerX, height - 20, Gfx.FONT_XTINY, "Press SELECT to choose exercise", Gfx.TEXT_JUSTIFY_CENTER);
     }
 
-    function moveCursor(direction) {
-        if (direction == :up) {
-            cursor = (cursor - 1 + items.size()) % items.size();
-        } else if (direction == :down) {
-            cursor = (cursor + 1) % items.size();
-        }
-        WatchUi.requestUpdate();
+    function getStressColor(level) {
+        if (level > 0.7) return Gfx.COLOR_RED;
+        else if (level > 0.4) return Gfx.COLOR_ORANGE;
+        else return Gfx.COLOR_GREEN;
     }
 
-    function selectItem() {
-        if (cursor == 0) {
-            WatchUi.pushView(
-                new BreathingView(),
-                new BreathingDelegate(),
-                WatchUi.SLIDE_UP
-            );
-        } else if (cursor == 1) {
-            var groundingView = new FiveFourThreeTwoOneView();
-            WatchUi.pushView(
-                groundingView,
-                new FiveFourThreeTwoOneDelegate(groundingView),
-                WatchUi.SLIDE_UP
-            );
-        }
+    function getStressMessage(level) {
+        if (level > 0.7) return "High Stress";
+        else if (level > 0.4) return "Moderate Stress";
+        else return "You are calm";
+    }
+
+    // --- Button handlers ---
+    function onSelect() {
+        var menu = new MenuView();
+        WatchUi.pushView(menu, new MenuViewDelegate(menu), WatchUi.SLIDE_UP);
         return true;
+    }
+
+    function onMenu() {
+        return onSelect(); // MENU button does same
     }
 }
 
-class MenuViewDelegate extends WatchUi.BehaviorDelegate {
-    hidden var view;
-
-    function initialize(menuView) {
+class MainViewDelegate extends WatchUi.BehaviorDelegate {
+    function initialize() {
         BehaviorDelegate.initialize();
-        view = menuView;
-    }
-
-    function onNextPage() {
-        // Swipe up or UP button
-        view.moveCursor(:down);
-        return true;
-    }
-
-    function onPreviousPage() {
-        // Swipe down or DOWN button
-        view.moveCursor(:up);
-        return true;
-    }
-
-    function onSelect() {
-        // Middle button or tap
-        return view.selectItem();
-    }
-
-    function onBack() {
-        // Back button
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        return true;
     }
 }

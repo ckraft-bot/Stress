@@ -1,190 +1,89 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Gfx;
+using Toybox.Timer as Timer;
 using Toybox.System as Sys;
-using Toybox.Timer;
 
 class FiveFourThreeTwoOneView extends WatchUi.View {
-    hidden var step = 0;
-    hidden var timer;
-    hidden var isActive = false;
-    hidden var stepDuration = 8000; // 8 seconds per step
-    
-    // 5-4-3-2-1 Grounding technique
-    hidden const STEPS = [
-        "Name 5 things\nyou can SEE",
-        "Name 4 things\nyou can TOUCH",
-        "Name 3 things\nyou can HEAR",
-        "Name 2 things\nyou can SMELL",
-        "Name 1 thing\nyou can TASTE"
-    ];
 
-    hidden const STEP_COUNTS = [5, 4, 3, 2, 1];
+    hidden var _steps = ["5", "4", "3", "2", "1"];
+    hidden var _index = 0;
+    hidden var _timer = null;
+    hidden var _delegate;
 
-    function initialize() {
+    function initialize(delegate) {
         View.initialize();
-    }
-
-    function onLayout(dc) {
-        // No layout needed
+        _delegate = delegate;
     }
 
     function onShow() {
-        step = 0;
-        isActive = true;
-        WatchUi.requestUpdate();
-        startTimer();
+        _index = 0;
+        nextStep();
+    }
+
+    function onHide() {
+        // Cancel timer if leaving view
+        if (_timer != null) {
+            _timer.cancel();
+            _timer = null;
+        }
+    }
+
+    function nextStep() {
+        // Cancel previous timer
+        if (_timer != null) {
+            _timer.cancel();
+            _timer = null;
+        }
+
+        if (_index < _steps.size()) {
+            WatchUi.requestUpdate();
+            Sys.println("Step: " + _steps[_index]);
+            _timer = Timer.Timer();
+            // Wait 1 second per step
+            _timer.start(method(:nextStep), 1000);
+            _index += 1;
+        } else {
+            // Exercise complete
+            if (_delegate != null && _delegate.respondsTo("onExerciseComplete")) {
+                _delegate.onExerciseComplete();
+            }
+            // Go back to main view
+            WatchUi.popView();
+        }
     }
 
     function onUpdate(dc) {
         var width = dc.getWidth();
         var height = dc.getHeight();
         var centerX = width / 2;
-        var centerY = height / 2;
 
-        // Clear screen
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
-        if (step < STEPS.size()) {
-            // Draw large number
-            dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(
-                centerX,
-                height * 0.2,
-                Gfx.FONT_NUMBER_HOT,
-                STEP_COUNTS[step].toString(),
-                Gfx.TEXT_JUSTIFY_CENTER
-            );
-
-            // Draw instruction
+        if (_index < _steps.size()) {
+            var stepText = _steps[_index];
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(
-                centerX,
-                centerY - 10,
-                Gfx.FONT_SMALL,
-                STEPS[step],
-                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
-            );
-
-            // Draw progress
-            dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(
-                centerX,
-                height * 0.8,
-                Gfx.FONT_TINY,
-                "Step " + (step + 1) + " of 5",
-                Gfx.TEXT_JUSTIFY_CENTER
-            );
-
-            // Draw progress bar
-            var barWidth = width * 0.8;
-            var barHeight = 6;
-            var barX = (width - barWidth) / 2;
-            var barY = height * 0.9;
-            
-            dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-            dc.fillRectangle(barX, barY, barWidth, barHeight);
-            
-            var progress = (step + 1).toFloat() / STEPS.size();
-            dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
-            dc.fillRectangle(barX, barY, barWidth * progress, barHeight);
-
+            dc.drawText(centerX, height / 2, Gfx.FONT_NUMBER_HOT, stepText, Gfx.TEXT_JUSTIFY_CENTER);
         } else {
-            // Completion screen
-            dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(
-                centerX,
-                centerY - 30,
-                Gfx.FONT_LARGE,
-                "Complete!",
-                Gfx.TEXT_JUSTIFY_CENTER
-            );
-
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-            dc.drawText(
-                centerX,
-                centerY + 20,
-                Gfx.FONT_SMALL,
-                "Well done!",
-                Gfx.TEXT_JUSTIFY_CENTER
-            );
-        }
-
-        // Draw exit instruction
-        dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(
-            centerX,
-            height - 15,
-            Gfx.FONT_XTINY,
-            "BACK to exit",
-            Gfx.TEXT_JUSTIFY_CENTER
-        );
-    }
-
-    function startTimer() {
-        if (isActive && step < STEPS.size()) {
-            timer = new Timer.Timer();
-            timer.start(method(:nextStep), stepDuration, false);
-        }
-    }
-
-    function nextStep() as Void {
-        if (!isActive) {
-            return;
-        }
-
-        step = step + 1;
-        WatchUi.requestUpdate();
-
-        if (step < STEPS.size()) {
-            startTimer();
-        } else {
-            // Exercise complete - auto-exit after 3 seconds
-            timer = new Timer.Timer();
-            timer.start(method(:autoExit), 3000, false);
-        }
-    }
-
-    function autoExit() as Void {
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-    }
-
-    function onHide() {
-        isActive = false;
-        if (timer != null) {
-            timer.stop();
-            timer = null;
+            dc.drawText(centerX, height / 2, Gfx.FONT_SMALL, "Done!", Gfx.TEXT_JUSTIFY_CENTER);
         }
     }
 }
 
+// Simple delegate to notify the main app
 class FiveFourThreeTwoOneDelegate extends WatchUi.BehaviorDelegate {
-    hidden var view;
 
-    function initialize(groundingView) {
+    hidden var _callback;
+
+    function initialize(callback) {
         BehaviorDelegate.initialize();
-        view = groundingView;
+        _callback = callback;
     }
 
-    function onBack() {
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        return true;
-    }
-
-    function onSelect() {
-        // Tap to advance to next step
-        if (view != null) {
-            view.nextStep();
+    function onExerciseComplete() {
+        if (_callback != null) {
+            _callback();
         }
-        return true;
-    }
-
-    function onNextPage() {
-        // Swipe up to advance
-        if (view != null) {
-            view.nextStep();
-        }
-        return true;
     }
 }
-

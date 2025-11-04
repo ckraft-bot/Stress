@@ -2,7 +2,6 @@ using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Gfx;
 
 class MainView extends WatchUi.View {
-
     hidden var stressLevel;
 
     function initialize(level) {
@@ -26,21 +25,24 @@ class MainView extends WatchUi.View {
         var height = dc.getHeight();
         var centerX = width / 2;
 
+        // clear screen
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
-        // Draw stress % as before
+        // stress %
         var stressPercent = (stressLevel * 100).toNumber();
         dc.setColor(getStressColor(stressLevel), Gfx.COLOR_TRANSPARENT);
-        dc.drawText(centerX, height * 0.3, Gfx.FONT_NUMBER_HOT, stressPercent.format("%d") + "%", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, height*0.3, Gfx.FONT_NUMBER_HOT, stressPercent.format("%d") + "%", Gfx.TEXT_JUSTIFY_CENTER);
 
+        // label
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(centerX, height * 0.5, Gfx.FONT_SMALL, "STRESS LEVEL", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, height*0.5, Gfx.FONT_SMALL, "STRESS LEVEL", Gfx.TEXT_JUSTIFY_CENTER);
 
+        // message
         var message = getStressMessage(stressLevel);
-        dc.drawText(centerX, height * 0.7, Gfx.FONT_TINY, message, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, height*0.7, Gfx.FONT_TINY, message, Gfx.TEXT_JUSTIFY_CENTER);
 
-        // Hint for user
+        // hint
         dc.drawText(centerX, height - 20, Gfx.FONT_XTINY, "Press SELECT to choose exercise", Gfx.TEXT_JUSTIFY_CENTER);
     }
 
@@ -56,7 +58,7 @@ class MainView extends WatchUi.View {
         else return "You are calm";
     }
 
-    // --- Handle button presses ---
+    // --- Button handlers ---
     function onSelect() {
         var menu = new MenuView();
         WatchUi.pushView(menu, new MenuViewDelegate(menu), WatchUi.SLIDE_UP);
@@ -64,7 +66,7 @@ class MainView extends WatchUi.View {
     }
 
     function onMenu() {
-        return onSelect(); // also allow MENU button
+        return onSelect(); // MENU button does same
     }
 }
 
