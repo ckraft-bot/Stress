@@ -7,17 +7,17 @@ class StressApp extends App.AppBase {
 
     hidden var stressLevel = 0.0; // 0 = calm, 1 = high stress
     hidden var timerId;
-    hidden var lastExercise = ""; // prevent reopening the same exercise repeatedly
-    hidden var mainView; // Store reference to main view
+    hidden var lastExercise = "";
+    hidden var mainView;
+    hidden var inExercise = false; // prevents repeated pushes
 
     function initialize() {
         AppBase.initialize();
     }
 
     function onStart(state) {
-        // Start a timer to simulate stress changes
         timerId = new Timer.Timer();
-        timerId.start(method(:simulateStress), 5000, true); // every 5 sec, repeating
+        timerId.start(method(:simulateStress), 5000, true);
     }
 
     function onStop(state) {
@@ -33,25 +33,42 @@ class StressApp extends App.AppBase {
     }
 
     function simulateStress() as Void {
-        // Random stress for testing
-        stressLevel = Math.rand() % 100 / 100.0; // 0.0 to 1.0
+        // simulate random stress
+        stressLevel = Math.rand() % 100 / 100.0;
 
-        // Update main view if it exists
         if (mainView != null) {
             mainView.updateStress(stressLevel);
         }
 
-        // Auto-launch exercise if stress > 0.7
+        // only launch new view if not currently in one
+        if (inExercise) return;
+
         if (stressLevel > 0.7 && lastExercise != "breathing") {
             lastExercise = "breathing";
-            WatchUi.pushView(new BreathingView(), new BreathingDelegate(), WatchUi.SLIDE_UP);
+            inExercise = true;
+            WatchUi.pushView(
+                new BreathingView(),
+                new BreathingDelegate(method(:onExerciseComplete)),
+                WatchUi.SLIDE_UP
+            );
         } else if (stressLevel > 0.4 && stressLevel <= 0.7 && lastExercise != "grounding") {
             lastExercise = "grounding";
+            inExercise = true;
             var groundingView = new FiveFourThreeTwoOneView();
-            WatchUi.pushView(groundingView, new FiveFourThreeTwoOneDelegate(groundingView), WatchUi.SLIDE_UP);
+            WatchUi.pushView(
+                groundingView,
+                new FiveFourThreeTwoOneDelegate(method(:onExerciseComplete)),
+                WatchUi.SLIDE_UP
+            );
         } else if (stressLevel <= 0.4) {
-            lastExercise = ""; // reset when stress is low
+            lastExercise = "";
         }
+    }
+
+    //called by delegates when user finishes exercise
+    function onExerciseComplete() as Void {
+        inExercise = false;
+        Sys.println("Exercise complete — ready for next one");
     }
 
     function getStressLevel() {
@@ -62,4 +79,3 @@ class StressApp extends App.AppBase {
 function getApp() {
     return App.getApp();
 }
-
