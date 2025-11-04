@@ -1,5 +1,5 @@
-project.manifest manifest.xml
+﻿project.manifest manifest.xml
 base.sourcePath Source
 base.resourcePath Resources
 device fr265
-build.output bin/stress.prg
+build.output bin\stress.prg

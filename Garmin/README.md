@@ -31,6 +31,26 @@ Garmin/
 mkdir bin -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path bin
 ```
+3.b writing `project.jungle` using powershell
+    ```
+    $path = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\project.jungle"
+    $lines = @(
+    "project.manifest manifest.xml",
+    "base.sourcePath Source",
+    "base.resourcePath Resources",
+    "device fr265",
+    "build.output bin/stress.prg"
+    )
+    $lf = [System.Text.Encoding]::UTF8.GetBytes("`n")
+    $stream = [System.IO.File]::Open($path, 'Create', 'Write')
+    foreach ($line in $lines) {
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes($line)
+        $stream.Write($bytes, 0, $bytes.Length)
+        $stream.Write($lf, 0, $lf.Length)
+    }
+    $stream.Close()
+    ```
+
 4. Build the app (including dev key) 
 ```
 & "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -f "C:\Users\Clair\Documents\GitHub\Stress\Garmin\project.jungle" -y "C:\Users\Clair\Desktop\Sandbox\garmin_developer_key" -o "C:\Users\Clair\Documents\GitHub\Stress\Garmin\bin\stress.prg"
