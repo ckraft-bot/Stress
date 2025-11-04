@@ -47,15 +47,23 @@ class MainView extends WatchUi.View {
     }
 
     function getStressColor(level) {
-        if (level > 0.7) return Gfx.COLOR_RED;
-        else if (level > 0.4) return Gfx.COLOR_ORANGE;
-        else return Gfx.COLOR_GREEN;
+        if (level > 0.7) {
+            return Gfx.COLOR_RED;
+        } else if (level > 0.4) {
+            return Gfx.COLOR_ORANGE;
+        } else {
+            return Gfx.COLOR_GREEN;
+        }
     }
 
     function getStressMessage(level) {
-        if (level > 0.7) return "High Stress";
-        else if (level > 0.4) return "Moderate Stress";
-        else return "You are calm";
+        if (level > 0.7) {
+            return "High Stress";
+        } else if (level > 0.4) {
+            return "Moderate Stress";
+        } else {
+            return "You are calm";
+        }
     }
 
     // --- Button handlers ---

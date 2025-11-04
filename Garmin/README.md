@@ -32,11 +32,33 @@ Project structure
 └───Garmin
     │   developer_key
     │   manifest.xml
+    │   monkey.jungle
     │   project.jungle
     │   README.md
+    │   run_garmin.ps1
+    │
+    ├───bin
+    │   ├───gen
+    │   │   └───no-device
+    │   │       └───source
+    │   │               Rez.mcgen
+    │   │
+    │   ├───internal-mir
+    │   │       Rez.mir
+    │   │
+    │   └───mir
+    │       └───Source
+    │               App.mir
+    │               BreathingDelegate.mir
+    │               BreathingView.mir
+    │               FiveFourThreeTwoOne.mir
+    │               MainView.mir
+    │               MainViewDelegate.mir
+    │               MenuView.mir
     │
     ├───Resources
     │   ├───Images
+    │   │       launcher_icon.png
     │   │       stress-app-icon.png
     │   │
     │   └───Strings
@@ -44,10 +66,13 @@ Project structure
     │
     └───Source
             App.mc
+            BreathingDelegate.mc
             BreathingView.mc
             FiveFourThreeTwoOne.mc
             MainView.mc
+            MainViewDelegate.mc
             MenuView.mc
+
 
 # Build and run the app in the CIQ simulator 
 1. cd to project root `cd C:\Users\<path>\Garmin`
@@ -76,3 +101,6 @@ Start-Process "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sd
 `taskkill /IM ConnectIQ.exe /F`
 8. Just run the powershell that handles steps 1-7
 `.\run_garmin.ps1`
+
+
+

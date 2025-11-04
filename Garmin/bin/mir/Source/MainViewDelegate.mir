@@ -1,82 +1,40 @@
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; @symbol_usingAlias = [WatchUi,1,24,31]; ]
 using Toybox.WatchUi as :WatchUi;
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 4; @symbol_classdef = [MainViewDelegate,4,6,22]; @symbol_extends<0> = [WatchUi,4,31,38]; @symbol_extends<1> = [BehaviorDelegate,4,39,55]; ]
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 3; @symbol_classdef = [MainViewDelegate,3,6,22]; @symbol_extends<0> = [WatchUi,3,31,38]; @symbol_extends<1> = [BehaviorDelegate,3,39,55]; ]
 class MainViewDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 4; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 3; ]
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 4; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 3; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 5; @symbol_functiondef = [initialize,5,13,23]; ]
     function initialize() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_6_26_8_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 7 8 ]
-        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_5_26_7_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 6 8 ]
+        symbol [ BehaviorDelegate %tmp.2 6 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 7 25 35 ];
+        symbol [ initialize %tmp.3 6 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_6_26_8_4_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_5_26_7_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 11; @symbol_functiondef = [onMenu,11,13,19]; ]
-    function onMenu() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_11_22_14_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 12 8 ]
-        %tmp.1 = self;
-        symbol [ openMenu %tmp.2 12 8 16 ];
-        %tmp.2 = getv function %tmp.1 :openMenu;
-        invoke %tmp.1 %tmp.2();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 13 8 ]
-        %tmp.3 = true;
-        ret %tmp.3;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_11_22_14_4_stop:
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 10; @symbol_functiondef = [onBack,10,13,19]; ]
+    function onBack() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_10_22_12_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 11 8 ]
+        %tmp.1 = false;
+        ret %tmp.1;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_10_22_12_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 17; @symbol_functiondef = [onSelect,17,13,21]; ]
-    function onSelect() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_17_24_20_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 18 8 ]
-        %tmp.1 = self;
-        symbol [ openMenu %tmp.2 18 8 16 ];
-        %tmp.2 = getv function %tmp.1 :openMenu;
-        invoke %tmp.1 %tmp.2();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 19 8 ]
-        %tmp.3 = true;
-        ret %tmp.3;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_17_24_20_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 22; @symbol_functiondef = [openMenu,22,20,28]; ]
-    protected
-    function openMenu() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_22_31_25_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 23 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_22_31_25_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_22_31_25_4_stop" ]
-        %menuView.1 = local;
-        symbol [ menuView %menuView.1 23 12 20 ];
-        symbol [ MenuView %tmp.4 23 27 35 ];
-        %tmp.4 = getv ? :MenuView;
-        %tmp.1 = newc %tmp.4 ();
-        lputv %menuView.1 %tmp.1;
-        symbol [ menuView %menuView.1 23 12 20 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 24 8 ]
-        symbol [ WatchUi %tmp.5 24 8 15 ];
-        %tmp.5 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.6 24 16 24 ];
-        %tmp.6 = getv function %tmp.5 :pushView;
-        %tmp.7 = lgetv %menuView.1;
-        symbol [ menuView %tmp.7 24 25 33 ];
-        symbol [ MenuViewDelegate %tmp.11 24 39 55 ];
-        %tmp.11 = getv ? :MenuViewDelegate;
-        %tmp.12 = lgetv %menuView.1;
-        symbol [ menuView %tmp.12 24 56 64 ];
-        %tmp.8 = newc %tmp.11 (%tmp.12);
-        symbol [ WatchUi %tmp.13 24 67 74 ];
-        %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_UP %tmp.14 24 75 83 ];
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8, %tmp.14);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_22_31_25_4_stop:
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 14; @symbol_functiondef = [onKey,14,13,18]; @symbol_param<0> = [key,14,19,22]; @symbol_param<1> = [state,14,24,29]; ]
+    function onKey(key, state) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_14_31_17_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc" 16 8 ]
+        %tmp.1 = false;
+        ret %tmp.1;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_MainViewDelegate_mc_14_31_17_4_stop:
     }
 }
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\MainViewDelegate.mc"; @line = 1; ]

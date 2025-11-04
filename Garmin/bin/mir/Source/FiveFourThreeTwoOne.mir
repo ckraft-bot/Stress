@@ -2,824 +2,446 @@
 using Toybox.WatchUi as :WatchUi;
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; @symbol_usingAlias = [Gfx,2,25,28]; ]
 using Toybox.Graphics as :Gfx;
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [System,3,13,19]; @symbol_usingAlias = [Sys,3,23,26]; ]
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Timer,3,13,18]; @symbol_usingAlias = [Timer,3,22,27]; ]
+using Toybox.Timer as :Timer;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [System,4,13,19]; @symbol_usingAlias = [Sys,4,23,26]; ]
 using Toybox.System as :Sys;
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Timer,4,13,18]; ]
-using Toybox.Timer;
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 6; @symbol_classdef = [FiveFourThreeTwoOneView,6,6,29]; @symbol_extends<0> = [WatchUi,6,38,45]; @symbol_extends<1> = [View,6,46,50]; ]
 class FiveFourThreeTwoOneView extends WatchUi.View {
     [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 6; ]
     <init> {
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 13 17 ]
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 8 15 ]
         %tmp.1 = newa 5;
-        %tmp.2 = "Name 5 things\nyou can SEE";
+        %tmp.2 = "5";
         %tmp.3 = dup %tmp.1;
         %tmp.4 = aputv %tmp.3 0 %tmp.2;
-        %tmp.5 = "Name 4 things\nyou can TOUCH";
+        %tmp.5 = "4";
         %tmp.6 = dup %tmp.4;
         %tmp.7 = aputv %tmp.6 1 %tmp.5;
-        %tmp.8 = "Name 3 things\nyou can HEAR";
+        %tmp.8 = "3";
         %tmp.9 = dup %tmp.7;
         %tmp.10 = aputv %tmp.9 2 %tmp.8;
-        %tmp.11 = "Name 2 things\nyou can SMELL";
+        %tmp.11 = "2";
         %tmp.12 = dup %tmp.10;
         %tmp.13 = aputv %tmp.12 3 %tmp.11;
-        %tmp.14 = "Name 1 thing\nyou can TASTE";
+        %tmp.14 = "1";
         %tmp.15 = dup %tmp.13;
         %tmp.16 = aputv %tmp.15 4 %tmp.14;
-        putv self :STEPS %tmp.16;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 21 17 ]
-        %tmp.17 = newa 5;
-        %tmp.18 = 5;
-        %tmp.19 = dup %tmp.17;
-        %tmp.20 = aputv %tmp.19 0 %tmp.18;
-        %tmp.21 = 4;
-        %tmp.22 = dup %tmp.20;
-        %tmp.23 = aputv %tmp.22 1 %tmp.21;
-        %tmp.24 = 3;
-        %tmp.25 = dup %tmp.23;
-        %tmp.26 = aputv %tmp.25 2 %tmp.24;
-        %tmp.27 = 2;
-        %tmp.28 = dup %tmp.26;
-        %tmp.29 = aputv %tmp.28 3 %tmp.27;
-        %tmp.30 = 1;
-        %tmp.31 = dup %tmp.29;
-        %tmp.32 = aputv %tmp.31 4 %tmp.30;
-        putv self :STEP_COUNTS %tmp.32;
+        putv self :_steps %tmp.16;
     }
     [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 7; @position = 15; @symbol_vardef = [step,7,15,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 8; @position = 15; @symbol_vardef = [_steps,8,15,21]; ]
     protected
-    var step = 0;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 8; @position = 15; @symbol_vardef = [timer,8,15,20]; ]
+    var _steps;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 9; @position = 15; @symbol_vardef = [_index,9,15,21]; ]
     protected
-    var timer;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 9; @position = 15; @symbol_vardef = [isActive,9,15,23]; ]
+    var _index = 0;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 10; @position = 15; @symbol_vardef = [_timer,10,15,21]; ]
     protected
-    var isActive = false;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 10; @position = 15; @symbol_vardef = [stepDuration,10,15,27]; ]
+    var _timer = null;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 11; @position = 15; @symbol_vardef = [_delegate,11,15,24]; ]
     protected
-    var stepDuration = 8000;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 13; @position = 17; @symbol_constdef = [STEPS,13,17,22]; ]
-    protected
-    const STEPS;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 21; @position = 17; @symbol_constdef = [STEP_COUNTS,21,17,28]; ]
-    protected
-    const STEP_COUNTS;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 23; @symbol_functiondef = [initialize,23,13,23]; ]
-    function initialize() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_23_26_25_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 24 8 ]
-        symbol [ View %tmp.2 24 8 12 ];
+    var _delegate;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [delegate,13,24,32]; ]
+    function initialize(delegate) as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_13_34_16_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 14 8 ]
+        symbol [ View %tmp.2 14 8 12 ];
         %tmp.2 = getv ? :View;
-        symbol [ initialize %tmp.3 24 13 23 ];
+        symbol [ initialize %tmp.3 14 13 23 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_23_26_25_4_stop:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 15 8 ]
+        %tmp.4 = lgetv %delegate;
+        symbol [ delegate %tmp.4 15 20 28 ];
+        symbol [ _delegate ? 15 8 17 ];
+        putv self :_delegate %tmp.4;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_13_34_16_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 27; @symbol_functiondef = [onLayout,27,13,21]; @symbol_param<0> = [dc,27,22,24]; ]
-    function onLayout(dc) {
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 31; @symbol_functiondef = [onShow,31,13,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 18; @symbol_functiondef = [onShow,18,13,19]; ]
     function onShow() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_31_22_36_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 32 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_18_22_21_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 19 8 ]
         %tmp.1 = 0;
-        symbol [ step ? 32 8 12 ];
-        putv self :step %tmp.1;
+        symbol [ _index ? 19 8 14 ];
+        putv self :_index %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 20 8 ]
+        %tmp.2 = self;
+        symbol [ nextStep %tmp.3 20 8 16 ];
+        %tmp.3 = getv function %tmp.2 :nextStep;
+        invoke %tmp.2 %tmp.3();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_18_22_21_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 23; @symbol_functiondef = [onHide,23,13,19]; ]
+    function onHide() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_23_22_29_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 25 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_8_28_8_if_stmt:
+        symbol [ _timer %tmp.2 25 12 18 ];
+        %tmp.2 = getv ? :_timer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_8_28_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_8_28_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_28_28_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 26 12 ]
+        symbol [ _timer %tmp.6 26 12 18 ];
+        %tmp.6 = getv ? :_timer;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ cancel %tmp.8 26 19 25 ];
+        %tmp.8 = getv function %tmp.7 :cancel;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 27 12 ]
+        %tmp.9 = null;
+        symbol [ _timer ? 27 12 18 ];
+        putv self :_timer %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_28_28_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_8_28_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_25_8_28_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_23_22_29_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 31; @symbol_functiondef = [nextStep,31,13,21]; ]
+    function nextStep() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_31_24_53_4_start:
 [ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 33 8 ]
-        %tmp.2 = true;
-        symbol [ isActive ? 33 8 16 ];
-        putv self :isActive %tmp.2;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 34 8 ]
-        symbol [ WatchUi %tmp.3 34 8 15 ];
-        %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.4 34 16 29 ];
-        %tmp.4 = getv function %tmp.3 :requestUpdate;
-        invoke %tmp.3 %tmp.4();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 35 8 ]
-        %tmp.5 = self;
-        symbol [ startTimer %tmp.6 35 8 18 ];
-        %tmp.6 = getv function %tmp.5 :startTimer;
-        invoke %tmp.5 %tmp.6();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_31_22_36_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 38; @symbol_functiondef = [onUpdate,38,13,21]; @symbol_param<0> = [dc,38,22,24]; ]
-    function onUpdate(dc) {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 39 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_stop" ]
-        %width.1 = local;
-        symbol [ width %width.1 39 12 17 ];
-        %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 39 20 22 ];
-        symbol [ getWidth %tmp.2 39 23 31 ];
-        %tmp.2 = getv function %tmp.1 :getWidth;
-        %tmp.3 = invoke %tmp.1 %tmp.2();
-        lputv %width.1 %tmp.3;
-        symbol [ width %width.1 39 12 17 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 40 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_stop" ]
-        %height.2 = local;
-        symbol [ height %height.2 40 12 18 ];
-        %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 40 21 23 ];
-        symbol [ getHeight %tmp.5 40 24 33 ];
-        %tmp.5 = getv function %tmp.4 :getHeight;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        lputv %height.2 %tmp.6;
-        symbol [ height %height.2 40 12 18 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 41 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_stop" ]
-        %centerX.3 = local;
-        symbol [ centerX %centerX.3 41 12 19 ];
-        %tmp.7 = lgetv %width.1;
-        symbol [ width %tmp.7 41 22 27 ];
-        %tmp.8 = 2;
-        %tmp.9 = div %tmp.7 %tmp.8;
-        lputv %centerX.3 %tmp.9;
-        symbol [ centerX %centerX.3 41 12 19 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 42 8 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_stop" ]
-        %centerY.4 = local;
-        symbol [ centerY %centerY.4 42 12 19 ];
-        %tmp.10 = lgetv %height.2;
-        symbol [ height %tmp.10 42 22 28 ];
-        %tmp.11 = 2;
-        %tmp.12 = div %tmp.10 %tmp.11;
-        lputv %centerY.4 %tmp.12;
-        symbol [ centerY %centerY.4 42 12 19 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 45 8 ]
-        %tmp.13 = lgetv %dc;
-        symbol [ dc %tmp.13 45 8 10 ];
-        symbol [ setColor %tmp.14 45 11 19 ];
-        %tmp.14 = getv function %tmp.13 :setColor;
-        symbol [ Gfx %tmp.15 45 20 23 ];
-        %tmp.15 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.16 45 24 35 ];
-        %tmp.16 = getv %tmp.15 :COLOR_BLACK;
-        symbol [ Gfx %tmp.17 45 37 40 ];
-        %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.18 45 41 52 ];
-        %tmp.18 = getv %tmp.17 :COLOR_BLACK;
-        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 46 8 ]
-        %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 46 8 10 ];
-        symbol [ clear %tmp.20 46 11 16 ];
-        %tmp.20 = getv function %tmp.19 :clear;
-        invoke %tmp.19 %tmp.20();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 48 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_8_111_8_if_stmt:
-        symbol [ step %tmp.22 48 12 16 ];
-        %tmp.22 = getv ? :step;
-        symbol [ STEPS %tmp.24 48 19 24 ];
-        %tmp.24 = getv ? :STEPS;
-        symbol [ size %tmp.25 48 25 29 ];
-        %tmp.25 = getv function %tmp.24 :size;
-        %tmp.26 = invoke %tmp.24 %tmp.25();
-        %tmp.27 = lt %tmp.22 %tmp.26;
-        bf %tmp.27 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_8_111_8_if_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_8_111_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 50 12 ]
-        %tmp.28 = lgetv %dc;
-        symbol [ dc %tmp.28 50 12 14 ];
-        symbol [ setColor %tmp.29 50 15 23 ];
-        %tmp.29 = getv function %tmp.28 :setColor;
-        symbol [ Gfx %tmp.30 50 24 27 ];
-        %tmp.30 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.31 50 28 38 ];
-        %tmp.31 = getv %tmp.30 :COLOR_BLUE;
-        symbol [ Gfx %tmp.32 50 40 43 ];
-        %tmp.32 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.33 50 44 61 ];
-        %tmp.33 = getv %tmp.32 :COLOR_TRANSPARENT;
-        invoke %tmp.28 %tmp.29(%tmp.31, %tmp.33);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 51 12 ]
-        %tmp.34 = lgetv %dc;
-        symbol [ dc %tmp.34 51 12 14 ];
-        symbol [ drawText %tmp.35 51 15 23 ];
-        %tmp.35 = getv function %tmp.34 :drawText;
-        %tmp.36 = lgetv %centerX.3;
-        symbol [ centerX %tmp.36 52 16 23 ];
-        %tmp.37 = lgetv %height.2;
-        symbol [ height %tmp.37 53 16 22 ];
-        %tmp.38 = 0.2;
-        %tmp.39 = mul %tmp.37 %tmp.38;
-        symbol [ Gfx %tmp.40 54 16 19 ];
-        %tmp.40 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_HOT %tmp.41 54 20 35 ];
-        %tmp.41 = getv %tmp.40 :FONT_NUMBER_HOT;
-        symbol [ STEP_COUNTS %tmp.43 55 16 27 ];
-        %tmp.43 = getv ? :STEP_COUNTS;
-        symbol [ step %tmp.45 55 28 32 ];
-        %tmp.45 = getv ? :step;
-        %tmp.46 = agetv %tmp.43 %tmp.45;
-        symbol [ toString %tmp.47 55 34 42 ];
-        %tmp.47 = getv function %tmp.46 :toString;
-        %tmp.48 = invoke %tmp.46 %tmp.47();
-        symbol [ Gfx %tmp.49 56 16 19 ];
-        %tmp.49 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.50 56 20 39 ];
-        %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.39, %tmp.41, %tmp.48, %tmp.50);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 60 12 ]
-        %tmp.51 = lgetv %dc;
-        symbol [ dc %tmp.51 60 12 14 ];
-        symbol [ setColor %tmp.52 60 15 23 ];
-        %tmp.52 = getv function %tmp.51 :setColor;
-        symbol [ Gfx %tmp.53 60 24 27 ];
-        %tmp.53 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.54 60 28 39 ];
-        %tmp.54 = getv %tmp.53 :COLOR_WHITE;
-        symbol [ Gfx %tmp.55 60 41 44 ];
-        %tmp.55 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.56 60 45 62 ];
-        %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
-        invoke %tmp.51 %tmp.52(%tmp.54, %tmp.56);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 61 12 ]
-        %tmp.57 = lgetv %dc;
-        symbol [ dc %tmp.57 61 12 14 ];
-        symbol [ drawText %tmp.58 61 15 23 ];
-        %tmp.58 = getv function %tmp.57 :drawText;
-        %tmp.59 = lgetv %centerX.3;
-        symbol [ centerX %tmp.59 62 16 23 ];
-        %tmp.60 = lgetv %centerY.4;
-        symbol [ centerY %tmp.60 63 16 23 ];
-        %tmp.61 = 10;
-        %tmp.62 = sub %tmp.60 %tmp.61;
-        symbol [ Gfx %tmp.63 64 16 19 ];
-        %tmp.63 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.64 64 20 30 ];
-        %tmp.64 = getv %tmp.63 :FONT_SMALL;
-        symbol [ STEPS %tmp.66 65 16 21 ];
-        %tmp.66 = getv ? :STEPS;
-        symbol [ step %tmp.68 65 22 26 ];
-        %tmp.68 = getv ? :step;
-        %tmp.69 = agetv %tmp.66 %tmp.68;
-        symbol [ Gfx %tmp.70 66 16 19 ];
-        %tmp.70 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.71 66 20 39 ];
-        %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_CENTER;
-        symbol [ Gfx %tmp.72 66 42 45 ];
-        %tmp.72 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.73 66 46 66 ];
-        %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_VCENTER;
-        %tmp.74 = bitor %tmp.71 %tmp.73;
-        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.62, %tmp.64, %tmp.69, %tmp.74);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 70 12 ]
-        %tmp.75 = lgetv %dc;
-        symbol [ dc %tmp.75 70 12 14 ];
-        symbol [ setColor %tmp.76 70 15 23 ];
-        %tmp.76 = getv function %tmp.75 :setColor;
-        symbol [ Gfx %tmp.77 70 24 27 ];
-        %tmp.77 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.78 70 28 41 ];
-        %tmp.78 = getv %tmp.77 :COLOR_LT_GRAY;
-        symbol [ Gfx %tmp.79 70 43 46 ];
-        %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.80 70 47 64 ];
-        %tmp.80 = getv %tmp.79 :COLOR_TRANSPARENT;
-        invoke %tmp.75 %tmp.76(%tmp.78, %tmp.80);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 71 12 ]
-        %tmp.81 = lgetv %dc;
-        symbol [ dc %tmp.81 71 12 14 ];
-        symbol [ drawText %tmp.82 71 15 23 ];
-        %tmp.82 = getv function %tmp.81 :drawText;
-        %tmp.83 = lgetv %centerX.3;
-        symbol [ centerX %tmp.83 72 16 23 ];
-        %tmp.84 = lgetv %height.2;
-        symbol [ height %tmp.84 73 16 22 ];
-        %tmp.85 = 0.8;
-        %tmp.86 = mul %tmp.84 %tmp.85;
-        symbol [ Gfx %tmp.87 74 16 19 ];
-        %tmp.87 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.88 74 20 29 ];
-        %tmp.88 = getv %tmp.87 :FONT_TINY;
-        %tmp.89 = "Step ";
-        symbol [ step %tmp.91 75 27 31 ];
-        %tmp.91 = getv ? :step;
-        %tmp.92 = 1;
-        %tmp.93 = add %tmp.91 %tmp.92;
-        %tmp.94 = add %tmp.89 %tmp.93;
-        %tmp.95 = " of 5";
-        %tmp.96 = add %tmp.94 %tmp.95;
-        symbol [ Gfx %tmp.97 76 16 19 ];
-        %tmp.97 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.98 76 20 39 ];
-        %tmp.98 = getv %tmp.97 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.81 %tmp.82(%tmp.83, %tmp.86, %tmp.88, %tmp.96, %tmp.98);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 80 12 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_stop" ]
-        %barWidth.5 = local;
-        symbol [ barWidth %barWidth.5 80 16 24 ];
-        %tmp.99 = lgetv %width.1;
-        symbol [ width %tmp.99 80 27 32 ];
-        %tmp.100 = 0.8;
-        %tmp.101 = mul %tmp.99 %tmp.100;
-        lputv %barWidth.5 %tmp.101;
-        symbol [ barWidth %barWidth.5 80 16 24 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 81 12 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_stop" ]
-        %barHeight.6 = local;
-        symbol [ barHeight %barHeight.6 81 16 25 ];
-        %tmp.102 = 6;
-        lputv %barHeight.6 %tmp.102;
-        symbol [ barHeight %barHeight.6 81 16 25 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 82 12 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_stop" ]
-        %barX.7 = local;
-        symbol [ barX %barX.7 82 16 20 ];
-        %tmp.103 = lgetv %width.1;
-        symbol [ width %tmp.103 82 24 29 ];
-        %tmp.104 = lgetv %barWidth.5;
-        symbol [ barWidth %tmp.104 82 32 40 ];
-        %tmp.105 = sub %tmp.103 %tmp.104;
-        %tmp.106 = 2;
-        %tmp.107 = div %tmp.105 %tmp.106;
-        lputv %barX.7 %tmp.107;
-        symbol [ barX %barX.7 82 16 20 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 83 12 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_stop" ]
-        %barY.8 = local;
-        symbol [ barY %barY.8 83 16 20 ];
-        %tmp.108 = lgetv %height.2;
-        symbol [ height %tmp.108 83 23 29 ];
-        %tmp.109 = 0.9;
-        %tmp.110 = mul %tmp.108 %tmp.109;
-        lputv %barY.8 %tmp.110;
-        symbol [ barY %barY.8 83 16 20 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 85 12 ]
-        %tmp.111 = lgetv %dc;
-        symbol [ dc %tmp.111 85 12 14 ];
-        symbol [ setColor %tmp.112 85 15 23 ];
-        %tmp.112 = getv function %tmp.111 :setColor;
-        symbol [ Gfx %tmp.113 85 24 27 ];
-        %tmp.113 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.114 85 28 41 ];
-        %tmp.114 = getv %tmp.113 :COLOR_DK_GRAY;
-        symbol [ Gfx %tmp.115 85 43 46 ];
-        %tmp.115 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.116 85 47 64 ];
-        %tmp.116 = getv %tmp.115 :COLOR_TRANSPARENT;
-        invoke %tmp.111 %tmp.112(%tmp.114, %tmp.116);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 86 12 ]
-        %tmp.117 = lgetv %dc;
-        symbol [ dc %tmp.117 86 12 14 ];
-        symbol [ fillRectangle %tmp.118 86 15 28 ];
-        %tmp.118 = getv function %tmp.117 :fillRectangle;
-        %tmp.119 = lgetv %barX.7;
-        symbol [ barX %tmp.119 86 29 33 ];
-        %tmp.120 = lgetv %barY.8;
-        symbol [ barY %tmp.120 86 35 39 ];
-        %tmp.121 = lgetv %barWidth.5;
-        symbol [ barWidth %tmp.121 86 41 49 ];
-        %tmp.122 = lgetv %barHeight.6;
-        symbol [ barHeight %tmp.122 86 51 60 ];
-        invoke %tmp.117 %tmp.118(%tmp.119, %tmp.120, %tmp.121, %tmp.122);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 88 12 ]
-        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_stop" ]
-        %progress.9 = local;
-        symbol [ progress %progress.9 88 16 24 ];
-        symbol [ step %tmp.124 88 28 32 ];
-        %tmp.124 = getv ? :step;
-        %tmp.125 = 1;
-        %tmp.126 = add %tmp.124 %tmp.125;
-        symbol [ toFloat %tmp.127 88 38 45 ];
-        %tmp.127 = getv function %tmp.126 :toFloat;
-        %tmp.128 = invoke %tmp.126 %tmp.127();
-        symbol [ STEPS %tmp.130 88 50 55 ];
-        %tmp.130 = getv ? :STEPS;
-        symbol [ size %tmp.131 88 56 60 ];
-        %tmp.131 = getv function %tmp.130 :size;
-        %tmp.132 = invoke %tmp.130 %tmp.131();
-        %tmp.133 = div %tmp.128 %tmp.132;
-        lputv %progress.9 %tmp.133;
-        symbol [ progress %progress.9 88 16 24 ];
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 89 12 ]
-        %tmp.134 = lgetv %dc;
-        symbol [ dc %tmp.134 89 12 14 ];
-        symbol [ setColor %tmp.135 89 15 23 ];
-        %tmp.135 = getv function %tmp.134 :setColor;
-        symbol [ Gfx %tmp.136 89 24 27 ];
-        %tmp.136 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.137 89 28 38 ];
-        %tmp.137 = getv %tmp.136 :COLOR_BLUE;
-        symbol [ Gfx %tmp.138 89 40 43 ];
-        %tmp.138 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.139 89 44 61 ];
-        %tmp.139 = getv %tmp.138 :COLOR_TRANSPARENT;
-        invoke %tmp.134 %tmp.135(%tmp.137, %tmp.139);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 90 12 ]
-        %tmp.140 = lgetv %dc;
-        symbol [ dc %tmp.140 90 12 14 ];
-        symbol [ fillRectangle %tmp.141 90 15 28 ];
-        %tmp.141 = getv function %tmp.140 :fillRectangle;
-        %tmp.142 = lgetv %barX.7;
-        symbol [ barX %tmp.142 90 29 33 ];
-        %tmp.143 = lgetv %barY.8;
-        symbol [ barY %tmp.143 90 35 39 ];
-        %tmp.144 = lgetv %barWidth.5;
-        symbol [ barWidth %tmp.144 90 41 49 ];
-        %tmp.145 = lgetv %progress.9;
-        symbol [ progress %tmp.145 90 52 60 ];
-        %tmp.146 = mul %tmp.144 %tmp.145;
-        %tmp.147 = lgetv %barHeight.6;
-        symbol [ barHeight %tmp.147 90 62 71 ];
-        invoke %tmp.140 %tmp.141(%tmp.142, %tmp.143, %tmp.146, %tmp.147);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_33_92_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_8_111_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_8_111_8_if_else_false:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_92_15_111_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 94 12 ]
-        %tmp.148 = lgetv %dc;
-        symbol [ dc %tmp.148 94 12 14 ];
-        symbol [ setColor %tmp.149 94 15 23 ];
-        %tmp.149 = getv function %tmp.148 :setColor;
-        symbol [ Gfx %tmp.150 94 24 27 ];
-        %tmp.150 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.151 94 28 39 ];
-        %tmp.151 = getv %tmp.150 :COLOR_GREEN;
-        symbol [ Gfx %tmp.152 94 41 44 ];
-        %tmp.152 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.153 94 45 62 ];
-        %tmp.153 = getv %tmp.152 :COLOR_TRANSPARENT;
-        invoke %tmp.148 %tmp.149(%tmp.151, %tmp.153);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 95 12 ]
-        %tmp.154 = lgetv %dc;
-        symbol [ dc %tmp.154 95 12 14 ];
-        symbol [ drawText %tmp.155 95 15 23 ];
-        %tmp.155 = getv function %tmp.154 :drawText;
-        %tmp.156 = lgetv %centerX.3;
-        symbol [ centerX %tmp.156 96 16 23 ];
-        %tmp.157 = lgetv %centerY.4;
-        symbol [ centerY %tmp.157 97 16 23 ];
-        %tmp.158 = 30;
-        %tmp.159 = sub %tmp.157 %tmp.158;
-        symbol [ Gfx %tmp.160 98 16 19 ];
-        %tmp.160 = getm $.Toybox.Graphics;
-        symbol [ FONT_LARGE %tmp.161 98 20 30 ];
-        %tmp.161 = getv %tmp.160 :FONT_LARGE;
-        %tmp.162 = "Complete!";
-        symbol [ Gfx %tmp.163 100 16 19 ];
-        %tmp.163 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.164 100 20 39 ];
-        %tmp.164 = getv %tmp.163 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.154 %tmp.155(%tmp.156, %tmp.159, %tmp.161, %tmp.162, %tmp.164);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 103 12 ]
-        %tmp.165 = lgetv %dc;
-        symbol [ dc %tmp.165 103 12 14 ];
-        symbol [ setColor %tmp.166 103 15 23 ];
-        %tmp.166 = getv function %tmp.165 :setColor;
-        symbol [ Gfx %tmp.167 103 24 27 ];
-        %tmp.167 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.168 103 28 39 ];
-        %tmp.168 = getv %tmp.167 :COLOR_WHITE;
-        symbol [ Gfx %tmp.169 103 41 44 ];
-        %tmp.169 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.170 103 45 62 ];
-        %tmp.170 = getv %tmp.169 :COLOR_TRANSPARENT;
-        invoke %tmp.165 %tmp.166(%tmp.168, %tmp.170);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 104 12 ]
-        %tmp.171 = lgetv %dc;
-        symbol [ dc %tmp.171 104 12 14 ];
-        symbol [ drawText %tmp.172 104 15 23 ];
-        %tmp.172 = getv function %tmp.171 :drawText;
-        %tmp.173 = lgetv %centerX.3;
-        symbol [ centerX %tmp.173 105 16 23 ];
-        %tmp.174 = lgetv %centerY.4;
-        symbol [ centerY %tmp.174 106 16 23 ];
-        %tmp.175 = 20;
-        %tmp.176 = add %tmp.174 %tmp.175;
-        symbol [ Gfx %tmp.177 107 16 19 ];
-        %tmp.177 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.178 107 20 30 ];
-        %tmp.178 = getv %tmp.177 :FONT_SMALL;
-        %tmp.179 = "Well done!";
-        symbol [ Gfx %tmp.180 109 16 19 ];
-        %tmp.180 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.181 109 20 39 ];
-        %tmp.181 = getv %tmp.180 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.171 %tmp.172(%tmp.173, %tmp.176, %tmp.178, %tmp.179, %tmp.181);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_92_15_111_8_stop:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_48_8_111_8_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 114 8 ]
-        %tmp.182 = lgetv %dc;
-        symbol [ dc %tmp.182 114 8 10 ];
-        symbol [ setColor %tmp.183 114 11 19 ];
-        %tmp.183 = getv function %tmp.182 :setColor;
-        symbol [ Gfx %tmp.184 114 20 23 ];
-        %tmp.184 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_GRAY %tmp.185 114 24 37 ];
-        %tmp.185 = getv %tmp.184 :COLOR_DK_GRAY;
-        symbol [ Gfx %tmp.186 114 39 42 ];
-        %tmp.186 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.187 114 43 60 ];
-        %tmp.187 = getv %tmp.186 :COLOR_TRANSPARENT;
-        invoke %tmp.182 %tmp.183(%tmp.185, %tmp.187);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 115 8 ]
-        %tmp.188 = lgetv %dc;
-        symbol [ dc %tmp.188 115 8 10 ];
-        symbol [ drawText %tmp.189 115 11 19 ];
-        %tmp.189 = getv function %tmp.188 :drawText;
-        %tmp.190 = lgetv %centerX.3;
-        symbol [ centerX %tmp.190 116 12 19 ];
-        %tmp.191 = lgetv %height.2;
-        symbol [ height %tmp.191 117 12 18 ];
-        %tmp.192 = 15;
-        %tmp.193 = sub %tmp.191 %tmp.192;
-        symbol [ Gfx %tmp.194 118 12 15 ];
-        %tmp.194 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.195 118 16 26 ];
-        %tmp.195 = getv %tmp.194 :FONT_XTINY;
-        %tmp.196 = "BACK to exit";
-        symbol [ Gfx %tmp.197 120 12 15 ];
-        %tmp.197 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.198 120 16 35 ];
-        %tmp.198 = getv %tmp.197 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.188 %tmp.189(%tmp.190, %tmp.193, %tmp.195, %tmp.196, %tmp.198);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_26_122_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 124; @symbol_functiondef = [startTimer,124,13,23]; ]
-    function startTimer() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_124_26_129_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 125 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_8_128_8_if_stmt:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_12_125_42_begin:
-        symbol [ isActive %tmp.2 125 12 20 ];
-        %tmp.2 = getv ? :isActive;
-        bf %tmp.2 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_8_128_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_24_125_42_true:
-        symbol [ step %tmp.4 125 24 28 ];
-        %tmp.4 = getv ? :step;
-        symbol [ STEPS %tmp.6 125 31 36 ];
-        %tmp.6 = getv ? :STEPS;
-        symbol [ size %tmp.7 125 37 41 ];
-        %tmp.7 = getv function %tmp.6 :size;
-        %tmp.8 = invoke %tmp.6 %tmp.7();
-        %tmp.9 = lt %tmp.4 %tmp.8;
-        push %tmp.9;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_24_125_42_end:
-        %tmp.10 = phi [%tmp.2 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_12_125_42_begin] [%tmp.9 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_24_125_42_true] [%tmp.10 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_24_125_42_end];
-        bf %tmp.10 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_8_128_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_8_128_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_45_128_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 126 12 ]
-        symbol [ Timer %tmp.13 126 24 29 ];
-        %tmp.13 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.14 126 30 35 ];
-        %tmp.14 = getv function ? %tmp.13 :Timer;
-        %tmp.11 = newc %tmp.14 ();
-        symbol [ timer ? 126 12 17 ];
-        putv self :timer %tmp.11;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 127 12 ]
-        symbol [ timer %tmp.16 127 12 17 ];
-        %tmp.16 = getv ? :timer;
-        symbol [ start %tmp.17 127 18 23 ];
-        %tmp.17 = getv function %tmp.16 :start;
-        %tmp.18 = self;
-        symbol [ method %tmp.19 127 24 30 ];
-        %tmp.19 = getv function %tmp.18 :method;
-        %tmp.21 = const :nextStep;
-        symbol [ nextStep %tmp.21 127 32 40 const ];
-        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
-        symbol [ stepDuration %tmp.24 127 43 55 ];
-        %tmp.24 = getv ? :stepDuration;
-        %tmp.25 = false;
-        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.24, %tmp.25);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_45_128_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_8_128_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_125_8_128_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_124_26_129_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 131; @symbol_functiondef = [nextStep,131,13,21]; ]
-    function nextStep() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_131_32_146_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 132 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_8_134_8_if_stmt:
-        symbol [ isActive %tmp.2 132 13 21 ];
-        %tmp.2 = getv ? :isActive;
-        %tmp.3 = not %tmp.2;
-        bf %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_8_134_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_8_134_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_23_134_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 133 12 ]
-        ret ?;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_23_134_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_8_134_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_132_8_134_8_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 136 8 ]
-        symbol [ step %tmp.5 136 15 19 ];
-        %tmp.5 = getv ? :step;
-        %tmp.6 = 1;
-        %tmp.7 = add %tmp.5 %tmp.6;
-        symbol [ step ? 136 8 12 ];
-        putv self :step %tmp.7;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 137 8 ]
-        symbol [ WatchUi %tmp.8 137 8 15 ];
-        %tmp.8 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.9 137 16 29 ];
-        %tmp.9 = getv function %tmp.8 :requestUpdate;
-        invoke %tmp.8 %tmp.9();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 139 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_8_145_8_if_stmt:
-        symbol [ step %tmp.11 139 12 16 ];
-        %tmp.11 = getv ? :step;
-        symbol [ STEPS %tmp.13 139 19 24 ];
-        %tmp.13 = getv ? :STEPS;
-        symbol [ size %tmp.14 139 25 29 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_8_36_8_if_stmt:
+        symbol [ _timer %tmp.2 33 12 18 ];
+        %tmp.2 = getv ? :_timer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_8_36_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_8_36_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_28_36_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 34 12 ]
+        symbol [ _timer %tmp.6 34 12 18 ];
+        %tmp.6 = getv ? :_timer;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ cancel %tmp.8 34 19 25 ];
+        %tmp.8 = getv function %tmp.7 :cancel;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 35 12 ]
+        %tmp.9 = null;
+        symbol [ _timer ? 35 12 18 ];
+        putv self :_timer %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_28_36_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_8_36_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_33_8_36_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 38 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_8_52_8_if_stmt:
+        symbol [ _index %tmp.11 38 12 18 ];
+        %tmp.11 = getv ? :_index;
+        symbol [ _steps %tmp.13 38 21 27 ];
+        %tmp.13 = getv ? :_steps;
+        symbol [ size %tmp.14 38 28 32 ];
         %tmp.14 = getv function %tmp.13 :size;
         %tmp.15 = invoke %tmp.13 %tmp.14();
         %tmp.16 = lt %tmp.11 %tmp.15;
-        bf %tmp.16 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_8_145_8_if_else_false;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_8_145_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_33_141_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 140 12 ]
-        %tmp.17 = self;
-        symbol [ startTimer %tmp.18 140 12 22 ];
-        %tmp.18 = getv function %tmp.17 :startTimer;
+        bf %tmp.16 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_8_52_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_8_52_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_36_45_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 39 12 ]
+        symbol [ WatchUi %tmp.17 39 12 19 ];
+        %tmp.17 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.18 39 20 33 ];
+        %tmp.18 = getv function %tmp.17 :requestUpdate;
         invoke %tmp.17 %tmp.18();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_33_141_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_8_145_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_8_145_8_if_else_false:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_141_15_145_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 143 12 ]
-        symbol [ Timer %tmp.21 143 24 29 ];
-        %tmp.21 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.22 143 30 35 ];
-        %tmp.22 = getv function ? %tmp.21 :Timer;
-        %tmp.19 = newc %tmp.22 ();
-        symbol [ timer ? 143 12 17 ];
-        putv self :timer %tmp.19;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 144 12 ]
-        symbol [ timer %tmp.24 144 12 17 ];
-        %tmp.24 = getv ? :timer;
-        symbol [ start %tmp.25 144 18 23 ];
-        %tmp.25 = getv function %tmp.24 :start;
-        %tmp.26 = self;
-        symbol [ method %tmp.27 144 24 30 ];
-        %tmp.27 = getv function %tmp.26 :method;
-        %tmp.29 = const :autoExit;
-        symbol [ autoExit %tmp.29 144 32 40 const ];
-        %tmp.30 = invoke %tmp.26 %tmp.27(%tmp.29);
-        %tmp.31 = 3000;
-        %tmp.32 = false;
-        invoke %tmp.24 %tmp.25(%tmp.30, %tmp.31, %tmp.32);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_141_15_145_8_stop:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_139_8_145_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_131_32_146_4_stop:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 40 12 ]
+        symbol [ Sys %tmp.19 40 12 15 ];
+        %tmp.19 = getm $.Toybox.System;
+        symbol [ println %tmp.20 40 16 23 ];
+        %tmp.20 = getv function %tmp.19 :println;
+        %tmp.21 = "Step: ";
+        symbol [ _steps %tmp.23 40 35 41 ];
+        %tmp.23 = getv ? :_steps;
+        symbol [ _index %tmp.25 40 42 48 ];
+        %tmp.25 = getv ? :_index;
+        %tmp.26 = agetv %tmp.23 %tmp.25;
+        %tmp.27 = add %tmp.21 %tmp.26;
+        invoke %tmp.19 %tmp.20(%tmp.27);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 41 12 ]
+        symbol [ Timer %tmp.28 41 21 26 ];
+        %tmp.28 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.29 41 27 32 ];
+        %tmp.29 = getv function %tmp.28 :Timer;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        symbol [ _timer ? 41 12 18 ];
+        putv self :_timer %tmp.30;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 43 12 ]
+        symbol [ _timer %tmp.32 43 12 18 ];
+        %tmp.32 = getv ? :_timer;
+        symbol [ start %tmp.33 43 19 24 ];
+        %tmp.33 = getv function %tmp.32 :start;
+        %tmp.34 = self;
+        symbol [ method %tmp.35 43 25 31 ];
+        %tmp.35 = getv function %tmp.34 :method;
+        %tmp.37 = const :nextStep;
+        symbol [ nextStep %tmp.37 43 33 41 const ];
+        %tmp.38 = invoke %tmp.34 %tmp.35(%tmp.37);
+        %tmp.39 = 1000;
+        invoke %tmp.32 %tmp.33(%tmp.38, %tmp.39);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 44 12 ]
+        symbol [ _index %tmp.40 44 12 18 ];
+        %tmp.40 = getv self :_index;
+        %tmp.41 = 1;
+        %tmp.42 = add %tmp.40 %tmp.41;
+        symbol [ _index ? 44 12 18 ];
+        putv self :_index dup %tmp.42;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_36_45_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_8_52_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_8_52_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_45_15_52_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 47 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_12_49_12_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_16_47_78_begin:
+        symbol [ _delegate %tmp.44 47 16 25 ];
+        %tmp.44 = getv ? :_delegate;
+        %tmp.45 = null;
+        %tmp.46 = ne %tmp.44 %tmp.45;
+        bf %tmp.46 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_12_49_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_37_47_78_true:
+        symbol [ _delegate %tmp.48 47 37 46 ];
+        %tmp.48 = getv ? :_delegate;
+        %tmp.49 = as %tmp.48 { (!Null) };
+        symbol [ respondsTo %tmp.50 47 47 57 ];
+        %tmp.50 = getv function %tmp.49 :respondsTo;
+        %tmp.51 = "onExerciseComplete";
+        %tmp.52 = invoke %tmp.49 %tmp.50(%tmp.51);
+        push %tmp.52;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_37_47_78_end:
+        %tmp.53 = phi [%tmp.46 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_16_47_78_begin] [%tmp.52 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_37_47_78_true] [%tmp.53 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_37_47_78_end];
+        bf %tmp.53 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_12_49_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_12_49_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_81_49_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 48 16 ]
+        symbol [ _delegate %tmp.55 48 16 25 ];
+        %tmp.55 = getv ? :_delegate;
+        symbol [ onExerciseComplete %tmp.56 48 26 44 ];
+        %tmp.56 = getv function %tmp.55 :onExerciseComplete;
+        invoke %tmp.55 %tmp.56();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_81_49_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_12_49_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_47_12_49_12_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 51 12 ]
+        symbol [ WatchUi %tmp.57 51 12 19 ];
+        %tmp.57 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.58 51 20 27 ];
+        %tmp.58 = getv function %tmp.57 :popView;
+        invoke %tmp.57 %tmp.58();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_45_15_52_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_38_8_52_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_31_24_53_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 148; @symbol_functiondef = [autoExit,148,13,21]; ]
-    function autoExit() as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_148_32_150_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 149 8 ]
-        symbol [ WatchUi %tmp.1 149 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 149 16 23 ];
-        %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 149 24 31 ];
-        %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.4 149 32 42 ];
-        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
-        invoke %tmp.1 %tmp.2(%tmp.4);
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_148_32_150_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 152; @symbol_functiondef = [onHide,152,13,19]; ]
-    function onHide() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_152_22_158_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 153 8 ]
-        %tmp.1 = false;
-        symbol [ isActive ? 153 8 16 ];
-        putv self :isActive %tmp.1;
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 154 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_8_157_8_if_stmt:
-        symbol [ timer %tmp.3 154 12 17 ];
-        %tmp.3 = getv ? :timer;
-        %tmp.4 = null;
-        %tmp.5 = ne %tmp.3 %tmp.4;
-        bf %tmp.5 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_8_157_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_8_157_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_27_157_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 155 12 ]
-        symbol [ timer %tmp.7 155 12 17 ];
-        %tmp.7 = getv ? :timer;
-        %tmp.8 = as %tmp.7 { (!Null) };
-        symbol [ stop %tmp.9 155 18 22 ];
-        %tmp.9 = getv function %tmp.8 :stop;
-        invoke %tmp.8 %tmp.9();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 156 12 ]
-        %tmp.10 = null;
-        symbol [ timer ? 156 12 17 ];
-        putv self :timer %tmp.10;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_27_157_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_8_157_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_154_8_157_8_if_end:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_152_22_158_4_stop:
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 55; @symbol_functiondef = [onUpdate,55,13,21]; @symbol_param<0> = [dc,55,22,24]; ]
+    function onUpdate(dc) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 56 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 56 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 56 20 22 ];
+        symbol [ getWidth %tmp.2 56 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 56 12 17 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 57 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 57 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 57 21 23 ];
+        symbol [ getHeight %tmp.5 57 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 57 12 18 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 58 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_stop" ]
+        %centerX.3 = local;
+        symbol [ centerX %centerX.3 58 12 19 ];
+        %tmp.7 = lgetv %width.1;
+        symbol [ width %tmp.7 58 22 27 ];
+        %tmp.8 = 2;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        lputv %centerX.3 %tmp.9;
+        symbol [ centerX %centerX.3 58 12 19 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 60 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 60 8 10 ];
+        symbol [ setColor %tmp.11 60 11 19 ];
+        %tmp.11 = getv function %tmp.10 :setColor;
+        symbol [ Gfx %tmp.12 60 20 23 ];
+        %tmp.12 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.13 60 24 35 ];
+        %tmp.13 = getv %tmp.12 :COLOR_BLACK;
+        symbol [ Gfx %tmp.14 60 37 40 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.15 60 41 52 ];
+        %tmp.15 = getv %tmp.14 :COLOR_BLACK;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 61 8 ]
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 61 8 10 ];
+        symbol [ clear %tmp.17 61 11 16 ];
+        %tmp.17 = getv function %tmp.16 :clear;
+        invoke %tmp.16 %tmp.17();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 63 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_8_70_8_if_stmt:
+        symbol [ _index %tmp.19 63 12 18 ];
+        %tmp.19 = getv ? :_index;
+        symbol [ _steps %tmp.21 63 21 27 ];
+        %tmp.21 = getv ? :_steps;
+        symbol [ size %tmp.22 63 28 32 ];
+        %tmp.22 = getv function %tmp.21 :size;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = lt %tmp.19 %tmp.23;
+        bf %tmp.24 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_8_70_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_8_70_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_36_67_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 64 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_36_67_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_36_67_8_stop" ]
+        %stepText.4 = local;
+        symbol [ stepText %stepText.4 64 16 24 ];
+        symbol [ _steps %tmp.26 64 27 33 ];
+        %tmp.26 = getv ? :_steps;
+        symbol [ _index %tmp.28 64 34 40 ];
+        %tmp.28 = getv ? :_index;
+        %tmp.29 = agetv %tmp.26 %tmp.28;
+        lputv %stepText.4 %tmp.29;
+        symbol [ stepText %stepText.4 64 16 24 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 65 12 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 65 12 14 ];
+        symbol [ setColor %tmp.31 65 15 23 ];
+        %tmp.31 = getv function %tmp.30 :setColor;
+        symbol [ Gfx %tmp.32 65 24 27 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.33 65 28 39 ];
+        %tmp.33 = getv %tmp.32 :COLOR_WHITE;
+        symbol [ Gfx %tmp.34 65 41 44 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.35 65 45 62 ];
+        %tmp.35 = getv %tmp.34 :COLOR_TRANSPARENT;
+        invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 66 12 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 66 12 14 ];
+        symbol [ drawText %tmp.37 66 15 23 ];
+        %tmp.37 = getv function %tmp.36 :drawText;
+        %tmp.38 = lgetv %centerX.3;
+        symbol [ centerX %tmp.38 66 24 31 ];
+        %tmp.39 = lgetv %height.2;
+        symbol [ height %tmp.39 66 33 39 ];
+        %tmp.40 = 2;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        symbol [ Gfx %tmp.42 66 45 48 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.43 66 49 64 ];
+        %tmp.43 = getv %tmp.42 :FONT_NUMBER_HOT;
+        %tmp.44 = lgetv %stepText.4;
+        symbol [ stepText %tmp.44 66 66 74 ];
+        symbol [ Gfx %tmp.45 66 76 79 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 66 80 99 ];
+        %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.36 %tmp.37(%tmp.38, %tmp.41, %tmp.43, %tmp.44, %tmp.46);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_36_67_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_8_70_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_8_70_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_67_15_70_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 68 12 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 68 12 14 ];
+        symbol [ setColor %tmp.48 68 15 23 ];
+        %tmp.48 = getv function %tmp.47 :setColor;
+        symbol [ Gfx %tmp.49 68 24 27 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.50 68 28 39 ];
+        %tmp.50 = getv %tmp.49 :COLOR_WHITE;
+        symbol [ Gfx %tmp.51 68 41 44 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.52 68 45 62 ];
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 69 12 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 69 12 14 ];
+        symbol [ drawText %tmp.54 69 15 23 ];
+        %tmp.54 = getv function %tmp.53 :drawText;
+        %tmp.55 = lgetv %centerX.3;
+        symbol [ centerX %tmp.55 69 24 31 ];
+        %tmp.56 = lgetv %height.2;
+        symbol [ height %tmp.56 69 33 39 ];
+        %tmp.57 = 2;
+        %tmp.58 = div %tmp.56 %tmp.57;
+        symbol [ Gfx %tmp.59 69 45 48 ];
+        %tmp.59 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.60 69 49 59 ];
+        %tmp.60 = getv %tmp.59 :FONT_SMALL;
+        %tmp.61 = "Done!";
+        symbol [ Gfx %tmp.62 69 70 73 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.63 69 74 93 ];
+        %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.58, %tmp.60, %tmp.61, %tmp.63);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_67_15_70_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_63_8_70_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_55_26_71_4_stop:
     }
 }
-[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 161; @symbol_classdef = [FiveFourThreeTwoOneDelegate,161,6,33]; @symbol_extends<0> = [WatchUi,161,42,49]; @symbol_extends<1> = [BehaviorDelegate,161,50,66]; ]
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 75; @symbol_classdef = [FiveFourThreeTwoOneDelegate,75,6,33]; @symbol_extends<0> = [WatchUi,75,42,49]; @symbol_extends<1> = [BehaviorDelegate,75,50,66]; ]
 class FiveFourThreeTwoOneDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 161; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 75; ]
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 161; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 75; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 162; @position = 15; @symbol_vardef = [view,162,15,19]; ]
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 77; @position = 15; @symbol_vardef = [_callback,77,15,24]; ]
     protected
-    var view;
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 164; @symbol_functiondef = [initialize,164,13,23]; @symbol_param<0> = [groundingView,164,24,37]; ]
-    function initialize(groundingView) as Void {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_164_39_167_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 165 8 ]
-        symbol [ BehaviorDelegate %tmp.2 165 8 24 ];
+    var _callback;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 79; @symbol_functiondef = [initialize,79,13,23]; @symbol_param<0> = [callback,79,24,32]; ]
+    function initialize(callback) as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_79_34_82_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 80 8 ]
+        symbol [ BehaviorDelegate %tmp.2 80 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 165 25 35 ];
+        symbol [ initialize %tmp.3 80 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 166 8 ]
-        %tmp.4 = lgetv %groundingView;
-        symbol [ groundingView %tmp.4 166 15 28 ];
-        symbol [ view ? 166 8 12 ];
-        putv self :view %tmp.4;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_164_39_167_4_stop:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 81 8 ]
+        %tmp.4 = lgetv %callback;
+        symbol [ callback %tmp.4 81 20 28 ];
+        symbol [ _callback ? 81 8 17 ];
+        putv self :_callback %tmp.4;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_79_34_82_4_stop:
     }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 169; @symbol_functiondef = [onBack,169,13,19]; ]
-    function onBack() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_169_22_172_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 170 8 ]
-        symbol [ WatchUi %tmp.1 170 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ popView %tmp.2 170 16 23 ];
-        %tmp.2 = getv function %tmp.1 :popView;
-        symbol [ WatchUi %tmp.3 170 24 31 ];
-        %tmp.3 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_DOWN %tmp.4 170 32 42 ];
-        %tmp.4 = getv %tmp.3 :SLIDE_DOWN;
-        invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 171 8 ]
-        %tmp.5 = true;
-        ret %tmp.5;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_169_22_172_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 174; @symbol_functiondef = [onSelect,174,13,21]; ]
-    function onSelect() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_174_24_180_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 176 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_8_178_8_if_stmt:
-        symbol [ view %tmp.2 176 12 16 ];
-        %tmp.2 = getv ? :view;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 84; @symbol_functiondef = [onExerciseComplete,84,13,31]; ]
+    function onExerciseComplete() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_84_34_88_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 85 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_8_87_8_if_stmt:
+        symbol [ _callback %tmp.2 85 12 21 ];
+        %tmp.2 = getv ? :_callback;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_8_178_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_8_178_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_26_178_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 177 12 ]
-        symbol [ view %tmp.6 177 12 16 ];
-        %tmp.6 = getv ? :view;
-        %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ nextStep %tmp.8 177 17 25 ];
-        %tmp.8 = getv function %tmp.7 :nextStep;
-        invoke %tmp.7 %tmp.8();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_26_178_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_8_178_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_176_8_178_8_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 179 8 ]
-        %tmp.9 = true;
-        ret %tmp.9;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_174_24_180_4_stop:
-    }
-    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 182; @symbol_functiondef = [onNextPage,182,13,23]; ]
-    function onNextPage() {
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_182_26_188_4_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 184 8 ]
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_8_186_8_if_stmt:
-        symbol [ view %tmp.2 184 12 16 ];
-        %tmp.2 = getv ? :view;
-        %tmp.3 = null;
-        %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_8_186_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_8_186_8_if_true:
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_26_186_8_start:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 185 12 ]
-        symbol [ view %tmp.6 185 12 16 ];
-        %tmp.6 = getv ? :view;
-        %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ nextStep %tmp.8 185 17 25 ];
-        %tmp.8 = getv function %tmp.7 :nextStep;
-        invoke %tmp.7 %tmp.8();
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_26_186_8_stop:
-        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_8_186_8_if_end;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_184_8_186_8_if_end:
-[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 187 8 ]
-        %tmp.9 = true;
-        ret %tmp.9;
-C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_182_26_188_4_stop:
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_8_87_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_8_87_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_31_87_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc" 86 12 ]
+        %tmp.5 = self;
+        symbol [ _callback %tmp.6 86 12 21 ];
+        %tmp.6 = getv function %tmp.5 :_callback;
+        invoke %tmp.5 %tmp.6();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_31_87_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_8_87_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_85_8_87_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_FiveFourThreeTwoOne_mc_84_34_88_4_stop:
     }
 }
 [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\FiveFourThreeTwoOne.mc"; @line = 1; ]
