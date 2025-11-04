@@ -38,6 +38,7 @@ class BreathingView extends WatchUi.View {
         var centerX = width / 2;
         var centerY = height / 2;
 
+        // Background
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
@@ -45,6 +46,7 @@ class BreathingView extends WatchUi.View {
         var color = getStepColor(step);
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
 
+        // Instruction text
         dc.drawText(
             centerX,
             centerY - 40,
@@ -53,10 +55,12 @@ class BreathingView extends WatchUi.View {
             Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
         );
 
+        // Animated circle
         var radius = getCircleRadius(step);
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
         dc.fillCircle(centerX, centerY + 30, radius);
 
+        // Step counter
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
             centerX,
@@ -66,6 +70,7 @@ class BreathingView extends WatchUi.View {
             Gfx.TEXT_JUSTIFY_CENTER
         );
 
+        // Exit hint
         dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
             centerX,
@@ -80,7 +85,7 @@ class BreathingView extends WatchUi.View {
         WatchUi.requestUpdate();
         animationProgress = 0.0;
 
-        // Reuse animation timer
+        // Animation timer (updates every 50 ms)
         if (animationTimer == null) {
             animationTimer = new Timer.Timer();
         } else {
@@ -88,21 +93,19 @@ class BreathingView extends WatchUi.View {
         }
         animationTimer.start(method(:updateAnimation), 50, true);
 
-        // Reuse step timer
-        if (isActive) {
-            if (timer == null) {
-                timer = new Timer.Timer();
-            } else {
-                timer.stop();
-            }
-            timer.start(method(:nextStep), stepDuration, false);
+        // Step timer (every 4 s)
+        if (timer == null) {
+            timer = new Timer.Timer();
+        } else {
+            timer.stop();
         }
+        timer.start(method(:nextStep), stepDuration, false);
     }
 
     function updateAnimation() as Void {
-        if (!isActive) { return; }
+        if (!isActive) return;
 
-        animationProgress = animationProgress + 0.05;
+        animationProgress += 0.05;
         if (animationProgress > 1.0) {
             animationProgress = 1.0;
         }
@@ -110,16 +113,18 @@ class BreathingView extends WatchUi.View {
     }
 
     function nextStep() as Void {
-        if (!isActive) { return; }
+        if (!isActive) return;
 
         step = (step + 1) % 4;
         animationProgress = 0.0;
         WatchUi.requestUpdate();
 
-        if (timer != null) {
+        if (timer == null) {
+            timer = new Timer.Timer();
+        } else {
             timer.stop();
-            timer.start(method(:nextStep), stepDuration, false);
         }
+        timer.start(method(:nextStep), stepDuration, false);
     }
 
     function getStepColor(currentStep) {
@@ -149,6 +154,7 @@ class BreathingView extends WatchUi.View {
 
     function onHide() {
         isActive = false;
+
         if (timer != null) {
             timer.stop();
             timer = null;
@@ -157,5 +163,10 @@ class BreathingView extends WatchUi.View {
             animationTimer.stop();
             animationTimer = null;
         }
+    }
+
+    function onKey(key) {
+        // Exit on BACK
+        WatchUi.popView();
     }
 }
