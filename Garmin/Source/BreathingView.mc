@@ -10,7 +10,7 @@ class BreathingView extends WatchUi.View {
     hidden var stepDuration = 4000; // 4 seconds per step
     hidden var isActive = false;
     hidden var animationProgress = 0.0;
-    
+
     hidden var STEPS = [
         "Breathe In",
         "Hold",
@@ -38,18 +38,13 @@ class BreathingView extends WatchUi.View {
         var centerX = width / 2;
         var centerY = height / 2;
 
-        // Clear screen
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
-        // Get current instruction
         var instruction = STEPS[step];
-        
-        // Set color based on step
         var color = getStepColor(step);
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
 
-        // Draw breathing instruction
         dc.drawText(
             centerX,
             centerY - 40,
@@ -58,12 +53,10 @@ class BreathingView extends WatchUi.View {
             Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER
         );
 
-        // Draw visual circle that "breathes"
         var radius = getCircleRadius(step);
         dc.setColor(color, Gfx.COLOR_TRANSPARENT);
         dc.fillCircle(centerX, centerY + 30, radius);
 
-        // Draw step counter
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
             centerX,
@@ -73,7 +66,6 @@ class BreathingView extends WatchUi.View {
             Gfx.TEXT_JUSTIFY_CENTER
         );
 
-        // Draw exit instruction
         dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
         dc.drawText(
             centerX,
@@ -87,21 +79,29 @@ class BreathingView extends WatchUi.View {
     function startBreathingCycle() {
         WatchUi.requestUpdate();
         animationProgress = 0.0;
-        
-        // Faster updates for smooth animation
-        animationTimer = new Timer.Timer();
-        animationTimer.start(method(:updateAnimation), 50, true); // 50ms updates
-        
-        // Step timer
+
+        // Reuse animation timer
+        if (animationTimer == null) {
+            animationTimer = new Timer.Timer();
+        } else {
+            animationTimer.stop();
+        }
+        animationTimer.start(method(:updateAnimation), 50, true);
+
+        // Reuse step timer
         if (isActive) {
-            timer = new Timer.Timer();
+            if (timer == null) {
+                timer = new Timer.Timer();
+            } else {
+                timer.stop();
+            }
             timer.start(method(:nextStep), stepDuration, false);
         }
     }
 
     function updateAnimation() as Void {
         if (!isActive) { return; }
-        
+
         animationProgress = animationProgress + 0.05;
         if (animationProgress > 1.0) {
             animationProgress = 1.0;
@@ -111,36 +111,38 @@ class BreathingView extends WatchUi.View {
 
     function nextStep() as Void {
         if (!isActive) { return; }
-        
+
         step = (step + 1) % 4;
         animationProgress = 0.0;
         WatchUi.requestUpdate();
-        
-        timer = new Timer.Timer();
-        timer.start(method(:nextStep), stepDuration, false);
+
+        if (timer != null) {
+            timer.stop();
+            timer.start(method(:nextStep), stepDuration, false);
+        }
     }
 
     function getStepColor(currentStep) {
         if (currentStep == 0) {
-            return Gfx.COLOR_BLUE;    // Breathe In
+            return Gfx.COLOR_BLUE;
         } else if (currentStep == 1) {
-            return Gfx.COLOR_YELLOW;  // Hold
+            return Gfx.COLOR_YELLOW;
         } else if (currentStep == 2) {
-            return Gfx.COLOR_GREEN;   // Breathe Out
+            return Gfx.COLOR_GREEN;
         } else {
-            return Gfx.COLOR_ORANGE;  // Hold
+            return Gfx.COLOR_ORANGE;
         }
     }
 
     function getCircleRadius(currentStep) {
         var minRadius = 15;
         var maxRadius = 40;
-        
-        if (currentStep == 0) { // Breathe In - grow
+
+        if (currentStep == 0) {
             return minRadius + ((maxRadius - minRadius) * animationProgress);
-        } else if (currentStep == 2) { // Breathe Out - shrink
+        } else if (currentStep == 2) {
             return maxRadius - ((maxRadius - minRadius) * animationProgress);
-        } else { // Hold - stay same
+        } else {
             return (currentStep == 1) ? maxRadius : minRadius;
         }
     }
@@ -157,22 +159,3 @@ class BreathingView extends WatchUi.View {
         }
     }
 }
-
-class BreathingDelegate extends WatchUi.BehaviorDelegate {
-    
-    function initialize() {
-        BehaviorDelegate.initialize();
-    }
-
-    function onBack() {
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        return true;
-    }
-
-    function onSelect() {
-        // Also allow select to exit
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        return true;
-    }
-}
-
