@@ -49,6 +49,18 @@ Project structure
             MainView.mc
             MenuView.mc
 
+# Build the app for the sim
+`cd C:\Users\Clair\Documents\GitHub\Stress\Garmin`
+
+- Create bin folder
+`mkdir bin -ErrorAction SilentlyContinue`
+`New-Item -ItemType Directory -Force -Path bin`
+
+- Build the app
+`java -jar "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.jar" -d fr265 -f monkey.jungle -o bin\stress.prg -y C:\Users\Clair\Desktop\Sandbox\garmin_developer_key`
+- launch in sim
+```& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265```
+
 # For testing (in the terminal)
 1. cd to project root `cd C:\Users\<path>\Garmin`
 2. ctrl + shift + p
