@@ -16,11 +16,11 @@ $monkeydo = "$connectIqSdk\bin\monkeydo.bat"
 $simulator = "$connectIqSdk\bin\simulator.exe"
 
 # --- Kill any running simulator processes ---
-Write-Host "Checking for running simulator instances..."
+Write-Host "`n[INFO] Checking for running simulator instances..."
 $simProc = Get-Process -Name "ConnectIQ" -ErrorAction SilentlyContinue
 if ($simProc) {
     foreach ($p in $simProc) {
-        Write-Host "Killing simulator PID $($p.Id)..."
+        Write-Host "[INFO] Killing simulator PID $($p.Id)..."
         Stop-Process -Id $p.Id -Force
     }
     Start-Sleep -Seconds 2
@@ -28,25 +28,26 @@ if ($simProc) {
 
 # --- Ensure bin folder exists ---
 if (-not (Test-Path $binDir)) {
+    Write-Host "[INFO] Creating bin directory..."
     New-Item -ItemType Directory -Force -Path $binDir | Out-Null
 }
 
 # --- Build the app ---
-Write-Host "Building Stress app..."
+Write-Host "`n[BUILD] Compiling Stress app..."
 & $monkeyc -f $jungleFile -y $developerKey -o $prgFile
 
 if (-not (Test-Path $prgFile)) {
-    Write-Error "Build failed: PRG file not found at $prgFile"
+    Write-Error "[ERROR] Build failed: PRG file not found at $prgFile"
     exit 1
 }
 
 # --- Launch the simulator ---
-Write-Host "Launching simulator..."
+Write-Host "`n[INFO] Launching simulator..."
 Start-Process $simulator
-Start-Sleep -Seconds 8 # wait for simulator to fully start
+Start-Sleep -Seconds 6
 
 # --- Run the app on the simulator ---
-Write-Host "Running Stress app on FR265 simulator..."
+Write-Host "[RUN] Starting Stress app on FR265 simulator..."
 & $monkeydo $prgFile fr265
 
-Write-Host "Done! Stress app should now be running on the simulator."
+Write-Host "`n[SUCCESS] App is now running in the Connect IQ simulator."

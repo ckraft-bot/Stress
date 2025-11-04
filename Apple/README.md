@@ -29,6 +29,27 @@ StressApp (iOS target)
 │             ├─ ProgressCircle.swift # Reusable circular progress view
 │             └─ Square.swift         # Reusable square for box breathing visual
 
+Garmin/
+│
+├── manifest.xml
+├── project.jungle
+├── run_garmin.ps1
+├── README.md
+│
+├── bin/
+│
+├── source/
+│   └── StressApp.mc
+│
+└── resource/
+    ├── drawables.xml
+    ├── images/
+    │   └── launcher_icon.png
+    └── strings/
+        └── strings.xml
+
+
+
 # Flow
 How the StressDetector triggers grounding exerices and how the UI components connect on iOS vs WatchOS
 
