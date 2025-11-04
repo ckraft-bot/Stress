@@ -1,77 +1,21 @@
 Project structure
 
-├───Apple
-│   │   .gitignore
-│   │   README.md
-│   │   Stress Research.pdf
-│   │   Stressed Sim
-│   │   WatchMenuView.swift
-│   │   
-│   └───Shared
-│       ├───Exercises
-│       │       Categorize.swift
-│       │       ExerciseData.swift
-│       │       FiveFourThreeTwoOne.swift
-│       │       FourByFour.swift
-│       │       OneByThirty.swift
-│       │       TouchGrass.swift
-│       │
-│       ├───Models
-│       │       HRVSample.swift
-│       │       StressDetector.swift
-│       │
-│       └───Views
-│           │   ExercisesMenuView.swift
-│           │   StressView.swift
-│           │
-│           └───Components
-│                   Countdown.swift
-│                   ProgressCircle.swift
-│                   Square.swift
+Garmin/
 │
-└───Garmin
-    │   developer_key
-    │   manifest.xml
-    │   monkey.jungle
-    │   project.jungle
-    │   README.md
-    │   run_garmin.ps1
-    │
-    ├───bin
-    │   ├───gen
-    │   │   └───no-device
-    │   │       └───source
-    │   │               Rez.mcgen
-    │   │
-    │   ├───internal-mir
-    │   │       Rez.mir
-    │   │
-    │   └───mir
-    │       └───Source
-    │               App.mir
-    │               BreathingDelegate.mir
-    │               BreathingView.mir
-    │               FiveFourThreeTwoOne.mir
-    │               MainView.mir
-    │               MainViewDelegate.mir
-    │               MenuView.mir
-    │
-    ├───Resources
-    │   ├───Images
-    │   │       launcher_icon.png
-    │   │       stress-app-icon.png
-    │   │
-    │   └───Strings
-    │           strings.xml
-    │
-    └───Source
-            App.mc
-            BreathingDelegate.mc
-            BreathingView.mc
-            FiveFourThreeTwoOne.mc
-            MainView.mc
-            MainViewDelegate.mc
-            MenuView.mc
+├── bin/                # Compiled output or builds
+│
+├── source/             # All your .mc (Monkey C) source files
+│   └── main.mc         # Example entry point
+│
+├── resource/           # Images, strings, etc.
+│   ├── images/
+│   │   └── icon.png
+│   └── strings/
+│       └── en-US.txt
+│
+├── manifest.xml        # Garmin app manifest
+├── README.md           # Project info
+└── run_garmin.ps1      # PowerShell script to build/run app
 
 
 # Build and run the app in the CIQ simulator 
