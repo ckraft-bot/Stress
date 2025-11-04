@@ -1,40 +1,53 @@
+using Toybox.WatchUi as WatchUi;
+using Toybox.Graphics as Gfx;
 using Toybox.Timer as Timer;
-using Toybox.System as Sys;
 
 class BreathingView extends WatchUi.View {
-    var _timer;
+    var _timer = null;
     var _step = 0;
-
-    const STEP_DURATION = 4000;
-    const STEPS = ["Breathe In", "Hold", "Breathe Out", "Hold"];
+    var _steps = ["Breathe In", "Hold", "Breathe Out", "Hold"];
+    var _stepDuration = 4000; // 4 seconds
 
     function initialize() {
         View.initialize();
-        _timer = new Timer.Timer(); // create once
     }
 
     function onShow() {
         _step = 0;
-        runStep();
+
+        // Start ONE repeating timer for the whole cycle
+        if (_timer == null) {
+            _timer = new Timer.Timer();
+            _timer.start(method(:nextStep), _stepDuration, true);
+        }
+
+        WatchUi.requestUpdate();
+    }
+
+    function onUpdate(dc) {
+        var w = dc.getWidth();
+        var h = dc.getHeight();
+        var cx = w / 2;
+        var cy = h / 2;
+
+        dc.clear();
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        dc.drawText(cx, cy - 20, Gfx.FONT_LARGE, _steps[_step],
+                    Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, h - 20, Gfx.FONT_TINY,
+                    "Step " + (_step + 1) + " of 4",
+                    Gfx.TEXT_JUSTIFY_CENTER);
+    }
+
+    function nextStep() {
+        _step = (_step + 1) % _steps.size();
+        WatchUi.requestUpdate();
     }
 
     function onHide() {
         if (_timer != null) {
             _timer.stop();
+            _timer = null;
         }
-    }
-
-    function runStep() {
-        // display/log current step
-        Sys.println(STEPS[_step]);
-
-        // schedule next step
-        _timer.stop(); // safety — ensures only one active
-        _timer.start(method(:nextStep), STEP_DURATION, false);
-    }
-
-    function nextStep() {
-        _step = (_step + 1) % STEPS.size(); // loop back after 4
-        runStep();
     }
 }
