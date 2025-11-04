@@ -52,7 +52,7 @@ Project structure
 # Build the app for the sim
 `cd C:\Users\Clair\Documents\GitHub\Stress\Garmin`
 
-- Create bin folder
+- Create bin folder (one time event)
 `mkdir bin -ErrorAction SilentlyContinue`
 `New-Item -ItemType Directory -Force -Path bin`
 
