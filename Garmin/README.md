@@ -35,11 +35,11 @@ New-Item -ItemType Directory -Force -Path bin
     ```
     $path = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\project.jungle"
     $lines = @(
-    "project.manifest manifest.xml",
-    "base.sourcePath Source",
-    "base.resourcePath Resources",
-    "device fr265",
-    "build.output bin/stress.prg"
+    "project.manifest = manifest.xml",
+    "base.sourcePath = Source",
+    "base.resourcePath = Resources",
+    "device = fr265",
+    "build.output = bin/stress.prg"
     )
     $lf = [System.Text.Encoding]::UTF8.GetBytes("`n")
     $stream = [System.IO.File]::Open($path, 'Create', 'Write')
