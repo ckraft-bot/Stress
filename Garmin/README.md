@@ -1,53 +1,56 @@
-Project structure
+## Garmin Stress Assistant
 
-Garmin/
-│
-├── manifest.xml
-├── project.jungle          <- UTF-8, LF, no BOM
-├── run_garmin.ps1
-├── README.md
-│
-├── bin/
-│
-├── Source/
-│   └── StressApp.mc
-│
-└── Resources/
-    ├── drawables.xml
-    ├── images/
-    │   └── launcher_icon.png
-    └── strings/
-        └── strings.xml
+### App Summary
+Garmin Stress Assistant is a privacy-first wearable app that estimates elevated stress states from physiological patterns and guides the user through short regulation exercises.
 
+The app does not diagnose stress or medical conditions. It identifies sustained deviations from a personal baseline and offers wellness support at the right time.
 
-# Build and run the app in the CIQ simulator 
-1. cd to project root `cd C:\Users\<path>\Garmin`
-2. ctrl + shift + p
-   - Monkey C: Verify Installation
-   - Monkey C: Build Current Project
-   - Developer: Reload Window
-3. create `bin` folder 
-```
-mkdir bin -ErrorAction SilentlyContinue
-New-Item -ItemType Directory -Force -Path bin
-```
+### Architecture
+The watch app is organized as a modular pipeline:
 
-4. Build the app (including dev key) 
-```
-& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeyc.bat" -f "C:\Users\Clair\Documents\GitHub\Stress\Garmin\project.jungle" -y "C:\Users\Clair\Desktop\Sandbox\garmin_developer_key" -o "C:\Users\Clair\Documents\GitHub\Stress\Garmin\bin\stress.prg"
-```
-5. Launch sim
-```
-Start-Process "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\simulator.exe"
-```
-6. Run app
-```
-& "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0\bin\monkeydo.bat" bin\stress.prg fr265
-```
-7. Kill sim
-`taskkill /IM ConnectIQ.exe /F`
-8. Just run the powershell that handles steps 1-7
-`.\run_garmin.ps1`
+1. Data Input Layer
+- Receives heart rate and RR interval data.
+- Uses a simulator-safe fallback stream when live sensor APIs are unavailable.
+
+2. Baseline Engine
+- Continuously learns the user baseline from resting windows.
+- Tracks baseline heart rate and baseline HRV trend.
+
+3. Context Detector
+- Labels current state as resting, exercise-like, or post-activity recovery.
+- Suppresses stress estimation during exercise and recovery windows.
+
+4. Stress Estimator
+- Produces a stress probability score from HR/HRV deviations.
+- Adds confidence and factor explanations for transparency.
+
+5. Regulation Engine
+- Requires sustained elevation before prompting intervention.
+- Applies cooldown logic to avoid repeated alerts.
+- Runs guided protocols and captures simple feedback.
+
+6. UI and Interaction
+- Displays stress percentage, context state, confidence, and top contributing factor.
+- Supports on-watch controls for regulation flow:
+    - Select: choose or confirm
+    - Down: alternate choice / negative feedback
+    - Up: skip prompt
+
+### Feature Highlights
+- Personalized baseline adaptation
+- Context-aware suppression to reduce false positives
+- Sustained trigger window before prompting
+- Guided breathing exercises:
+    - Resonant breathing (5s inhale / 5s exhale)
+    - Box breathing (4-4-4-4)
+- Post-intervention feedback capture (Yes/No)
+- Cooldown and recovery-aware prompting behavior
+- Explainable output (probability, confidence, factor)
+
+### Privacy and Safety
+- On-device estimation focused on derived metrics.
+- No medical claims or diagnoses.
+- Designed as a supportive self-regulation tool for wellness.
 
 
 

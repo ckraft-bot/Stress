@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\Users\Clair\Documents\GitHub\Stress\Garmin\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="1" lineNum="23" parent="globals/StressInputDelegate" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\bin\\gen\\no-device\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435472" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="3" lineNum="45" parent="globals/StressView" pc="268435492" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="4" lineNum="7" parent="globals/StressApp" pc="268435504" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="5" lineNum="36" parent="globals/StressInputDelegate" pc="268435516" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="5" lineNum="37" parent="globals/StressInputDelegate" pc="268435518" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="6" lineNum="27" parent="globals/StressInputDelegate" pc="268435530" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="6" lineNum="28" parent="globals/StressInputDelegate" pc="268435532" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="6" lineNum="29" parent="globals/StressInputDelegate" pc="268435544" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="7" lineNum="40" parent="globals/StressInputDelegate" pc="268435554" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="7" lineNum="41" parent="globals/StressInputDelegate" pc="268435556" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="8" lineNum="32" parent="globals/StressInputDelegate" pc="268435568" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="8" lineNum="33" parent="globals/StressInputDelegate" pc="268435570" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="9" lineNum="169" parent="globals/StressController" pc="268435582" symbol="colorFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="9" lineNum="170" parent="globals/StressController" pc="268435584" symbol="colorFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="9" lineNum="171" parent="globals/StressController" pc="268435595" symbol="colorFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="9" lineNum="174" parent="globals/StressController" pc="268435604" symbol="colorFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="9" lineNum="175" parent="globals/StressController" pc="268435615" symbol="colorFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="9" lineNum="178" parent="globals/StressController" pc="268435624" symbol="colorFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="10" lineNum="68" parent="globals/StressController" pc="268435629" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="10" lineNum="69" parent="globals/StressController" pc="268435631" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="10" lineNum="70" parent="globals/StressController" pc="268435663" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="10" lineNum="71" parent="globals/StressController" pc="268435679" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="86" parent="globals/StressController" pc="268435706" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="87" parent="globals/StressController" pc="268435709" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="88" parent="globals/StressController" pc="268435734" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="89" parent="globals/StressController" pc="268435751" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="91" parent="globals/StressController" pc="268435772" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="102" parent="globals/StressController" pc="268435913" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="103" parent="globals/StressController" pc="268435919" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="104" parent="globals/StressController" pc="268435935" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="105" parent="globals/StressController" pc="268435951" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="11" lineNum="108" parent="globals/StressController" pc="268435967" symbol="getDisplayModel"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="47" parent="globals/StressController" pc="268435970" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="48" parent="globals/StressController" pc="268435973" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="49" parent="globals/StressController" pc="268435985" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="50" parent="globals/StressController" pc="268435997" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="52" parent="globals/StressController" pc="268436009" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="54" parent="globals/StressController" pc="268436041" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="62" parent="globals/StressController" pc="268436111" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="63" parent="globals/StressController" pc="268436135" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="64" parent="globals/StressController" pc="268436153" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="12" lineNum="65" parent="globals/StressController" pc="268436188" symbol="onSensor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="155" parent="globals/StressController" pc="268436215" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="156" parent="globals/StressController" pc="268436218" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="157" parent="globals/StressController" pc="268436238" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="160" parent="globals/StressController" pc="268436243" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="161" parent="globals/StressController" pc="268436246" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="162" parent="globals/StressController" pc="268436263" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="163" parent="globals/StressController" pc="268436279" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="13" lineNum="166" parent="globals/StressController" pc="268436299" symbol="computeRmssd"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="14" lineNum="82" parent="globals/StressController" pc="268436325" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="14" lineNum="83" parent="globals/StressController" pc="268436327" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="15" lineNum="74" parent="globals/StressController" pc="268436344" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="15" lineNum="75" parent="globals/StressController" pc="268436346" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="29" parent="globals/StressController" pc="268436363" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="30" parent="globals/StressController" pc="268436366" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="32" parent="globals/StressController" pc="268436381" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="33" parent="globals/StressController" pc="268436384" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="34" parent="globals/StressController" pc="268436398" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="37" parent="globals/StressController" pc="268436405" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="38" parent="globals/StressController" pc="268436412" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="39" parent="globals/StressController" pc="268436423" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="40" parent="globals/StressController" pc="268436434" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="41" parent="globals/StressController" pc="268436445" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="43" parent="globals/StressController" pc="268436471" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="16" lineNum="44" parent="globals/StressController" pc="268436494" symbol="onTickWithFallback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="17" lineNum="78" parent="globals/StressController" pc="268436508" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="17" lineNum="79" parent="globals/StressController" pc="268436510" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="16" parent="globals/StressController" pc="268436527" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="17" parent="globals/StressController" pc="268436529" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="18" parent="globals/StressController" pc="268436554" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="19" parent="globals/StressController" pc="268436579" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="20" parent="globals/StressController" pc="268436604" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="22" parent="globals/StressController" pc="268436629" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="23" parent="globals/StressController" pc="268436670" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="24" parent="globals/StressController" pc="268436688" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="25" parent="globals/StressController" pc="268436729" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="18" lineNum="26" parent="globals/StressController" pc="268436737" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="111" parent="globals/StressController" pc="268436746" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="112" parent="globals/StressController" pc="268436748" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="113" parent="globals/StressController" pc="268436754" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="116" parent="globals/StressController" pc="268436759" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="117" parent="globals/StressController" pc="268436770" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="120" parent="globals/StressController" pc="268436782" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="121" parent="globals/StressController" pc="268436793" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="124" parent="globals/StressController" pc="268436805" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="125" parent="globals/StressController" pc="268436816" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="128" parent="globals/StressController" pc="268436828" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="129" parent="globals/StressController" pc="268436839" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="19" lineNum="132" parent="globals/StressController" pc="268436850" symbol="readHeartRate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="135" parent="globals/StressController" pc="268436852" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="136" parent="globals/StressController" pc="268436854" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="137" parent="globals/StressController" pc="268436860" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="140" parent="globals/StressController" pc="268436865" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="141" parent="globals/StressController" pc="268436876" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="144" parent="globals/StressController" pc="268436888" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="145" parent="globals/StressController" pc="268436899" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="148" parent="globals/StressController" pc="268436911" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="149" parent="globals/StressController" pc="268436922" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressController.mc" id="20" lineNum="152" parent="globals/StressController" pc="268436934" symbol="readRrIntervals"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="21" lineNum="49" parent="globals/ContextDetector" pc="268436936" symbol="isLikelyExercise"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="21" lineNum="50" parent="globals/ContextDetector" pc="268436938" symbol="isLikelyExercise"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="21" lineNum="51" parent="globals/ContextDetector" pc="268436950" symbol="isLikelyExercise"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="21" lineNum="54" parent="globals/ContextDetector" pc="268436955" symbol="isLikelyExercise"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="21" lineNum="55" parent="globals/ContextDetector" pc="268436979" symbol="isLikelyExercise"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="21" lineNum="59" parent="globals/ContextDetector" pc="268436984" symbol="isLikelyExercise"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="22" lineNum="7" parent="globals/ContextDetector" pc="268437005" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="22" lineNum="8" parent="globals/ContextDetector" pc="268437007" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="22" lineNum="9" parent="globals/ContextDetector" pc="268437018" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="22" lineNum="10" parent="globals/ContextDetector" pc="268437026" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="13" parent="globals/ContextDetector" pc="268437035" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="14" parent="globals/ContextDetector" pc="268437038" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="16" parent="globals/ContextDetector" pc="268437052" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="17" parent="globals/ContextDetector" pc="268437057" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="18" parent="globals/ContextDetector" pc="268437065" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="25" parent="globals/ContextDetector" pc="268437103" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="26" parent="globals/ContextDetector" pc="268437111" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="27" parent="globals/ContextDetector" pc="268437119" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="30" parent="globals/ContextDetector" pc="268437131" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="31" parent="globals/ContextDetector" pc="268437140" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="32" parent="globals/ContextDetector" pc="268437150" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="33" parent="globals/ContextDetector" pc="268437161" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="34" parent="globals/ContextDetector" pc="268437182" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\ContextDetector.mc" id="23" lineNum="42" parent="globals/ContextDetector" pc="268437244" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="24" lineNum="59" parent="globals/BaselineEngine" pc="268437279" symbol="minInt"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="24" lineNum="60" parent="globals/BaselineEngine" pc="268437281" symbol="minInt"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="24" lineNum="61" parent="globals/BaselineEngine" pc="268437289" symbol="minInt"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="24" lineNum="63" parent="globals/BaselineEngine" pc="268437295" symbol="minInt"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="47" parent="globals/BaselineEngine" pc="268437298" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="48" parent="globals/BaselineEngine" pc="268437301" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="49" parent="globals/BaselineEngine" pc="268437320" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="52" parent="globals/BaselineEngine" pc="268437326" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="53" parent="globals/BaselineEngine" pc="268437329" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="54" parent="globals/BaselineEngine" pc="268437345" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="25" lineNum="56" parent="globals/BaselineEngine" pc="268437365" symbol="safeMean"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="26" lineNum="33" parent="globals/BaselineEngine" pc="268437376" symbol="getProfile"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="26" lineNum="34" parent="globals/BaselineEngine" pc="268437378" symbol="getProfile"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="13" parent="globals/BaselineEngine" pc="268437468" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="14" parent="globals/BaselineEngine" pc="268437470" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="15" parent="globals/BaselineEngine" pc="268437482" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="18" parent="globals/BaselineEngine" pc="268437486" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="19" parent="globals/BaselineEngine" pc="268437503" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="22" parent="globals/BaselineEngine" pc="268437507" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="23" parent="globals/BaselineEngine" pc="268437519" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="24" parent="globals/BaselineEngine" pc="268437541" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="27" parent="globals/BaselineEngine" pc="268437558" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="28" parent="globals/BaselineEngine" pc="268437570" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="27" lineNum="29" parent="globals/BaselineEngine" pc="268437592" symbol="update"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="28" lineNum="7" parent="globals/BaselineEngine" pc="268437610" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="28" lineNum="8" parent="globals/BaselineEngine" pc="268437612" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="28" lineNum="9" parent="globals/BaselineEngine" pc="268437621" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="28" lineNum="10" parent="globals/BaselineEngine" pc="268437630" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="29" lineNum="41" parent="globals/BaselineEngine" pc="268437641" symbol="trimToMax"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="29" lineNum="42" parent="globals/BaselineEngine" pc="268437643" symbol="trimToMax"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\BaselineEngine.mc" id="29" lineNum="43" parent="globals/BaselineEngine" pc="268437659" symbol="trimToMax"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="30" lineNum="204" parent="globals/RegulationEngine" pc="268437674" symbol="getPlanCycles"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="30" lineNum="205" parent="globals/RegulationEngine" pc="268437676" symbol="getPlanCycles"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="30" lineNum="206" parent="globals/RegulationEngine" pc="268437690" symbol="getPlanCycles"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="30" lineNum="208" parent="globals/RegulationEngine" pc="268437696" symbol="getPlanCycles"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="136" parent="globals/RegulationEngine" pc="268437699" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="137" parent="globals/RegulationEngine" pc="268437702" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="138" parent="globals/RegulationEngine" pc="268437710" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="144" parent="globals/RegulationEngine" pc="268437741" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="145" parent="globals/RegulationEngine" pc="268437750" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="146" parent="globals/RegulationEngine" pc="268437758" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="147" parent="globals/RegulationEngine" pc="268437768" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="148" parent="globals/RegulationEngine" pc="268437778" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="149" parent="globals/RegulationEngine" pc="268437801" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="150" parent="globals/RegulationEngine" pc="268437808" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="153" parent="globals/RegulationEngine" pc="268437814" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="159" parent="globals/RegulationEngine" pc="268437903" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="160" parent="globals/RegulationEngine" pc="268437911" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="31" lineNum="166" parent="globals/RegulationEngine" pc="268437942" symbol="getGuidance"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="108" parent="globals/RegulationEngine" pc="268437944" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="109" parent="globals/RegulationEngine" pc="268437947" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="110" parent="globals/RegulationEngine" pc="268437956" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="113" parent="globals/RegulationEngine" pc="268437960" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="114" parent="globals/RegulationEngine" pc="268437968" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="116" parent="globals/RegulationEngine" pc="268437976" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="117" parent="globals/RegulationEngine" pc="268437986" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="119" parent="globals/RegulationEngine" pc="268438002" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="120" parent="globals/RegulationEngine" pc="268438010" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="121" parent="globals/RegulationEngine" pc="268438019" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="123" parent="globals/RegulationEngine" pc="268438034" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="124" parent="globals/RegulationEngine" pc="268438050" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="125" parent="globals/RegulationEngine" pc="268438058" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="128" parent="globals/RegulationEngine" pc="268438076" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="129" parent="globals/RegulationEngine" pc="268438087" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="130" parent="globals/RegulationEngine" pc="268438095" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="32" lineNum="131" parent="globals/RegulationEngine" pc="268438103" symbol="updatePlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="33" lineNum="188" parent="globals/RegulationEngine" pc="268438125" symbol="getPlanSequence"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="33" lineNum="189" parent="globals/RegulationEngine" pc="268438127" symbol="getPlanSequence"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="33" lineNum="190" parent="globals/RegulationEngine" pc="268438141" symbol="getPlanSequence"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="33" lineNum="198" parent="globals/RegulationEngine" pc="268438261" symbol="getPlanSequence"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="34" lineNum="92" parent="globals/RegulationEngine" pc="268438322" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="34" lineNum="93" parent="globals/RegulationEngine" pc="268438324" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="34" lineNum="94" parent="globals/RegulationEngine" pc="268438332" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="34" lineNum="95" parent="globals/RegulationEngine" pc="268438340" symbol="onUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="35" lineNum="70" parent="globals/RegulationEngine" pc="268438358" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="35" lineNum="71" parent="globals/RegulationEngine" pc="268438360" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="35" lineNum="72" parent="globals/RegulationEngine" pc="268438368" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="35" lineNum="73" parent="globals/RegulationEngine" pc="268438384" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="35" lineNum="76" parent="globals/RegulationEngine" pc="268438388" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="35" lineNum="77" parent="globals/RegulationEngine" pc="268438396" symbol="onSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="99" parent="globals/RegulationEngine" pc="268438412" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="100" parent="globals/RegulationEngine" pc="268438414" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="101" parent="globals/RegulationEngine" pc="268438422" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="102" parent="globals/RegulationEngine" pc="268438430" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="103" parent="globals/RegulationEngine" pc="268438439" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="104" parent="globals/RegulationEngine" pc="268438448" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="36" lineNum="105" parent="globals/RegulationEngine" pc="268438456" symbol="startPlan"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="37" lineNum="81" parent="globals/RegulationEngine" pc="268438465" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="37" lineNum="82" parent="globals/RegulationEngine" pc="268438467" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="37" lineNum="83" parent="globals/RegulationEngine" pc="268438475" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="37" lineNum="84" parent="globals/RegulationEngine" pc="268438491" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="37" lineNum="87" parent="globals/RegulationEngine" pc="268438495" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="37" lineNum="88" parent="globals/RegulationEngine" pc="268438503" symbol="onDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="169" parent="globals/RegulationEngine" pc="268438519" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="170" parent="globals/RegulationEngine" pc="268438522" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="171" parent="globals/RegulationEngine" pc="268438551" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="172" parent="globals/RegulationEngine" pc="268438572" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="175" parent="globals/RegulationEngine" pc="268438602" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="176" parent="globals/RegulationEngine" pc="268438620" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="177" parent="globals/RegulationEngine" pc="268438640" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="38" lineNum="180" parent="globals/RegulationEngine" pc="268438670" symbol="getStatusLine"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="39" lineNum="183" parent="globals/RegulationEngine" pc="268438676" symbol="registerFeedback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="39" lineNum="184" parent="globals/RegulationEngine" pc="268438678" symbol="registerFeedback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="39" lineNum="185" parent="globals/RegulationEngine" pc="268438686" symbol="registerFeedback"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="18" parent="globals/RegulationEngine" pc="268438702" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="19" parent="globals/RegulationEngine" pc="268438704" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="20" parent="globals/RegulationEngine" pc="268438716" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="21" parent="globals/RegulationEngine" pc="268438727" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="23" parent="globals/RegulationEngine" pc="268438738" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="24" parent="globals/RegulationEngine" pc="268438746" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="25" parent="globals/RegulationEngine" pc="268438754" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="27" parent="globals/RegulationEngine" pc="268438762" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="28" parent="globals/RegulationEngine" pc="268438770" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="29" parent="globals/RegulationEngine" pc="268438778" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="30" parent="globals/RegulationEngine" pc="268438786" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="31" parent="globals/RegulationEngine" pc="268438794" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="40" lineNum="32" parent="globals/RegulationEngine" pc="268438802" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="35" parent="globals/RegulationEngine" pc="268438811" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="36" parent="globals/RegulationEngine" pc="268438813" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="37" parent="globals/RegulationEngine" pc="268438847" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="38" parent="globals/RegulationEngine" pc="268438855" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="39" parent="globals/RegulationEngine" pc="268438863" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="40" parent="globals/RegulationEngine" pc="268438871" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="43" parent="globals/RegulationEngine" pc="268438875" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="44" parent="globals/RegulationEngine" pc="268438900" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="47" parent="globals/RegulationEngine" pc="268438911" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="48" parent="globals/RegulationEngine" pc="268438928" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="51" parent="globals/RegulationEngine" pc="268438932" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="52" parent="globals/RegulationEngine" pc="268438952" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="55" parent="globals/RegulationEngine" pc="268438956" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="56" parent="globals/RegulationEngine" pc="268438973" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="57" parent="globals/RegulationEngine" pc="268438982" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="60" parent="globals/RegulationEngine" pc="268438994" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="61" parent="globals/RegulationEngine" pc="268439011" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="63" parent="globals/RegulationEngine" pc="268439022" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="66" parent="globals/RegulationEngine" pc="268439026" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\RegulationEngine.mc" id="41" lineNum="67" parent="globals/RegulationEngine" pc="268439034" symbol="evaluate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="42" lineNum="58" parent="globals/StressEstimator" pc="268439043" symbol="confidenceFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="42" lineNum="59" parent="globals/StressEstimator" pc="268439045" symbol="confidenceFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="42" lineNum="60" parent="globals/StressEstimator" pc="268439070" symbol="confidenceFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="42" lineNum="63" parent="globals/StressEstimator" pc="268439079" symbol="confidenceFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="42" lineNum="64" parent="globals/StressEstimator" pc="268439093" symbol="confidenceFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="42" lineNum="67" parent="globals/StressEstimator" pc="268439102" symbol="confidenceFor"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="43" lineNum="80" parent="globals/StressEstimator" pc="268439108" symbol="maxFloat"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="43" lineNum="81" parent="globals/StressEstimator" pc="268439110" symbol="maxFloat"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="43" lineNum="82" parent="globals/StressEstimator" pc="268439118" symbol="maxFloat"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="43" lineNum="84" parent="globals/StressEstimator" pc="268439124" symbol="maxFloat"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="6" parent="globals/StressEstimator" pc="268439127" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="7" parent="globals/StressEstimator" pc="268439130" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="8" parent="globals/StressEstimator" pc="268439148" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="15" parent="globals/StressEstimator" pc="268439186" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="16" parent="globals/StressEstimator" pc="268439197" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="23" parent="globals/StressEstimator" pc="268439245" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="24" parent="globals/StressEstimator" pc="268439249" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="26" parent="globals/StressEstimator" pc="268439252" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="27" parent="globals/StressEstimator" pc="268439264" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="28" parent="globals/StressEstimator" pc="268439311" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="29" parent="globals/StressEstimator" pc="268439322" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="30" parent="globals/StressEstimator" pc="268439349" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="34" parent="globals/StressEstimator" pc="268439370" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="35" parent="globals/StressEstimator" pc="268439382" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="36" parent="globals/StressEstimator" pc="268439401" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="37" parent="globals/StressEstimator" pc="268439412" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="38" parent="globals/StressEstimator" pc="268439439" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="42" parent="globals/StressEstimator" pc="268439460" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="43" parent="globals/StressEstimator" pc="268439472" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="44" parent="globals/StressEstimator" pc="268439482" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="47" parent="globals/StressEstimator" pc="268439500" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="48" parent="globals/StressEstimator" pc="268439512" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="44" lineNum="51" parent="globals/StressEstimator" pc="268439530" symbol="estimate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="46" lineNum="70" parent="globals/StressEstimator" pc="268439584" symbol="clamp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="46" lineNum="71" parent="globals/StressEstimator" pc="268439586" symbol="clamp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="46" lineNum="72" parent="globals/StressEstimator" pc="268439594" symbol="clamp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="46" lineNum="74" parent="globals/StressEstimator" pc="268439600" symbol="clamp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="46" lineNum="75" parent="globals/StressEstimator" pc="268439608" symbol="clamp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\Core\\StressEstimator.mc" id="46" lineNum="77" parent="globals/StressEstimator" pc="268439614" symbol="clamp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="47" lineNum="82" parent="globals/StressView" pc="268439617" symbol="handleSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="47" lineNum="83" parent="globals/StressView" pc="268439619" symbol="handleSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="47" lineNum="84" parent="globals/StressView" pc="268439643" symbol="handleSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="47" lineNum="85" parent="globals/StressView" pc="268439654" symbol="handleSelect"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="48" lineNum="58" parent="globals/StressView" pc="268439656" symbol="onShow"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="48" lineNum="59" parent="globals/StressView" pc="268439658" symbol="onShow"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="48" lineNum="61" parent="globals/StressView" pc="268439666" symbol="onShow"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="48" lineNum="62" parent="globals/StressView" pc="268439697" symbol="onShow"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="49" lineNum="74" parent="globals/StressView" pc="268439709" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="49" lineNum="75" parent="globals/StressView" pc="268439711" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="49" lineNum="76" parent="globals/StressView" pc="268439720" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="49" lineNum="78" parent="globals/StressView" pc="268439747" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="49" lineNum="79" parent="globals/StressView" pc="268439771" symbol="onTick"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="50" lineNum="88" parent="globals/StressView" pc="268439783" symbol="handleDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="50" lineNum="89" parent="globals/StressView" pc="268439785" symbol="handleDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="50" lineNum="90" parent="globals/StressView" pc="268439809" symbol="handleDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="50" lineNum="91" parent="globals/StressView" pc="268439820" symbol="handleDown"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="51" lineNum="69" parent="globals/StressView" pc="268439822" symbol="onSensorData"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="51" lineNum="70" parent="globals/StressView" pc="268439824" symbol="onSensorData"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="51" lineNum="71" parent="globals/StressView" pc="268439850" symbol="onSensorData"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="52" lineNum="51" parent="globals/StressView" pc="268439862" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="52" lineNum="52" parent="globals/StressView" pc="268439864" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="52" lineNum="53" parent="globals/StressView" pc="268439876" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="52" lineNum="54" parent="globals/StressView" pc="268439901" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="52" lineNum="55" parent="globals/StressView" pc="268439930" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="53" lineNum="65" parent="globals/StressView" pc="268439939" symbol="onHide"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="53" lineNum="66" parent="globals/StressView" pc="268439941" symbol="onHide"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="54" lineNum="94" parent="globals/StressView" pc="268439954" symbol="handleUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="54" lineNum="95" parent="globals/StressView" pc="268439956" symbol="handleUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="54" lineNum="96" parent="globals/StressView" pc="268439980" symbol="handleUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="54" lineNum="97" parent="globals/StressView" pc="268439991" symbol="handleUp"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="100" parent="globals/StressView" pc="268439993" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="101" parent="globals/StressView" pc="268439996" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="102" parent="globals/StressView" pc="268440021" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="103" parent="globals/StressView" pc="268440030" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="104" parent="globals/StressView" pc="268440039" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="106" parent="globals/StressView" pc="268440046" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="107" parent="globals/StressView" pc="268440058" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="109" parent="globals/StressView" pc="268440066" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="110" parent="globals/StressView" pc="268440086" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="112" parent="globals/StressView" pc="268440118" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="113" parent="globals/StressView" pc="268440135" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="114" parent="globals/StressView" pc="268440167" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="115" parent="globals/StressView" pc="268440199" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="117" parent="globals/StressView" pc="268440231" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="118" parent="globals/StressView" pc="268440243" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="119" parent="globals/StressView" pc="268440275" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="55" lineNum="121" parent="globals/StressView" pc="268440310" symbol="onUpdate"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="56" lineNum="13" parent="globals/StressApp" pc="268440343" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="56" lineNum="14" parent="globals/StressApp" pc="268440346" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="56" lineNum="15" parent="globals/StressApp" pc="268440366" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="56" lineNum="16" parent="globals/StressApp" pc="268440388" symbol="getInitialView"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="57" lineNum="9" parent="globals/StressApp" pc="268440403" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="57" lineNum="10" parent="globals/StressApp" pc="268440405" symbol="initialize"/>
+<entry filename="C:\\Users\\Clair\\Documents\\GitHub\\Stress\\Garmin\\Source\\StressApp.mc" id="58" lineNum="19" parent="globals/StressApp" pc="268440418" symbol="onStop"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="11" object="true" symbol="StressInputDelegate"/>
+<entry field="true" id="16" symbol="_baselineEngine"/>
+<entry id="15" method="true" symbol="onUp"/>
+<entry field="true" id="50" symbol="_cyclesComplete"/>
+<entry id="6" object="true" symbol="ContextDetector"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="60" method="true" symbol="startPlan"/>
+<entry id="56" method="true" symbol="getPlanCycles"/>
+<entry id="90" symbol="hasRr"/>
+<entry id="43" method="true" symbol="trimToMax"/>
+<entry field="true" id="38" symbol="_hrValues"/>
+<entry field="true" id="53" symbol="_sustainedWindowMs"/>
+<entry id="62" method="true" symbol="clamp"/>
+<entry id="89" symbol="hrv"/>
+<entry field="true" id="35" symbol="_recoveryWindowMs"/>
+<entry id="64" method="true" symbol="estimate"/>
+<entry id="31" method="true" symbol="readHeartRate"/>
+<entry id="59" method="true" symbol="registerFeedback"/>
+<entry id="76" symbol="stressLabel"/>
+<entry id="25" method="true" symbol="colorFor"/>
+<entry id="8389142" method="true" symbol="getProfile"/>
+<entry id="36" method="true" symbol="evaluate"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="54" symbol="_triggerThreshold"/>
+<entry id="72" method="true" symbol="onSensorData"/>
+<entry id="41" method="true" symbol="minInt"/>
+<entry id="30" method="true" symbol="onTickWithFallback"/>
+<entry id="69" method="true" symbol="handleDown"/>
+<entry id="70" method="true" symbol="handleSelect"/>
+<entry field="true" id="19" symbol="_fallbackPhase"/>
+<entry id="85" symbol="line"/>
+<entry id="12" object="true" symbol="StressView"/>
+<entry field="true" id="74" symbol="AppName"/>
+<entry id="98" symbol="durationMs"/>
+<entry id="4" module="true" symbol="globals/Rez/Strings"/>
+<entry field="true" id="47" symbol="_awaitingFeedback"/>
+<entry id="75" symbol="probability"/>
+<entry id="94" symbol="getHeartRate"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry field="true" id="8389138" symbol="label"/>
+<entry id="14" method="true" symbol="onDown"/>
+<entry id="71" method="true" symbol="handleUp"/>
+<entry field="true" id="49" symbol="_cooldownUntilMs"/>
+<entry field="true" id="20" symbol="_latestBaseline"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry id="8" object="true" symbol="StressApp"/>
+<entry field="true" id="17" symbol="_contextDetector"/>
+<entry field="true" id="48" symbol="_cooldownMs"/>
+<entry field="true" id="21" symbol="_latestContext"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="22" symbol="_latestEstimate"/>
+<entry id="63" method="true" symbol="confidenceFor"/>
+<entry id="55" method="true" symbol="getGuidance"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="88" symbol="rr"/>
+<entry field="true" id="46" symbol="_activePlanStartMs"/>
+<entry id="7" object="true" symbol="RegulationEngine"/>
+<entry field="true" id="23" symbol="_latestSnapshot"/>
+<entry id="87" symbol="hr"/>
+<entry id="61" method="true" symbol="updatePlan"/>
+<entry id="78" symbol="confidenceLabel"/>
+<entry id="32" method="true" symbol="readRrIntervals"/>
+<entry field="true" id="24" symbol="_regulation"/>
+<entry id="27" method="true" symbol="getDisplayModel"/>
+<entry id="95" symbol="rrIntervals"/>
+<entry field="true" id="45" symbol="_activePlan"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="92" symbol="suppress"/>
+<entry field="true" id="40" symbol="_maxSamples"/>
+<entry id="57" method="true" symbol="getPlanSequence"/>
+<entry field="true" id="18" symbol="_estimator"/>
+<entry field="true" id="39" symbol="_hrvValues"/>
+<entry field="true" id="67" symbol="_sensorAvailable"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="58" method="true" symbol="getStatusLine"/>
+<entry id="8389619" method="true" symbol="onSelect"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="10" object="true" symbol="StressEstimator"/>
+<entry id="65" method="true" symbol="maxFloat"/>
+<entry id="80" symbol="reasonLine"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="28" method="true" symbol="onSensor"/>
+<entry id="84" symbol="actionHint"/>
+<entry field="true" id="73" symbol="LauncherIcon"/>
+<entry id="86" symbol="timestampMs"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="68" symbol="_ticker"/>
+<entry field="true" id="52" symbol="_sustainedStartMs"/>
+<entry id="5" object="true" symbol="BaselineEngine"/>
+<entry id="77" symbol="stateLabel"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="83" symbol="guidanceLine"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="79" symbol="confidence"/>
+<entry field="true" id="8388960" symbol="heartRate"/>
+<entry field="true" id="13" symbol="_view"/>
+<entry id="29" method="true" symbol="onTick"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="93" symbol="reason"/>
+<entry id="9" object="true" symbol="StressController"/>
+<entry field="true" id="34" symbol="_lastExerciseEndMs"/>
+<entry field="true" id="51" symbol="_hasPrompt"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry field="true" id="8388747" symbol="currentHeartRate"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="82" symbol="guidanceTitle"/>
+<entry field="true" id="8389347" symbol="color"/>
+<entry id="91" symbol="heartRateIntervals"/>
+<entry id="42" method="true" symbol="safeMean"/>
+<entry field="true" id="66" symbol="_controller"/>
+<entry id="26" method="true" symbol="computeRmssd"/>
+<entry id="8388646" module="true" object="true" symbol="Timer"/>
+<entry id="96" symbol="getRRIntervals"/>
+<entry field="true" id="8389487" symbol="state"/>
+<entry id="37" method="true" symbol="isLikelyExercise"/>
+<entry id="97" symbol="samples"/>
+<entry field="true" id="33" symbol="_inExercise"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="8390514" method="true" symbol="update"/>
+<entry field="true" id="8389642" symbol="title"/>
+<entry id="81" symbol="factors"/>
+<entry field="true" id="44" symbol="_activePhaseIndex"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435553" name="viewRef" stackId="1" startPc="268435530"/>
+<entry arg="true" endPc="268435628" name="probability" stackId="1" startPc="268435582"/>
+<entry arg="true" endPc="268435705" name="nowMs" stackId="1" startPc="268435629"/>
+<entry arg="true" endPc="268435969" name="nowMs" stackId="1" startPc="268435706"/>
+<entry endPc="268435969" name="pct" stackId="2" startPc="268435709"/>
+<entry endPc="268435969" name="guidance" stackId="3" startPc="268435709"/>
+<entry endPc="268435969" name="color" stackId="4" startPc="268435709"/>
+<entry endPc="268435969" name="model" stackId="5" startPc="268435709"/>
+<entry arg="true" endPc="268436214" name="hrm" stackId="1" startPc="268435970"/>
+<entry arg="true" endPc="268436214" name="nowMs" stackId="2" startPc="268435970"/>
+<entry endPc="268436213" name="hr" stackId="3" startPc="268435973"/>
+<entry endPc="268436213" name="rr" stackId="4" startPc="268435973"/>
+<entry endPc="268436213" name="hrv" stackId="5" startPc="268435973"/>
+<entry arg="true" endPc="268436324" name="rrArray" stackId="1" startPc="268436215"/>
+<entry endPc="268436324" name="sumSqDiff" stackId="2" startPc="268436218"/>
+<entry endPc="268436298" name="i" stackId="3" startPc="268436263"/>
+<entry endPc="268436288" name="diff" stackId="4" startPc="268436263"/>
+<entry arg="true" endPc="268436343" name="nowMs" stackId="1" startPc="268436325"/>
+<entry arg="true" endPc="268436362" name="nowMs" stackId="1" startPc="268436344"/>
+<entry arg="true" endPc="268436507" name="nowMs" stackId="1" startPc="268436363"/>
+<entry endPc="268436506" name="pulse" stackId="2" startPc="268436366"/>
+<entry endPc="268436506" name="hr" stackId="3" startPc="268436366"/>
+<entry endPc="268436506" name="rrA" stackId="4" startPc="268436366"/>
+<entry endPc="268436506" name="rrB" stackId="5" startPc="268436366"/>
+<entry endPc="268436506" name="rrC" stackId="6" startPc="268436366"/>
+<entry endPc="268436506" name="rr" stackId="7" startPc="268436366"/>
+<entry endPc="268436506" name="mockData" stackId="8" startPc="268436366"/>
+<entry arg="true" endPc="268436526" name="nowMs" stackId="1" startPc="268436508"/>
+<entry arg="true" endPc="268436851" name="hrm" stackId="1" startPc="268436746"/>
+<entry arg="true" endPc="268436935" name="hrm" stackId="1" startPc="268436852"/>
+<entry arg="true" endPc="268437004" name="snapshot" stackId="1" startPc="268436936"/>
+<entry arg="true" endPc="268437004" name="baseline" stackId="2" startPc="268436936"/>
+<entry arg="true" endPc="268437278" name="nowMs" stackId="1" startPc="268437035"/>
+<entry arg="true" endPc="268437278" name="snapshot" stackId="2" startPc="268437035"/>
+<entry arg="true" endPc="268437278" name="baseline" stackId="3" startPc="268437035"/>
+<entry endPc="268437278" name="exercising" stackId="4" startPc="268437038"/>
+<entry endPc="268437240" name="delta" stackId="5" startPc="268437140"/>
+<entry endPc="268437237" name="minsLeft" stackId="6" startPc="268437161"/>
+<entry arg="true" endPc="268437297" name="a" stackId="1" startPc="268437279"/>
+<entry arg="true" endPc="268437297" name="b" stackId="2" startPc="268437279"/>
+<entry arg="true" endPc="268437375" name="arr" stackId="1" startPc="268437298"/>
+<entry arg="true" endPc="268437375" name="fallback" stackId="2" startPc="268437298"/>
+<entry endPc="268437375" name="sum" stackId="3" startPc="268437301"/>
+<entry endPc="268437364" name="i" stackId="4" startPc="268437345"/>
+<entry arg="true" endPc="268437609" name="snapshot" stackId="1" startPc="268437468"/>
+<entry arg="true" endPc="268437609" name="context" stackId="2" startPc="268437468"/>
+<entry arg="true" endPc="268437673" name="arr" stackId="1" startPc="268437641"/>
+<entry arg="true" endPc="268437943" name="nowMs" stackId="1" startPc="268437699"/>
+<entry endPc="268437899" name="sequence" stackId="2" startPc="268437750"/>
+<entry endPc="268437899" name="phase" stackId="3" startPc="268437750"/>
+<entry endPc="268437899" name="elapsed" stackId="4" startPc="268437750"/>
+<entry endPc="268437899" name="secsLeft" stackId="5" startPc="268437750"/>
+<entry arg="true" endPc="268438124" name="nowMs" stackId="1" startPc="268437944"/>
+<entry endPc="268438123" name="sequence" stackId="2" startPc="268437947"/>
+<entry endPc="268438123" name="targetCycles" stackId="3" startPc="268437947"/>
+<entry endPc="268438123" name="elapsed" stackId="4" startPc="268437947"/>
+<entry endPc="268438123" name="phaseDuration" stackId="5" startPc="268437947"/>
+<entry arg="true" endPc="268438357" name="nowMs" stackId="1" startPc="268438322"/>
+<entry arg="true" endPc="268438411" name="nowMs" stackId="1" startPc="268438358"/>
+<entry arg="true" endPc="268438464" name="planName" stackId="1" startPc="268438412"/>
+<entry arg="true" endPc="268438464" name="nowMs" stackId="2" startPc="268438412"/>
+<entry arg="true" endPc="268438518" name="nowMs" stackId="1" startPc="268438465"/>
+<entry arg="true" endPc="268438675" name="nowMs" stackId="1" startPc="268438519"/>
+<entry endPc="268438598" name="mins" stackId="2" startPc="268438551"/>
+<entry endPc="268438666" name="seconds" stackId="3" startPc="268438620"/>
+<entry arg="true" endPc="268438701" name="helped" stackId="1" startPc="268438676"/>
+<entry arg="true" endPc="268438701" name="nowMs" stackId="2" startPc="268438676"/>
+<entry arg="true" endPc="268439042" name="nowMs" stackId="1" startPc="268438811"/>
+<entry arg="true" endPc="268439042" name="stressEstimate" stackId="2" startPc="268438811"/>
+<entry arg="true" endPc="268439042" name="context" stackId="3" startPc="268438811"/>
+<entry arg="true" endPc="268439107" name="snapshot" stackId="1" startPc="268439043"/>
+<entry arg="true" endPc="268439107" name="baseline" stackId="2" startPc="268439043"/>
+<entry arg="true" endPc="268439126" name="a" stackId="1" startPc="268439108"/>
+<entry arg="true" endPc="268439126" name="b" stackId="2" startPc="268439108"/>
+<entry arg="true" endPc="268439583" name="snapshot" stackId="1" startPc="268439127"/>
+<entry arg="true" endPc="268439583" name="baseline" stackId="2" startPc="268439127"/>
+<entry arg="true" endPc="268439583" name="context" stackId="3" startPc="268439127"/>
+<entry endPc="268439583" name="factors" stackId="4" startPc="268439130"/>
+<entry endPc="268439583" name="score" stackId="5" startPc="268439130"/>
+<entry endPc="268439366" name="hrvChangePct" stackId="6" startPc="268439264"/>
+<entry endPc="268439456" name="restingHrDelta" stackId="7" startPc="268439382"/>
+<entry arg="true" endPc="268439616" name="value" stackId="1" startPc="268439584"/>
+<entry arg="true" endPc="268439616" name="minValue" stackId="2" startPc="268439584"/>
+<entry arg="true" endPc="268439616" name="maxValue" stackId="3" startPc="268439584"/>
+<entry arg="true" endPc="268439861" name="data" stackId="1" startPc="268439822"/>
+<entry arg="true" endPc="268440342" name="dc" stackId="1" startPc="268439993"/>
+<entry endPc="268440341" name="model" stackId="2" startPc="268439996"/>
+<entry endPc="268440341" name="w" stackId="3" startPc="268439996"/>
+<entry endPc="268440341" name="h" stackId="4" startPc="268439996"/>
+<entry endPc="268440341" name="cx" stackId="5" startPc="268439996"/>
+<entry endPc="268440402" name="view" stackId="1" startPc="268440346"/>
+<entry endPc="268440402" name="delegate" stackId="2" startPc="268440346"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="49" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/StressInputDelegate" offset="161" parentId="globals" symbolId="StressInputDelegate" type="class"/>
+<dataEntry label="globals/StressController" offset="241" parentId="globals" symbolId="StressController" type="class"/>
+<dataEntry label="globals/Rez" offset="465" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/ContextDetector" offset="509" parentId="globals" symbolId="ContextDetector" type="class"/>
+<dataEntry label="globals/BaselineEngine" offset="598" parentId="globals" symbolId="BaselineEngine" type="class"/>
+<dataEntry label="globals/RegulationEngine" offset="714" parentId="globals" symbolId="RegulationEngine" type="class"/>
+<dataEntry label="globals/StressEstimator" offset="965" parentId="globals" symbolId="StressEstimator" type="class"/>
+<dataEntry label="globals/StressView" offset="1045" parentId="globals" symbolId="StressView" type="class"/>
+<dataEntry label="globals/StressApp" offset="1188" parentId="globals" symbolId="StressApp" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="1250" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="1285" parentId="Rez" symbolId="Strings" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="StressInputDelegate" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="StressController">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435491" name="&lt;init&gt;" parent="Rez" startPc="268435472">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="ContextDetector">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="BaselineEngine">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="RegulationEngine">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="StressEstimator">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435503" name="&lt;init&gt;" parent="StressView" startPc="268435492">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="StressApp" startPc="268435504">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435529" name="onDown" parent="StressInputDelegate" startPc="268435516">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435553" name="initialize" parent="StressInputDelegate" startPc="268435530">
+<param id="viewRef"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435567" name="onUp" parent="StressInputDelegate" startPc="268435554">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435581" name="onSelect" parent="StressInputDelegate" startPc="268435568">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435628" name="colorFor" parent="StressController" startPc="268435582">
+<param id="probability"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435705" name="onTick" parent="StressController" startPc="268435629">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435969" name="getDisplayModel" parent="StressController" startPc="268435706">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436214" name="onSensor" parent="StressController" startPc="268435970">
+<param id="hrm"/>
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436324" name="computeRmssd" parent="StressController" startPc="268436215">
+<param id="rrArray"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436343" name="onUp" parent="StressController" startPc="268436325">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436362" name="onSelect" parent="StressController" startPc="268436344">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436507" name="onTickWithFallback" parent="StressController" startPc="268436363">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436526" name="onDown" parent="StressController" startPc="268436508">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436745" name="initialize" parent="StressController" startPc="268436527">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436851" name="readHeartRate" parent="StressController" startPc="268436746">
+<param id="hrm"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436935" name="readRrIntervals" parent="StressController" startPc="268436852">
+<param id="hrm"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437004" name="isLikelyExercise" parent="ContextDetector" startPc="268436936">
+<param id="snapshot"/>
+<param id="baseline"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437034" name="initialize" parent="ContextDetector" startPc="268437005">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437278" name="evaluate" parent="ContextDetector" startPc="268437035">
+<param id="nowMs"/>
+<param id="snapshot"/>
+<param id="baseline"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437297" name="minInt" parent="BaselineEngine" startPc="268437279">
+<param id="a"/>
+<param id="b"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437375" name="safeMean" parent="BaselineEngine" startPc="268437298">
+<param id="arr"/>
+<param id="fallback"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437467" name="getProfile" parent="BaselineEngine" startPc="268437376">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437609" name="update" parent="BaselineEngine" startPc="268437468">
+<param id="snapshot"/>
+<param id="context"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437640" name="initialize" parent="BaselineEngine" startPc="268437610">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437673" name="trimToMax" parent="BaselineEngine" startPc="268437641">
+<param id="arr"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437698" name="getPlanCycles" parent="RegulationEngine" startPc="268437674">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437943" name="getGuidance" parent="RegulationEngine" startPc="268437699">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438124" name="updatePlan" parent="RegulationEngine" startPc="268437944">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438321" name="getPlanSequence" parent="RegulationEngine" startPc="268438125">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438357" name="onUp" parent="RegulationEngine" startPc="268438322">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438411" name="onSelect" parent="RegulationEngine" startPc="268438358">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438464" name="startPlan" parent="RegulationEngine" startPc="268438412">
+<param id="planName"/>
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438518" name="onDown" parent="RegulationEngine" startPc="268438465">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438675" name="getStatusLine" parent="RegulationEngine" startPc="268438519">
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438701" name="registerFeedback" parent="RegulationEngine" startPc="268438676">
+<param id="helped"/>
+<param id="nowMs"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438810" name="initialize" parent="RegulationEngine" startPc="268438702">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439042" name="evaluate" parent="RegulationEngine" startPc="268438811">
+<param id="nowMs"/>
+<param id="stressEstimate"/>
+<param id="context"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439107" name="confidenceFor" parent="StressEstimator" startPc="268439043">
+<param id="snapshot"/>
+<param id="baseline"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439126" name="maxFloat" parent="StressEstimator" startPc="268439108">
+<param id="a"/>
+<param id="b"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439583" name="estimate" parent="StressEstimator" startPc="268439127">
+<param id="snapshot"/>
+<param id="baseline"/>
+<param id="context"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="StressEstimator">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439616" name="clamp" parent="StressEstimator" startPc="268439584">
+<param id="value"/>
+<param id="minValue"/>
+<param id="maxValue"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439655" name="handleSelect" parent="StressView" startPc="268439617">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439708" name="onShow" parent="StressView" startPc="268439656">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439782" name="onTick" parent="StressView" startPc="268439709">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439821" name="handleDown" parent="StressView" startPc="268439783">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439861" name="onSensorData" parent="StressView" startPc="268439822">
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439938" name="initialize" parent="StressView" startPc="268439862">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439953" name="onHide" parent="StressView" startPc="268439939">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439992" name="handleUp" parent="StressView" startPc="268439954">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440342" name="onUpdate" parent="StressView" startPc="268439993">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440402" name="getInitialView" parent="StressApp" startPc="268440343">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440417" name="initialize" parent="StressApp" startPc="268440403">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440420" name="onStop" parent="StressApp" startPc="268440418">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

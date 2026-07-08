@@ -1,0 +1,664 @@
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; @symbol_usingAlias = [App,1,28,31]; ]
+using Toybox.Application as :App;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; @symbol_usingAlias = [WatchUi,2,24,31]; ]
+using Toybox.WatchUi as :WatchUi;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Graphics,3,13,21]; @symbol_usingAlias = [Gfx,3,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Sensor,4,13,19]; @symbol_usingAlias = [Sensor,4,23,29]; ]
+using Toybox.Sensor as :Sensor;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Timer,5,13,18]; @symbol_usingAlias = [Timer,5,22,27]; ]
+using Toybox.Timer as :Timer;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [System,6,13,19]; @symbol_usingAlias = [System,6,23,29]; ]
+using Toybox.System as :System;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [Lang,7,13,17]; @symbol_usingAlias = [Lang,7,21,25]; ]
+using Toybox.Lang as :Lang;
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 9; @symbol_classdef = [StressApp,9,6,15]; @symbol_extends<0> = [App,9,24,27]; @symbol_extends<1> = [AppBase,9,28,35]; ]
+class StressApp extends App.AppBase {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 11; @position = 15; @symbol_vardef = [_mainView,11,15,24]; ]
+    protected
+    var _mainView;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 12; @position = 15; @symbol_vardef = [_inputDelegate,12,15,29]; ]
+    protected
+    var _inputDelegate;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 14; @symbol_functiondef = [initialize,14,13,23]; ]
+    function initialize() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_14_26_16_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 15 8 ]
+        symbol [ AppBase %tmp.2 15 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 15 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_14_26_16_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 18; @symbol_functiondef = [onStart,18,13,20]; @symbol_param<0> = [state,18,21,26]; ]
+    function onStart(state) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_18_28_22_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 19 8 ]
+        symbol [ StressView %tmp.4 19 24 34 ];
+        %tmp.4 = getv ? :StressView;
+        %tmp.1 = newc %tmp.4 ();
+        symbol [ _mainView ? 19 8 17 ];
+        putv self :_mainView %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 20 8 ]
+        symbol [ StressInputDelegate %tmp.8 20 29 48 ];
+        %tmp.8 = getv ? :StressInputDelegate;
+        symbol [ _mainView %tmp.10 20 49 58 ];
+        %tmp.10 = getv ? :_mainView;
+        %tmp.5 = newc %tmp.8 (%tmp.10);
+        symbol [ _inputDelegate ? 20 8 22 ];
+        putv self :_inputDelegate %tmp.5;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 21 8 ]
+        symbol [ WatchUi %tmp.11 21 8 15 ];
+        %tmp.11 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.12 21 16 24 ];
+        %tmp.12 = getv function %tmp.11 :pushView;
+        symbol [ _mainView %tmp.14 21 25 34 ];
+        %tmp.14 = getv ? :_mainView;
+        symbol [ _inputDelegate %tmp.16 21 36 50 ];
+        %tmp.16 = getv ? :_inputDelegate;
+        symbol [ WatchUi %tmp.17 21 52 59 ];
+        %tmp.17 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.18 21 60 75 ];
+        %tmp.18 = getv %tmp.17 :SLIDE_IMMEDIATE;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.16, %tmp.18);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_18_28_22_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 24; @symbol_functiondef = [onStop,24,13,19]; @symbol_param<0> = [state,24,20,25]; ]
+    function onStop(state) {
+    }
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 28; @symbol_classdef = [StressInputDelegate,28,6,25]; @symbol_extends<0> = [WatchUi,28,34,41]; @symbol_extends<1> = [BehaviorDelegate,28,42,58]; ]
+class StressInputDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 28; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 28; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 30; @position = 15; @symbol_vardef = [_view,30,15,20]; ]
+    protected
+    var _view;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 32; @symbol_functiondef = [initialize,32,13,23]; @symbol_param<0> = [viewRef,32,24,31]; ]
+    function initialize(viewRef) as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_32_33_35_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 33 8 ]
+        symbol [ BehaviorDelegate %tmp.2 33 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 33 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 34 8 ]
+        %tmp.4 = lgetv %viewRef;
+        symbol [ viewRef %tmp.4 34 16 23 ];
+        symbol [ _view ? 34 8 13 ];
+        putv self :_view %tmp.4;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_32_33_35_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 37; @symbol_functiondef = [onSelect,37,13,21]; ]
+    function onSelect() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_37_24_39_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 38 8 ]
+        symbol [ _view %tmp.2 38 15 20 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ handleSelect %tmp.3 38 21 33 ];
+        %tmp.3 = getv function %tmp.2 :handleSelect;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_37_24_39_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 41; @symbol_functiondef = [onDown,41,13,19]; ]
+    function onDown() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_41_22_43_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 42 8 ]
+        symbol [ _view %tmp.2 42 15 20 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ handleDown %tmp.3 42 21 31 ];
+        %tmp.3 = getv function %tmp.2 :handleDown;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_41_22_43_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 45; @symbol_functiondef = [onUp,45,13,17]; ]
+    function onUp() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_45_20_47_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 46 8 ]
+        symbol [ _view %tmp.2 46 15 20 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ handleUp %tmp.3 46 21 29 ];
+        %tmp.3 = getv function %tmp.2 :handleUp;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_45_20_47_4_stop:
+    }
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 50; @symbol_classdef = [StressView,50,6,16]; @symbol_extends<0> = [WatchUi,50,25,32]; @symbol_extends<1> = [View,50,33,37]; ]
+class StressView extends WatchUi.View {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 50; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 50; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 52; @position = 15; @symbol_vardef = [_controller,52,15,26]; ]
+    protected
+    var _controller;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 53; @position = 15; @symbol_vardef = [_ticker,53,15,22]; ]
+    protected
+    var _ticker;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 55; @symbol_functiondef = [initialize,55,13,23]; ]
+    function initialize() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_55_26_59_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 56 8 ]
+        symbol [ View %tmp.2 56 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 56 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 57 8 ]
+        symbol [ StressController %tmp.7 57 26 42 ];
+        %tmp.7 = getv ? :StressController;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ _controller ? 57 8 19 ];
+        putv self :_controller %tmp.4;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 58 8 ]
+        symbol [ Timer %tmp.10 58 22 27 ];
+        %tmp.10 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.11 58 28 33 ];
+        %tmp.11 = getv function ? %tmp.10 :Timer;
+        %tmp.8 = newc %tmp.11 ();
+        symbol [ _ticker ? 58 8 15 ];
+        putv self :_ticker %tmp.8;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_55_26_59_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 61; @symbol_functiondef = [onShow,61,13,19]; ]
+    function onShow() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_61_22_65_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 62 8 ]
+        symbol [ Sensor %tmp.1 62 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ registerSensorDataListener %tmp.2 62 15 41 ];
+        %tmp.2 = getv function %tmp.1 :registerSensorDataListener;
+        %tmp.3 = self;
+        symbol [ method %tmp.4 62 42 48 ];
+        %tmp.4 = getv function %tmp.3 :method;
+        %tmp.6 = const :onSensorData;
+        symbol [ onSensorData %tmp.6 62 50 62 const ];
+        %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.6);
+        %tmp.8 = newd 1;
+        %tmp.10 = const :heartRate;
+        symbol [ heartRate %tmp.10 62 68 77 const ];
+        %tmp.11 = true;
+        %tmp.12 = dup %tmp.8;
+        %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
+        invoke %tmp.1 %tmp.2(%tmp.7, %tmp.13);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 63 8 ]
+        symbol [ _ticker %tmp.15 63 8 15 ];
+        %tmp.15 = getv ? :_ticker;
+        symbol [ start %tmp.16 63 16 21 ];
+        %tmp.16 = getv function %tmp.15 :start;
+        %tmp.17 = self;
+        symbol [ method %tmp.18 63 22 28 ];
+        %tmp.18 = getv function %tmp.17 :method;
+        %tmp.20 = const :onTick;
+        symbol [ onTick %tmp.20 63 30 36 const ];
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        %tmp.22 = 1000;
+        %tmp.23 = true;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.22, %tmp.23);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 64 8 ]
+        symbol [ WatchUi %tmp.24 64 8 15 ];
+        %tmp.24 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.25 64 16 29 ];
+        %tmp.25 = getv function %tmp.24 :requestUpdate;
+        invoke %tmp.24 %tmp.25();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_61_22_65_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 67; @symbol_functiondef = [onHide,67,13,19]; ]
+    function onHide() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_67_22_70_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 68 8 ]
+        symbol [ Sensor %tmp.1 68 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ unregisterSensorDataListener %tmp.2 68 15 43 ];
+        %tmp.2 = getv function %tmp.1 :unregisterSensorDataListener;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 69 8 ]
+        symbol [ _ticker %tmp.4 69 8 15 ];
+        %tmp.4 = getv ? :_ticker;
+        symbol [ stop %tmp.5 69 16 20 ];
+        %tmp.5 = getv function %tmp.4 :stop;
+        invoke %tmp.4 %tmp.5();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_67_22_70_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 72; @symbol_functiondef = [onSensorData,72,13,25]; @symbol_param<0> = [data,72,26,30]; @symbol_param<0>_type<0> = [Sensor,72,34,40]; @symbol_param<0>_type<1> = [SensorData,72,41,51]; ]
+    function onSensorData(data as Sensor.SensorData) as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_72_61_76_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 73 8 ]
+        symbol [ _controller %tmp.2 73 8 19 ];
+        %tmp.2 = getv ? :_controller;
+        symbol [ onSensor %tmp.3 73 20 28 ];
+        %tmp.3 = getv function %tmp.2 :onSensor;
+        %tmp.4 = lgetv %data;
+        symbol [ data %tmp.4 73 29 33 ];
+        symbol [ System %tmp.5 73 35 41 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.6 73 42 50 ];
+        %tmp.6 = getv function %tmp.5 :getTimer;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.7);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 74 8 ]
+        symbol [ WatchUi %tmp.8 74 8 15 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.9 74 16 29 ];
+        %tmp.9 = getv function %tmp.8 :requestUpdate;
+        invoke %tmp.8 %tmp.9();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 75 8 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_72_61_76_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 78; @symbol_functiondef = [onTick,78,13,19]; ]
+    function onTick() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_78_22_81_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 79 8 ]
+        symbol [ _controller %tmp.2 79 8 19 ];
+        %tmp.2 = getv ? :_controller;
+        symbol [ onTick %tmp.3 79 20 26 ];
+        %tmp.3 = getv function %tmp.2 :onTick;
+        symbol [ System %tmp.4 79 27 33 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.5 79 34 42 ];
+        %tmp.5 = getv function %tmp.4 :getTimer;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        invoke %tmp.2 %tmp.3(%tmp.6);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 80 8 ]
+        symbol [ WatchUi %tmp.7 80 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.8 80 16 29 ];
+        %tmp.8 = getv function %tmp.7 :requestUpdate;
+        invoke %tmp.7 %tmp.8();
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_78_22_81_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 83; @symbol_functiondef = [handleSelect,83,13,25]; ]
+    function handleSelect() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_83_28_87_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 84 8 ]
+        symbol [ _controller %tmp.2 84 8 19 ];
+        %tmp.2 = getv ? :_controller;
+        symbol [ onSelect %tmp.3 84 20 28 ];
+        %tmp.3 = getv function %tmp.2 :onSelect;
+        symbol [ System %tmp.4 84 29 35 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.5 84 36 44 ];
+        %tmp.5 = getv function %tmp.4 :getTimer;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        invoke %tmp.2 %tmp.3(%tmp.6);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 85 8 ]
+        symbol [ WatchUi %tmp.7 85 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.8 85 16 29 ];
+        %tmp.8 = getv function %tmp.7 :requestUpdate;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 86 8 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_83_28_87_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 89; @symbol_functiondef = [handleDown,89,13,23]; ]
+    function handleDown() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_89_26_93_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 90 8 ]
+        symbol [ _controller %tmp.2 90 8 19 ];
+        %tmp.2 = getv ? :_controller;
+        symbol [ onDown %tmp.3 90 20 26 ];
+        %tmp.3 = getv function %tmp.2 :onDown;
+        symbol [ System %tmp.4 90 27 33 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.5 90 34 42 ];
+        %tmp.5 = getv function %tmp.4 :getTimer;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        invoke %tmp.2 %tmp.3(%tmp.6);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 91 8 ]
+        symbol [ WatchUi %tmp.7 91 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.8 91 16 29 ];
+        %tmp.8 = getv function %tmp.7 :requestUpdate;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 92 8 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_89_26_93_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 95; @symbol_functiondef = [handleUp,95,13,21]; ]
+    function handleUp() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_95_24_99_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 96 8 ]
+        symbol [ _controller %tmp.2 96 8 19 ];
+        %tmp.2 = getv ? :_controller;
+        symbol [ onUp %tmp.3 96 20 24 ];
+        %tmp.3 = getv function %tmp.2 :onUp;
+        symbol [ System %tmp.4 96 25 31 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.5 96 32 40 ];
+        %tmp.5 = getv function %tmp.4 :getTimer;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        invoke %tmp.2 %tmp.3(%tmp.6);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 97 8 ]
+        symbol [ WatchUi %tmp.7 97 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.8 97 16 29 ];
+        %tmp.8 = getv function %tmp.7 :requestUpdate;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 98 8 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_95_24_99_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 101; @symbol_functiondef = [onUpdate,101,13,21]; @symbol_param<0> = [dc,101,22,24]; ]
+    function onUpdate(dc) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 102 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_stop" ]
+        %model.1 = local;
+        symbol [ model %model.1 102 12 17 ];
+        symbol [ _controller %tmp.2 102 20 31 ];
+        %tmp.2 = getv ? :_controller;
+        symbol [ getDisplayModel %tmp.3 102 32 47 ];
+        %tmp.3 = getv function %tmp.2 :getDisplayModel;
+        symbol [ System %tmp.4 102 48 54 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.5 102 55 63 ];
+        %tmp.5 = getv function %tmp.4 :getTimer;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = invoke %tmp.2 %tmp.3(%tmp.6);
+        lputv %model.1 %tmp.7;
+        symbol [ model %model.1 102 12 17 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 103 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_stop" ]
+        %w.2 = local;
+        symbol [ w %w.2 103 12 13 ];
+        %tmp.8 = lgetv %dc;
+        symbol [ dc %tmp.8 103 16 18 ];
+        symbol [ getWidth %tmp.9 103 19 27 ];
+        %tmp.9 = getv function %tmp.8 :getWidth;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %w.2 %tmp.10;
+        symbol [ w %w.2 103 12 13 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 104 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_stop" ]
+        %h.3 = local;
+        symbol [ h %h.3 104 12 13 ];
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 104 16 18 ];
+        symbol [ getHeight %tmp.12 104 19 28 ];
+        %tmp.12 = getv function %tmp.11 :getHeight;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        lputv %h.3 %tmp.13;
+        symbol [ h %h.3 104 12 13 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 105 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_stop" ]
+        %cx.4 = local;
+        symbol [ cx %cx.4 105 12 14 ];
+        %tmp.14 = lgetv %w.2;
+        symbol [ w %tmp.14 105 17 18 ];
+        %tmp.15 = 2;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        lputv %cx.4 %tmp.16;
+        symbol [ cx %cx.4 105 12 14 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 107 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 107 8 10 ];
+        symbol [ setColor %tmp.18 107 11 19 ];
+        %tmp.18 = getv function %tmp.17 :setColor;
+        symbol [ Gfx %tmp.19 107 20 23 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.20 107 24 35 ];
+        %tmp.20 = getv %tmp.19 :COLOR_BLACK;
+        symbol [ Gfx %tmp.21 107 37 40 ];
+        %tmp.21 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.22 107 41 52 ];
+        %tmp.22 = getv %tmp.21 :COLOR_BLACK;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.22);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 108 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 108 8 10 ];
+        symbol [ clear %tmp.24 108 11 16 ];
+        %tmp.24 = getv function %tmp.23 :clear;
+        invoke %tmp.23 %tmp.24();
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 110 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 110 8 10 ];
+        symbol [ setColor %tmp.26 110 11 19 ];
+        %tmp.26 = getv function %tmp.25 :setColor;
+        %tmp.27 = lgetv %model.1;
+        symbol [ model %tmp.27 110 20 25 ];
+        %tmp.29 = const :color;
+        symbol [ color %tmp.29 110 27 32 const ];
+        %tmp.30 = agetv %tmp.27 %tmp.29;
+        symbol [ Gfx %tmp.31 110 35 38 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.32 110 39 56 ];
+        %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+        invoke %tmp.25 %tmp.26(%tmp.30, %tmp.32);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 111 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 111 8 10 ];
+        symbol [ drawText %tmp.34 111 11 19 ];
+        %tmp.34 = getv function %tmp.33 :drawText;
+        %tmp.35 = lgetv %cx.4;
+        symbol [ cx %tmp.35 111 20 22 ];
+        %tmp.36 = lgetv %h.3;
+        symbol [ h %tmp.36 111 24 25 ];
+        %tmp.37 = 0.22;
+        %tmp.38 = mul %tmp.36 %tmp.37;
+        symbol [ Gfx %tmp.39 111 34 37 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.40 111 38 53 ];
+        %tmp.40 = getv %tmp.39 :FONT_NUMBER_HOT;
+        %tmp.41 = lgetv %model.1;
+        symbol [ model %tmp.41 111 55 60 ];
+        %tmp.43 = const :stressLabel;
+        symbol [ stressLabel %tmp.43 111 62 73 const ];
+        %tmp.44 = agetv %tmp.41 %tmp.43;
+        symbol [ Gfx %tmp.45 111 76 79 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 111 80 99 ];
+        %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.38, %tmp.40, %tmp.44, %tmp.46);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 113 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 113 8 10 ];
+        symbol [ setColor %tmp.48 113 11 19 ];
+        %tmp.48 = getv function %tmp.47 :setColor;
+        symbol [ Gfx %tmp.49 113 20 23 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.50 113 24 35 ];
+        %tmp.50 = getv %tmp.49 :COLOR_WHITE;
+        symbol [ Gfx %tmp.51 113 37 40 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.52 113 41 58 ];
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 114 8 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 114 8 10 ];
+        symbol [ drawText %tmp.54 114 11 19 ];
+        %tmp.54 = getv function %tmp.53 :drawText;
+        %tmp.55 = lgetv %cx.4;
+        symbol [ cx %tmp.55 114 20 22 ];
+        %tmp.56 = lgetv %h.3;
+        symbol [ h %tmp.56 114 24 25 ];
+        %tmp.57 = 0.42;
+        %tmp.58 = mul %tmp.56 %tmp.57;
+        symbol [ Gfx %tmp.59 114 34 37 ];
+        %tmp.59 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.60 114 38 48 ];
+        %tmp.60 = getv %tmp.59 :FONT_SMALL;
+        %tmp.61 = lgetv %model.1;
+        symbol [ model %tmp.61 114 50 55 ];
+        %tmp.63 = const :stateLabel;
+        symbol [ stateLabel %tmp.63 114 57 67 const ];
+        %tmp.64 = agetv %tmp.61 %tmp.63;
+        symbol [ Gfx %tmp.65 114 70 73 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.66 114 74 93 ];
+        %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.58, %tmp.60, %tmp.64, %tmp.66);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 115 8 ]
+        %tmp.67 = lgetv %dc;
+        symbol [ dc %tmp.67 115 8 10 ];
+        symbol [ drawText %tmp.68 115 11 19 ];
+        %tmp.68 = getv function %tmp.67 :drawText;
+        %tmp.69 = lgetv %cx.4;
+        symbol [ cx %tmp.69 115 20 22 ];
+        %tmp.70 = lgetv %h.3;
+        symbol [ h %tmp.70 115 24 25 ];
+        %tmp.71 = 0.53;
+        %tmp.72 = mul %tmp.70 %tmp.71;
+        symbol [ Gfx %tmp.73 115 34 37 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.74 115 38 48 ];
+        %tmp.74 = getv %tmp.73 :FONT_XTINY;
+        %tmp.75 = lgetv %model.1;
+        symbol [ model %tmp.75 115 50 55 ];
+        %tmp.77 = const :confidenceLabel;
+        symbol [ confidenceLabel %tmp.77 115 57 72 const ];
+        %tmp.78 = agetv %tmp.75 %tmp.77;
+        symbol [ Gfx %tmp.79 115 75 78 ];
+        %tmp.79 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.80 115 79 98 ];
+        %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.72, %tmp.74, %tmp.78, %tmp.80);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 116 8 ]
+        %tmp.81 = lgetv %dc;
+        symbol [ dc %tmp.81 116 8 10 ];
+        symbol [ drawText %tmp.82 116 11 19 ];
+        %tmp.82 = getv function %tmp.81 :drawText;
+        %tmp.83 = lgetv %cx.4;
+        symbol [ cx %tmp.83 116 20 22 ];
+        %tmp.84 = lgetv %h.3;
+        symbol [ h %tmp.84 116 24 25 ];
+        %tmp.85 = 0.66;
+        %tmp.86 = mul %tmp.84 %tmp.85;
+        symbol [ Gfx %tmp.87 116 34 37 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.88 116 38 47 ];
+        %tmp.88 = getv %tmp.87 :FONT_TINY;
+        %tmp.89 = lgetv %model.1;
+        symbol [ model %tmp.89 116 49 54 ];
+        %tmp.91 = const :reasonLine;
+        symbol [ reasonLine %tmp.91 116 56 66 const ];
+        %tmp.92 = agetv %tmp.89 %tmp.91;
+        symbol [ Gfx %tmp.93 116 69 72 ];
+        %tmp.93 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.94 116 73 92 ];
+        %tmp.94 = getv %tmp.93 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.81 %tmp.82(%tmp.83, %tmp.86, %tmp.88, %tmp.92, %tmp.94);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 118 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_8_123_8_if_stmt:
+        %tmp.95 = lgetv %model.1;
+        symbol [ model %tmp.95 118 12 17 ];
+        %tmp.97 = const :guidanceTitle;
+        symbol [ guidanceTitle %tmp.97 118 19 32 const ];
+        %tmp.98 = agetv %tmp.95 %tmp.97;
+        %tmp.99 = null;
+        %tmp.100 = ne %tmp.98 %tmp.99;
+        bf %tmp.100 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_8_123_8_if_else_false;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_8_123_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_43_121_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 119 12 ]
+        %tmp.101 = lgetv %dc;
+        symbol [ dc %tmp.101 119 12 14 ];
+        symbol [ drawText %tmp.102 119 15 23 ];
+        %tmp.102 = getv function %tmp.101 :drawText;
+        %tmp.103 = lgetv %cx.4;
+        symbol [ cx %tmp.103 119 24 26 ];
+        %tmp.104 = lgetv %h.3;
+        symbol [ h %tmp.104 119 28 29 ];
+        %tmp.105 = 0.78;
+        %tmp.106 = mul %tmp.104 %tmp.105;
+        symbol [ Gfx %tmp.107 119 38 41 ];
+        %tmp.107 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.108 119 42 52 ];
+        %tmp.108 = getv %tmp.107 :FONT_SMALL;
+        %tmp.109 = lgetv %model.1;
+        symbol [ model %tmp.109 119 54 59 ];
+        %tmp.111 = const :guidanceTitle;
+        symbol [ guidanceTitle %tmp.111 119 61 74 const ];
+        %tmp.112 = agetv %tmp.109 %tmp.111;
+        symbol [ Gfx %tmp.113 119 77 80 ];
+        %tmp.113 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.114 119 81 100 ];
+        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.101 %tmp.102(%tmp.103, %tmp.106, %tmp.108, %tmp.112, %tmp.114);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 120 12 ]
+        %tmp.115 = lgetv %dc;
+        symbol [ dc %tmp.115 120 12 14 ];
+        symbol [ drawText %tmp.116 120 15 23 ];
+        %tmp.116 = getv function %tmp.115 :drawText;
+        %tmp.117 = lgetv %cx.4;
+        symbol [ cx %tmp.117 120 24 26 ];
+        %tmp.118 = lgetv %h.3;
+        symbol [ h %tmp.118 120 28 29 ];
+        %tmp.119 = 0.88;
+        %tmp.120 = mul %tmp.118 %tmp.119;
+        symbol [ Gfx %tmp.121 120 38 41 ];
+        %tmp.121 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.122 120 42 52 ];
+        %tmp.122 = getv %tmp.121 :FONT_XTINY;
+        %tmp.123 = lgetv %model.1;
+        symbol [ model %tmp.123 120 54 59 ];
+        %tmp.125 = const :guidanceLine;
+        symbol [ guidanceLine %tmp.125 120 61 73 const ];
+        %tmp.126 = agetv %tmp.123 %tmp.125;
+        symbol [ Gfx %tmp.127 120 76 79 ];
+        %tmp.127 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.128 120 80 99 ];
+        %tmp.128 = getv %tmp.127 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.115 %tmp.116(%tmp.117, %tmp.120, %tmp.122, %tmp.126, %tmp.128);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_43_121_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_8_123_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_8_123_8_if_else_false:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_121_15_123_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc" 122 12 ]
+        %tmp.129 = lgetv %dc;
+        symbol [ dc %tmp.129 122 12 14 ];
+        symbol [ drawText %tmp.130 122 15 23 ];
+        %tmp.130 = getv function %tmp.129 :drawText;
+        %tmp.131 = lgetv %cx.4;
+        symbol [ cx %tmp.131 122 24 26 ];
+        %tmp.132 = lgetv %h.3;
+        symbol [ h %tmp.132 122 28 29 ];
+        %tmp.133 = 0.84;
+        %tmp.134 = mul %tmp.132 %tmp.133;
+        symbol [ Gfx %tmp.135 122 38 41 ];
+        %tmp.135 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.136 122 42 52 ];
+        %tmp.136 = getv %tmp.135 :FONT_XTINY;
+        %tmp.137 = lgetv %model.1;
+        symbol [ model %tmp.137 122 54 59 ];
+        %tmp.139 = const :actionHint;
+        symbol [ actionHint %tmp.139 122 61 71 const ];
+        %tmp.140 = agetv %tmp.137 %tmp.139;
+        symbol [ Gfx %tmp.141 122 74 77 ];
+        %tmp.141 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.142 122 78 97 ];
+        %tmp.142 = getv %tmp.141 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.129 %tmp.130(%tmp.131, %tmp.134, %tmp.136, %tmp.140, %tmp.142);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_121_15_123_8_stop:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_118_8_123_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_StressApp_mc_101_26_124_4_stop:
+    }
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\StressApp.mc"; @line = 1; ]
+<init> {
+}

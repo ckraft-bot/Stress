@@ -1,5 +1,3 @@
-project.manifest=manifest.xml
-base.sourcePath=Source
-base.resourcePath=Resources
-build.output=bin/stress.prg
-device=fr265
+project.manifest = manifest.xml
+base.sourcePath = Source
+base.resourcePath = Resources

@@ -5,7 +5,9 @@
 # Paths
 $projectRoot = "C:\Users\Clair\Documents\GitHub\Stress\Garmin"
 $binDir      = "$projectRoot\bin"
-$prgFile     = "$binDir\StressApp.prg"
+$outputPrg   = "$binDir\stress.prg"
+$prgFile     = $null
+$device      = "fr265"
 $jungleFile  = "$projectRoot\project.jungle"
 $developerKey= "C:\Users\Clair\Desktop\Sandbox\garmin_developer_key"
 $connectIqSdk= "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-8.3.0-2025-09-22-5813687a0"
@@ -35,10 +37,19 @@ if (-not (Test-Path $binDir)) {
 # Compile app
 # -------------------------------
 Write-Host "`n[BUILD] Compiling Stress app..."
-& $monkeyc -f $jungleFile -y $developerKey -o $binDir
+& $monkeyc -f $jungleFile -y $developerKey -o $outputPrg
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "[ERROR] Build failed: monkeyc exited with code $LASTEXITCODE"
+    exit 1
+}
 
-if (-not (Test-Path $prgFile)) {
-    Write-Error "[ERROR] Build failed: PRG file not found at $prgFile"
+$prgCandidate = Get-ChildItem -Path $binDir -Filter *.prg | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+if ($prgCandidate) {
+    $prgFile = $prgCandidate.FullName
+}
+
+if ([string]::IsNullOrWhiteSpace($prgFile) -or -not (Test-Path $prgFile)) {
+    Write-Error "[ERROR] Build failed: PRG file not found in $binDir"
     exit 1
 }
 
@@ -48,6 +59,8 @@ Write-Host "[BUILD] Build successful: $prgFile"
 # Launch simulator
 # -------------------------------
 Write-Host "`n[INFO] Launching simulator..."
-& $monkeydo -i $prgFile
+& $simulator
+Start-Sleep -Seconds 2
+& $monkeydo $prgFile $device
 
 Write-Host "`n[INFO] Done."

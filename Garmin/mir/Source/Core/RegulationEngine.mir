@@ -1,0 +1,1021 @@
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 1; @symbol_classdef = [RegulationEngine,1,6,22]; ]
+class RegulationEngine {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 1; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 3; @position = 15; @symbol_vardef = [_triggerThreshold,3,15,32]; ]
+    protected
+    var _triggerThreshold;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 4; @position = 15; @symbol_vardef = [_sustainedWindowMs,4,15,33]; ]
+    protected
+    var _sustainedWindowMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 5; @position = 15; @symbol_vardef = [_cooldownMs,5,15,26]; ]
+    protected
+    var _cooldownMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 7; @position = 15; @symbol_vardef = [_sustainedStartMs,7,15,32]; ]
+    protected
+    var _sustainedStartMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 8; @position = 15; @symbol_vardef = [_hasPrompt,8,15,25]; ]
+    protected
+    var _hasPrompt;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 9; @position = 15; @symbol_vardef = [_inExercise,9,15,26]; ]
+    protected
+    var _inExercise;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 11; @position = 15; @symbol_vardef = [_activePlan,11,15,26]; ]
+    protected
+    var _activePlan;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 12; @position = 15; @symbol_vardef = [_activePlanStartMs,12,15,33]; ]
+    protected
+    var _activePlanStartMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 13; @position = 15; @symbol_vardef = [_activePhaseIndex,13,15,32]; ]
+    protected
+    var _activePhaseIndex;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 14; @position = 15; @symbol_vardef = [_cyclesComplete,14,15,30]; ]
+    protected
+    var _cyclesComplete;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 15; @position = 15; @symbol_vardef = [_awaitingFeedback,15,15,32]; ]
+    protected
+    var _awaitingFeedback;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 16; @position = 15; @symbol_vardef = [_cooldownUntilMs,16,15,31]; ]
+    protected
+    var _cooldownUntilMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 18; @symbol_functiondef = [initialize,18,13,23]; ]
+    function initialize() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_18_26_33_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 19 8 ]
+        %tmp.1 = 0.65;
+        symbol [ _triggerThreshold ? 19 8 25 ];
+        putv self :_triggerThreshold %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 20 8 ]
+        %tmp.2 = 5;
+        %tmp.3 = 60;
+        %tmp.4 = mul %tmp.2 %tmp.3;
+        %tmp.5 = 1000;
+        %tmp.6 = mul %tmp.4 %tmp.5;
+        symbol [ _sustainedWindowMs ? 20 8 26 ];
+        putv self :_sustainedWindowMs %tmp.6;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 21 8 ]
+        %tmp.7 = 20;
+        %tmp.8 = 60;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        %tmp.10 = 1000;
+        %tmp.11 = mul %tmp.9 %tmp.10;
+        symbol [ _cooldownMs ? 21 8 19 ];
+        putv self :_cooldownMs %tmp.11;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 23 8 ]
+        %tmp.12 = null;
+        symbol [ _sustainedStartMs ? 23 8 25 ];
+        putv self :_sustainedStartMs %tmp.12;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 24 8 ]
+        %tmp.13 = false;
+        symbol [ _hasPrompt ? 24 8 18 ];
+        putv self :_hasPrompt %tmp.13;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 25 8 ]
+        %tmp.14 = false;
+        symbol [ _inExercise ? 25 8 19 ];
+        putv self :_inExercise %tmp.14;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 27 8 ]
+        %tmp.15 = null;
+        symbol [ _activePlan ? 27 8 19 ];
+        putv self :_activePlan %tmp.15;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 28 8 ]
+        %tmp.16 = null;
+        symbol [ _activePlanStartMs ? 28 8 26 ];
+        putv self :_activePlanStartMs %tmp.16;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 29 8 ]
+        %tmp.17 = 0;
+        symbol [ _activePhaseIndex ? 29 8 25 ];
+        putv self :_activePhaseIndex %tmp.17;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 30 8 ]
+        %tmp.18 = 0;
+        symbol [ _cyclesComplete ? 30 8 23 ];
+        putv self :_cyclesComplete %tmp.18;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 31 8 ]
+        %tmp.19 = false;
+        symbol [ _awaitingFeedback ? 31 8 25 ];
+        putv self :_awaitingFeedback %tmp.19;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 32 8 ]
+        %tmp.20 = null;
+        symbol [ _cooldownUntilMs ? 32 8 24 ];
+        putv self :_cooldownUntilMs %tmp.20;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_18_26_33_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 35; @symbol_functiondef = [evaluate,35,13,21]; @symbol_param<0> = [nowMs,35,22,27]; @symbol_param<1> = [stressEstimate,35,29,43]; @symbol_param<2> = [context,35,45,52]; ]
+    function evaluate(nowMs, stressEstimate, context) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_35_54_68_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 36 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_8_41_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_12_36_64_begin:
+        %tmp.1 = lgetv %context;
+        symbol [ context %tmp.1 36 12 19 ];
+        %tmp.3 = const :state;
+        symbol [ state %tmp.3 36 21 26 const ];
+        %tmp.4 = agetv %tmp.1 %tmp.3;
+        %tmp.5 = "exercise";
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bt %tmp.6 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_8_41_8_if_true;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_45_36_64_false:
+        %tmp.7 = lgetv %context;
+        symbol [ context %tmp.7 36 45 52 ];
+        %tmp.9 = const :state;
+        symbol [ state %tmp.9 36 54 59 const ];
+        %tmp.10 = agetv %tmp.7 %tmp.9;
+        %tmp.11 = "recovery";
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        push %tmp.12;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_45_36_64_end:
+        %tmp.13 = phi [%tmp.6 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_12_36_64_begin] [%tmp.12 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_45_36_64_false] [%tmp.13 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_45_36_64_end];
+        bf %tmp.13 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_8_41_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_8_41_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_76_41_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 37 12 ]
+        %tmp.14 = null;
+        symbol [ _sustainedStartMs ? 37 12 29 ];
+        putv self :_sustainedStartMs %tmp.14;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 38 12 ]
+        %tmp.15 = false;
+        symbol [ _hasPrompt ? 38 12 22 ];
+        putv self :_hasPrompt %tmp.15;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 39 12 ]
+        %tmp.16 = true;
+        symbol [ _inExercise ? 39 12 23 ];
+        putv self :_inExercise %tmp.16;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 40 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_76_41_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_8_41_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_36_8_41_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 43 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_8_45_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_12_43_46_begin:
+        symbol [ _inExercise %tmp.18 43 12 23 ];
+        %tmp.18 = getv ? :_inExercise;
+        bf %tmp.18 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_8_45_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_27_43_46_true:
+        %tmp.19 = lgetv %context;
+        symbol [ context %tmp.19 43 27 34 ];
+        %tmp.21 = const :state;
+        symbol [ state %tmp.21 43 36 41 const ];
+        %tmp.22 = agetv %tmp.19 %tmp.21;
+        %tmp.23 = "resting";
+        %tmp.24 = eq %tmp.22 %tmp.23;
+        push %tmp.24;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_27_43_46_end:
+        %tmp.25 = phi [%tmp.18 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_12_43_46_begin] [%tmp.24 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_27_43_46_true] [%tmp.25 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_27_43_46_end];
+        bf %tmp.25 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_8_45_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_8_45_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_57_45_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 44 12 ]
+        %tmp.26 = false;
+        symbol [ _inExercise ? 44 12 23 ];
+        putv self :_inExercise %tmp.26;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_57_45_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_8_45_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_43_8_45_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 47 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_8_49_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_12_47_35_begin:
+        symbol [ _activePlan %tmp.28 47 12 23 ];
+        %tmp.28 = getv ? :_activePlan;
+        %tmp.29 = null;
+        %tmp.30 = ne %tmp.28 %tmp.29;
+        bt %tmp.30 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_8_49_8_if_true;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_35_47_35_false:
+        symbol [ _awaitingFeedback %tmp.32 47 35 52 ];
+        %tmp.32 = getv ? :_awaitingFeedback;
+        push %tmp.32;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_35_47_35_end:
+        %tmp.33 = phi [%tmp.30 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_12_47_35_begin] [%tmp.32 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_35_47_35_false] [%tmp.33 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_35_47_35_end];
+        bf %tmp.33 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_8_49_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_8_49_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_54_49_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 48 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_54_49_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_8_49_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_47_8_49_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 51 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_8_53_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_12_51_48_begin:
+        symbol [ _cooldownUntilMs %tmp.35 51 12 28 ];
+        %tmp.35 = getv ? :_cooldownUntilMs;
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        bf %tmp.37 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_8_53_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_40_51_48_true:
+        %tmp.38 = lgetv %nowMs;
+        symbol [ nowMs %tmp.38 51 40 45 ];
+        symbol [ _cooldownUntilMs %tmp.40 51 48 64 ];
+        %tmp.40 = getv ? :_cooldownUntilMs;
+        %tmp.41 = as %tmp.40 { (!Null) };
+        %tmp.42 = lt %tmp.38 %tmp.41;
+        push %tmp.42;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_40_51_48_end:
+        %tmp.43 = phi [%tmp.37 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_12_51_48_begin] [%tmp.42 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_40_51_48_true] [%tmp.43 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_40_51_48_end];
+        bf %tmp.43 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_8_53_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_8_53_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_66_53_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 52 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_66_53_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_8_53_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_51_8_53_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 55 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_8_64_8_if_stmt:
+        %tmp.44 = lgetv %stressEstimate;
+        symbol [ stressEstimate %tmp.44 55 12 26 ];
+        %tmp.46 = const :probability;
+        symbol [ probability %tmp.46 55 28 39 const ];
+        %tmp.47 = agetv %tmp.44 %tmp.46;
+        symbol [ _triggerThreshold %tmp.49 55 44 61 ];
+        %tmp.49 = getv ? :_triggerThreshold;
+        %tmp.50 = gte %tmp.47 %tmp.49;
+        bf %tmp.50 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_8_64_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_8_64_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_63_64_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 56 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_12_58_12_if_stmt:
+        symbol [ _sustainedStartMs %tmp.52 56 16 33 ];
+        %tmp.52 = getv ? :_sustainedStartMs;
+        %tmp.53 = null;
+        %tmp.54 = eq %tmp.52 %tmp.53;
+        bf %tmp.54 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_12_58_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_12_58_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_43_58_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 57 16 ]
+        %tmp.55 = lgetv %nowMs;
+        symbol [ nowMs %tmp.55 57 36 41 ];
+        symbol [ _sustainedStartMs ? 57 16 33 ];
+        putv self :_sustainedStartMs %tmp.55;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_43_58_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_12_58_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_56_12_58_12_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 60 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_12_62_12_if_stmt:
+        %tmp.56 = lgetv %nowMs;
+        symbol [ nowMs %tmp.56 60 17 22 ];
+        symbol [ _sustainedStartMs %tmp.58 60 25 42 ];
+        %tmp.58 = getv ? :_sustainedStartMs;
+        %tmp.59 = sub %tmp.56 %tmp.58;
+        symbol [ _sustainedWindowMs %tmp.61 60 47 65 ];
+        %tmp.61 = getv ? :_sustainedWindowMs;
+        %tmp.62 = gte %tmp.59 %tmp.61;
+        bf %tmp.62 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_12_62_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_12_62_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_67_62_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 61 16 ]
+        %tmp.63 = true;
+        symbol [ _hasPrompt ? 61 16 26 ];
+        putv self :_hasPrompt %tmp.63;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_67_62_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_12_62_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_60_12_62_12_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 63 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_63_64_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_8_64_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_55_8_64_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 66 8 ]
+        %tmp.64 = null;
+        symbol [ _sustainedStartMs ? 66 8 25 ];
+        putv self :_sustainedStartMs %tmp.64;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 67 8 ]
+        %tmp.65 = false;
+        symbol [ _hasPrompt ? 67 8 18 ];
+        putv self :_hasPrompt %tmp.65;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_35_54_68_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 70; @symbol_functiondef = [onSelect,70,13,21]; @symbol_param<0> = [nowMs,70,22,27]; ]
+    function onSelect(nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_70_29_79_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 71 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_8_74_8_if_stmt:
+        symbol [ _hasPrompt %tmp.2 71 12 22 ];
+        %tmp.2 = getv ? :_hasPrompt;
+        bf %tmp.2 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_8_74_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_8_74_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_24_74_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 72 12 ]
+        %tmp.3 = self;
+        symbol [ startPlan %tmp.4 72 12 21 ];
+        %tmp.4 = getv function %tmp.3 :startPlan;
+        %tmp.5 = "resonant";
+        %tmp.6 = lgetv %nowMs;
+        symbol [ nowMs %tmp.6 72 34 39 ];
+        invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 73 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_24_74_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_8_74_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_71_8_74_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 76 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_8_78_8_if_stmt:
+        symbol [ _awaitingFeedback %tmp.8 76 12 29 ];
+        %tmp.8 = getv ? :_awaitingFeedback;
+        bf %tmp.8 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_8_78_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_8_78_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_31_78_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 77 12 ]
+        %tmp.9 = self;
+        symbol [ registerFeedback %tmp.10 77 12 28 ];
+        %tmp.10 = getv function %tmp.9 :registerFeedback;
+        %tmp.11 = true;
+        %tmp.12 = lgetv %nowMs;
+        symbol [ nowMs %tmp.12 77 35 40 ];
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.12);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_31_78_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_8_78_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_76_8_78_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_70_29_79_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 81; @symbol_functiondef = [onDown,81,13,19]; @symbol_param<0> = [nowMs,81,20,25]; ]
+    function onDown(nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_81_27_90_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 82 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_8_85_8_if_stmt:
+        symbol [ _hasPrompt %tmp.2 82 12 22 ];
+        %tmp.2 = getv ? :_hasPrompt;
+        bf %tmp.2 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_8_85_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_8_85_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_24_85_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 83 12 ]
+        %tmp.3 = self;
+        symbol [ startPlan %tmp.4 83 12 21 ];
+        %tmp.4 = getv function %tmp.3 :startPlan;
+        %tmp.5 = "box";
+        %tmp.6 = lgetv %nowMs;
+        symbol [ nowMs %tmp.6 83 29 34 ];
+        invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6);
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 84 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_24_85_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_8_85_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_82_8_85_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 87 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_8_89_8_if_stmt:
+        symbol [ _awaitingFeedback %tmp.8 87 12 29 ];
+        %tmp.8 = getv ? :_awaitingFeedback;
+        bf %tmp.8 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_8_89_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_8_89_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_31_89_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 88 12 ]
+        %tmp.9 = self;
+        symbol [ registerFeedback %tmp.10 88 12 28 ];
+        %tmp.10 = getv function %tmp.9 :registerFeedback;
+        %tmp.11 = false;
+        %tmp.12 = lgetv %nowMs;
+        symbol [ nowMs %tmp.12 88 36 41 ];
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.12);
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_31_89_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_8_89_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_87_8_89_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_81_27_90_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 92; @symbol_functiondef = [onUp,92,13,17]; @symbol_param<0> = [nowMs,92,18,23]; ]
+    function onUp(nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_92_25_97_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 93 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_8_96_8_if_stmt:
+        symbol [ _hasPrompt %tmp.2 93 12 22 ];
+        %tmp.2 = getv ? :_hasPrompt;
+        bf %tmp.2 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_8_96_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_8_96_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_24_96_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 94 12 ]
+        %tmp.3 = false;
+        symbol [ _hasPrompt ? 94 12 22 ];
+        putv self :_hasPrompt %tmp.3;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 95 12 ]
+        %tmp.4 = lgetv %nowMs;
+        symbol [ nowMs %tmp.4 95 31 36 ];
+        %tmp.5 = 5;
+        %tmp.6 = 60;
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        %tmp.8 = 1000;
+        %tmp.9 = mul %tmp.7 %tmp.8;
+        %tmp.10 = add %tmp.4 %tmp.9;
+        symbol [ _cooldownUntilMs ? 95 12 28 ];
+        putv self :_cooldownUntilMs %tmp.10;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_24_96_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_8_96_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_93_8_96_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_92_25_97_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 99; @symbol_functiondef = [startPlan,99,13,22]; @symbol_param<0> = [planName,99,23,31]; @symbol_param<1> = [nowMs,99,33,38]; ]
+    function startPlan(planName, nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_99_40_106_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 100 8 ]
+        %tmp.1 = false;
+        symbol [ _hasPrompt ? 100 8 18 ];
+        putv self :_hasPrompt %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 101 8 ]
+        %tmp.2 = null;
+        symbol [ _sustainedStartMs ? 101 8 25 ];
+        putv self :_sustainedStartMs %tmp.2;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 102 8 ]
+        %tmp.3 = lgetv %planName;
+        symbol [ planName %tmp.3 102 22 30 ];
+        symbol [ _activePlan ? 102 8 19 ];
+        putv self :_activePlan %tmp.3;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 103 8 ]
+        %tmp.4 = lgetv %nowMs;
+        symbol [ nowMs %tmp.4 103 29 34 ];
+        symbol [ _activePlanStartMs ? 103 8 26 ];
+        putv self :_activePlanStartMs %tmp.4;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 104 8 ]
+        %tmp.5 = 0;
+        symbol [ _activePhaseIndex ? 104 8 25 ];
+        putv self :_activePhaseIndex %tmp.5;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 105 8 ]
+        %tmp.6 = 0;
+        symbol [ _cyclesComplete ? 105 8 23 ];
+        putv self :_cyclesComplete %tmp.6;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_99_40_106_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 108; @symbol_functiondef = [updatePlan,108,13,23]; @symbol_param<0> = [nowMs,108,24,29]; ]
+    function updatePlan(nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 109 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_8_111_8_if_stmt:
+        symbol [ _activePlan %tmp.2 109 12 23 ];
+        %tmp.2 = getv ? :_activePlan;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_8_111_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_8_111_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_33_111_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 110 12 ]
+        ret ?;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_33_111_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_8_111_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_109_8_111_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 113 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_stop" ]
+        %sequence.1 = local;
+        symbol [ sequence %sequence.1 113 12 20 ];
+        %tmp.5 = self;
+        symbol [ getPlanSequence %tmp.6 113 23 38 ];
+        %tmp.6 = getv function %tmp.5 :getPlanSequence;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %sequence.1 %tmp.7;
+        symbol [ sequence %sequence.1 113 12 20 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 114 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_stop" ]
+        %targetCycles.2 = local;
+        symbol [ targetCycles %targetCycles.2 114 12 24 ];
+        %tmp.8 = self;
+        symbol [ getPlanCycles %tmp.9 114 27 40 ];
+        %tmp.9 = getv function %tmp.8 :getPlanCycles;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %targetCycles.2 %tmp.10;
+        symbol [ targetCycles %targetCycles.2 114 12 24 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 116 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_stop" ]
+        %elapsed.3 = local;
+        symbol [ elapsed %elapsed.3 116 12 19 ];
+        %tmp.11 = lgetv %nowMs;
+        symbol [ nowMs %tmp.11 116 22 27 ];
+        symbol [ _activePlanStartMs %tmp.13 116 30 48 ];
+        %tmp.13 = getv ? :_activePlanStartMs;
+        %tmp.14 = sub %tmp.11 %tmp.13;
+        lputv %elapsed.3 %tmp.14;
+        symbol [ elapsed %elapsed.3 116 12 19 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 117 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_stop" ]
+        %phaseDuration.4 = local;
+        symbol [ phaseDuration %phaseDuration.4 117 12 25 ];
+        %tmp.15 = lgetv %sequence.1;
+        symbol [ sequence %tmp.15 117 28 36 ];
+        symbol [ _activePhaseIndex %tmp.17 117 37 54 ];
+        %tmp.17 = getv ? :_activePhaseIndex;
+        %tmp.18 = agetv %tmp.15 %tmp.17;
+        %tmp.20 = const :durationMs;
+        symbol [ durationMs %tmp.20 117 57 67 const ];
+        %tmp.21 = agetv %tmp.18 %tmp.20;
+        lputv %phaseDuration.4 %tmp.21;
+        symbol [ phaseDuration %phaseDuration.4 117 12 25 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 119 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_8_133_8_if_stmt:
+        %tmp.22 = lgetv %elapsed.3;
+        symbol [ elapsed %tmp.22 119 12 19 ];
+        %tmp.23 = lgetv %phaseDuration.4;
+        symbol [ phaseDuration %tmp.23 119 23 36 ];
+        %tmp.24 = gte %tmp.22 %tmp.23;
+        bf %tmp.24 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_8_133_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_8_133_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_38_133_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 120 12 ]
+        %tmp.25 = lgetv %nowMs;
+        symbol [ nowMs %tmp.25 120 33 38 ];
+        symbol [ _activePlanStartMs ? 120 12 30 ];
+        putv self :_activePlanStartMs %tmp.25;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 121 12 ]
+        symbol [ _activePhaseIndex %tmp.26 121 12 29 ];
+        %tmp.26 = getv self :_activePhaseIndex;
+        %tmp.27 = 1;
+        %tmp.28 = add %tmp.26 %tmp.27;
+        symbol [ _activePhaseIndex ? 121 12 29 ];
+        putv self :_activePhaseIndex dup %tmp.28;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 123 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_12_126_12_if_stmt:
+        symbol [ _activePhaseIndex %tmp.30 123 16 33 ];
+        %tmp.30 = getv ? :_activePhaseIndex;
+        %tmp.31 = lgetv %sequence.1;
+        symbol [ sequence %tmp.31 123 37 45 ];
+        symbol [ size %tmp.32 123 46 50 ];
+        %tmp.32 = getv function %tmp.31 :size;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        %tmp.34 = gte %tmp.30 %tmp.33;
+        bf %tmp.34 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_12_126_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_12_126_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_54_126_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 124 16 ]
+        %tmp.35 = 0;
+        symbol [ _activePhaseIndex ? 124 16 33 ];
+        putv self :_activePhaseIndex %tmp.35;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 125 16 ]
+        symbol [ _cyclesComplete %tmp.36 125 16 31 ];
+        %tmp.36 = getv self :_cyclesComplete;
+        %tmp.37 = 1;
+        %tmp.38 = add %tmp.36 %tmp.37;
+        symbol [ _cyclesComplete ? 125 16 31 ];
+        putv self :_cyclesComplete dup %tmp.38;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_54_126_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_12_126_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_123_12_126_12_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 128 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_12_132_12_if_stmt:
+        symbol [ _cyclesComplete %tmp.40 128 16 31 ];
+        %tmp.40 = getv ? :_cyclesComplete;
+        %tmp.41 = lgetv %targetCycles.2;
+        symbol [ targetCycles %tmp.41 128 35 47 ];
+        %tmp.42 = gte %tmp.40 %tmp.41;
+        bf %tmp.42 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_12_132_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_12_132_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_49_132_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 129 16 ]
+        %tmp.43 = null;
+        symbol [ _activePlan ? 129 16 27 ];
+        putv self :_activePlan %tmp.43;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 130 16 ]
+        %tmp.44 = true;
+        symbol [ _awaitingFeedback ? 130 16 33 ];
+        putv self :_awaitingFeedback %tmp.44;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 131 16 ]
+        %tmp.45 = lgetv %nowMs;
+        symbol [ nowMs %tmp.45 131 35 40 ];
+        symbol [ _cooldownMs %tmp.47 131 43 54 ];
+        %tmp.47 = getv ? :_cooldownMs;
+        %tmp.48 = add %tmp.45 %tmp.47;
+        symbol [ _cooldownUntilMs ? 131 16 32 ];
+        putv self :_cooldownUntilMs %tmp.48;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_49_132_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_12_132_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_128_12_132_12_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_38_133_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_8_133_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_119_8_133_8_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_108_31_134_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 136; @symbol_functiondef = [getGuidance,136,13,24]; @symbol_param<0> = [nowMs,136,25,30]; ]
+    function getGuidance(nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_136_32_167_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 137 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_8_142_8_if_stmt:
+        symbol [ _hasPrompt %tmp.2 137 12 22 ];
+        %tmp.2 = getv ? :_hasPrompt;
+        bf %tmp.2 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_8_142_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_8_142_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_24_142_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 138 12 ]
+        %tmp.3 = newd 2;
+        %tmp.5 = const :title;
+        symbol [ title %tmp.5 139 17 22 const ];
+        %tmp.6 = "Regulate now?";
+        %tmp.7 = dup %tmp.3;
+        %tmp.8 = aputv %tmp.7 %tmp.5 %tmp.6;
+        %tmp.10 = const :line;
+        symbol [ line %tmp.10 140 17 21 const ];
+        %tmp.11 = "Select Resonant  Down Box  Up Skip";
+        %tmp.12 = dup %tmp.8;
+        %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
+        ret %tmp.13;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_24_142_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_8_142_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_137_8_142_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 144 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_8_157_8_if_stmt:
+        symbol [ _activePlan %tmp.15 144 12 23 ];
+        %tmp.15 = getv ? :_activePlan;
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        bf %tmp.17 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_8_157_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_8_157_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 145 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_stop" ]
+        %sequence.1 = local;
+        symbol [ sequence %sequence.1 145 16 24 ];
+        %tmp.18 = self;
+        symbol [ getPlanSequence %tmp.19 145 27 42 ];
+        %tmp.19 = getv function %tmp.18 :getPlanSequence;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %sequence.1 %tmp.20;
+        symbol [ sequence %sequence.1 145 16 24 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 146 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_stop" ]
+        %phase.2 = local;
+        symbol [ phase %phase.2 146 16 21 ];
+        %tmp.21 = lgetv %sequence.1;
+        symbol [ sequence %tmp.21 146 24 32 ];
+        symbol [ _activePhaseIndex %tmp.23 146 33 50 ];
+        %tmp.23 = getv ? :_activePhaseIndex;
+        %tmp.24 = agetv %tmp.21 %tmp.23;
+        lputv %phase.2 %tmp.24;
+        symbol [ phase %phase.2 146 16 21 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 147 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_stop" ]
+        %elapsed.3 = local;
+        symbol [ elapsed %elapsed.3 147 16 23 ];
+        %tmp.25 = lgetv %nowMs;
+        symbol [ nowMs %tmp.25 147 26 31 ];
+        symbol [ _activePlanStartMs %tmp.27 147 34 52 ];
+        %tmp.27 = getv ? :_activePlanStartMs;
+        %tmp.28 = sub %tmp.25 %tmp.27;
+        lputv %elapsed.3 %tmp.28;
+        symbol [ elapsed %elapsed.3 147 16 23 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 148 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_stop" ]
+        %secsLeft.4 = local;
+        symbol [ secsLeft %secsLeft.4 148 16 24 ];
+        %tmp.29 = lgetv %phase.2;
+        symbol [ phase %tmp.29 148 29 34 ];
+        %tmp.31 = const :durationMs;
+        symbol [ durationMs %tmp.31 148 36 46 const ];
+        %tmp.32 = agetv %tmp.29 %tmp.31;
+        %tmp.33 = lgetv %elapsed.3;
+        symbol [ elapsed %tmp.33 148 50 57 ];
+        %tmp.34 = sub %tmp.32 %tmp.33;
+        %tmp.35 = 1000;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        symbol [ toNumber %tmp.37 148 67 75 ];
+        %tmp.37 = getv function %tmp.36 :toNumber;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        lputv %secsLeft.4 %tmp.38;
+        symbol [ secsLeft %secsLeft.4 148 16 24 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 149 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_12_151_12_if_stmt:
+        %tmp.39 = lgetv %secsLeft.4;
+        symbol [ secsLeft %tmp.39 149 16 24 ];
+        %tmp.40 = 0;
+        %tmp.41 = lt %tmp.39 %tmp.40;
+        bf %tmp.41 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_12_151_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_12_151_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_30_151_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 150 16 ]
+        %tmp.42 = 0;
+        lputv %secsLeft.4 %tmp.42;
+        symbol [ secsLeft %secsLeft.4 150 16 24 ];
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_30_151_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_12_151_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_149_12_151_12_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 153 12 ]
+        %tmp.43 = newd 2;
+        %tmp.45 = const :title;
+        symbol [ title %tmp.45 154 17 22 const ];
+        %tmp.46 = lgetv %phase.2;
+        symbol [ phase %tmp.46 154 26 31 ];
+        %tmp.48 = const :label;
+        symbol [ label %tmp.48 154 33 38 const ];
+        %tmp.49 = agetv %tmp.46 %tmp.48;
+        %tmp.50 = dup %tmp.43;
+        %tmp.51 = aputv %tmp.50 %tmp.45 %tmp.49;
+        %tmp.53 = const :line;
+        symbol [ line %tmp.53 155 17 21 const ];
+        symbol [ _activePlan %tmp.55 155 25 36 ];
+        %tmp.55 = getv ? :_activePlan;
+        %tmp.56 = " cycle ";
+        %tmp.57 = add %tmp.55 %tmp.56;
+        symbol [ _cyclesComplete %tmp.59 155 52 67 ];
+        %tmp.59 = getv ? :_cyclesComplete;
+        %tmp.60 = 1;
+        %tmp.61 = add %tmp.59 %tmp.60;
+        symbol [ format %tmp.62 155 73 79 ];
+        %tmp.62 = getv function %tmp.61 :format;
+        %tmp.63 = "%d";
+        %tmp.64 = invoke %tmp.61 %tmp.62(%tmp.63);
+        %tmp.65 = add %tmp.57 %tmp.64;
+        %tmp.66 = "  ";
+        %tmp.67 = add %tmp.65 %tmp.66;
+        %tmp.68 = lgetv %secsLeft.4;
+        symbol [ secsLeft %tmp.68 155 95 103 ];
+        symbol [ format %tmp.69 155 104 110 ];
+        %tmp.69 = getv function %tmp.68 :format;
+        %tmp.70 = "%d";
+        %tmp.71 = invoke %tmp.68 %tmp.69(%tmp.70);
+        %tmp.72 = add %tmp.67 %tmp.71;
+        %tmp.73 = "s";
+        %tmp.74 = add %tmp.72 %tmp.73;
+        %tmp.75 = dup %tmp.51;
+        %tmp.76 = aputv %tmp.75 %tmp.53 %tmp.74;
+        ret %tmp.76;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_33_157_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_8_157_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_144_8_157_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 159 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_8_164_8_if_stmt:
+        symbol [ _awaitingFeedback %tmp.78 159 12 29 ];
+        %tmp.78 = getv ? :_awaitingFeedback;
+        bf %tmp.78 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_8_164_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_8_164_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_31_164_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 160 12 ]
+        %tmp.79 = newd 2;
+        %tmp.81 = const :title;
+        symbol [ title %tmp.81 161 17 22 const ];
+        %tmp.82 = "Did this help?";
+        %tmp.83 = dup %tmp.79;
+        %tmp.84 = aputv %tmp.83 %tmp.81 %tmp.82;
+        %tmp.86 = const :line;
+        symbol [ line %tmp.86 162 17 21 const ];
+        %tmp.87 = "Select Yes  Down No";
+        %tmp.88 = dup %tmp.84;
+        %tmp.89 = aputv %tmp.88 %tmp.86 %tmp.87;
+        ret %tmp.89;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_31_164_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_8_164_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_159_8_164_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 166 8 ]
+        %tmp.90 = null;
+        ret %tmp.90;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_136_32_167_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 169; @symbol_functiondef = [getStatusLine,169,13,26]; @symbol_param<0> = [nowMs,169,27,32]; ]
+    function getStatusLine(nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_169_34_181_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 170 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_12_170_69_begin:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_12_170_48_begin:
+        symbol [ _cooldownUntilMs %tmp.2 170 12 28 ];
+        %tmp.2 = getv ? :_cooldownUntilMs;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_40_170_48_true:
+        %tmp.5 = lgetv %nowMs;
+        symbol [ nowMs %tmp.5 170 40 45 ];
+        symbol [ _cooldownUntilMs %tmp.7 170 48 64 ];
+        %tmp.7 = getv ? :_cooldownUntilMs;
+        %tmp.8 = as %tmp.7 { (!Null) };
+        %tmp.9 = lt %tmp.5 %tmp.8;
+        push %tmp.9;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_40_170_48_end:
+        %tmp.10 = phi [%tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_12_170_48_begin] [%tmp.9 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_40_170_48_true] [%tmp.10 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_40_170_48_end];
+        bf %tmp.10 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_68_170_69_true:
+        symbol [ _awaitingFeedback %tmp.12 170 69 86 ];
+        %tmp.12 = getv ? :_awaitingFeedback;
+        %tmp.13 = not %tmp.12;
+        push %tmp.13;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_68_170_69_end:
+        %tmp.14 = phi [%tmp.10 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_12_170_69_begin] [%tmp.13 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_68_170_69_true] [%tmp.14 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_68_170_69_end];
+        bf %tmp.14 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_88_173_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 171 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_88_173_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_88_173_8_stop" ]
+        %mins.1 = local;
+        symbol [ mins %mins.1 171 16 20 ];
+        symbol [ _cooldownUntilMs %tmp.16 171 25 41 ];
+        %tmp.16 = getv ? :_cooldownUntilMs;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = lgetv %nowMs;
+        symbol [ nowMs %tmp.18 171 44 49 ];
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        %tmp.20 = 60000;
+        %tmp.21 = div %tmp.19 %tmp.20;
+        symbol [ toNumber %tmp.22 171 60 68 ];
+        %tmp.22 = getv function %tmp.21 :toNumber;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        lputv %mins.1 %tmp.23;
+        symbol [ mins %mins.1 171 16 20 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 172 12 ]
+        %tmp.24 = "Cooldown ";
+        %tmp.25 = lgetv %mins.1;
+        symbol [ mins %tmp.25 172 33 37 ];
+        symbol [ format %tmp.26 172 38 44 ];
+        %tmp.26 = getv function %tmp.25 :format;
+        %tmp.27 = "%d";
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        %tmp.29 = add %tmp.24 %tmp.28;
+        %tmp.30 = "m";
+        %tmp.31 = add %tmp.29 %tmp.30;
+        ret %tmp.31;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_88_173_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_170_8_173_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 175 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_8_178_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_12_175_42_begin:
+        symbol [ _sustainedStartMs %tmp.33 175 12 29 ];
+        %tmp.33 = getv ? :_sustainedStartMs;
+        %tmp.34 = null;
+        %tmp.35 = ne %tmp.33 %tmp.34;
+        bf %tmp.35 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_8_178_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_41_175_42_true:
+        symbol [ _hasPrompt %tmp.37 175 42 52 ];
+        %tmp.37 = getv ? :_hasPrompt;
+        %tmp.38 = not %tmp.37;
+        push %tmp.38;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_41_175_42_end:
+        %tmp.39 = phi [%tmp.35 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_12_175_42_begin] [%tmp.38 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_41_175_42_true] [%tmp.39 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_41_175_42_end];
+        bf %tmp.39 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_8_178_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_8_178_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_54_178_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 176 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_54_178_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_54_178_8_stop" ]
+        %seconds.2 = local;
+        symbol [ seconds %seconds.2 176 16 23 ];
+        %tmp.40 = lgetv %nowMs;
+        symbol [ nowMs %tmp.40 176 28 33 ];
+        symbol [ _sustainedStartMs %tmp.42 176 36 53 ];
+        %tmp.42 = getv ? :_sustainedStartMs;
+        %tmp.43 = as %tmp.42 { (!Null) };
+        %tmp.44 = sub %tmp.40 %tmp.43;
+        %tmp.45 = 1000;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        symbol [ toNumber %tmp.47 176 63 71 ];
+        %tmp.47 = getv function %tmp.46 :toNumber;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        lputv %seconds.2 %tmp.48;
+        symbol [ seconds %seconds.2 176 16 23 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 177 12 ]
+        %tmp.49 = "Sustained ";
+        %tmp.50 = lgetv %seconds.2;
+        symbol [ seconds %tmp.50 177 34 41 ];
+        symbol [ format %tmp.51 177 42 48 ];
+        %tmp.51 = getv function %tmp.50 :format;
+        %tmp.52 = "%d";
+        %tmp.53 = invoke %tmp.50 %tmp.51(%tmp.52);
+        %tmp.54 = add %tmp.49 %tmp.53;
+        %tmp.55 = "s";
+        %tmp.56 = add %tmp.54 %tmp.55;
+        ret %tmp.56;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_54_178_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_8_178_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_175_8_178_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 180 8 ]
+        %tmp.57 = "Monitoring";
+        ret %tmp.57;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_169_34_181_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 183; @symbol_functiondef = [registerFeedback,183,13,29]; @symbol_param<0> = [helped,183,30,36]; @symbol_param<1> = [nowMs,183,38,43]; ]
+    function registerFeedback(helped, nowMs) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_183_45_186_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 184 8 ]
+        %tmp.1 = false;
+        symbol [ _awaitingFeedback ? 184 8 25 ];
+        putv self :_awaitingFeedback %tmp.1;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 185 8 ]
+        %tmp.2 = lgetv %nowMs;
+        symbol [ nowMs %tmp.2 185 27 32 ];
+        symbol [ _cooldownMs %tmp.4 185 35 46 ];
+        %tmp.4 = getv ? :_cooldownMs;
+        %tmp.5 = add %tmp.2 %tmp.4;
+        symbol [ _cooldownUntilMs ? 185 8 24 ];
+        putv self :_cooldownUntilMs %tmp.5;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_183_45_186_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 188; @symbol_functiondef = [getPlanSequence,188,13,28]; ]
+    function getPlanSequence() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_188_31_202_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 189 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_8_196_8_if_stmt:
+        symbol [ _activePlan %tmp.2 189 12 23 ];
+        %tmp.2 = getv ? :_activePlan;
+        %tmp.3 = "box";
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_8_196_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_8_196_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_34_196_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 190 12 ]
+        %tmp.5 = newa 4;
+        %tmp.6 = newd 2;
+        %tmp.8 = const :label;
+        symbol [ label %tmp.8 191 19 24 const ];
+        %tmp.9 = "Inhale";
+        %tmp.10 = dup %tmp.6;
+        %tmp.11 = aputv %tmp.10 %tmp.8 %tmp.9;
+        %tmp.13 = const :durationMs;
+        symbol [ durationMs %tmp.13 191 39 49 const ];
+        %tmp.14 = 4000;
+        %tmp.15 = dup %tmp.11;
+        %tmp.16 = aputv %tmp.15 %tmp.13 %tmp.14;
+        %tmp.17 = dup %tmp.5;
+        %tmp.18 = aputv %tmp.17 0 %tmp.16;
+        %tmp.19 = newd 2;
+        %tmp.21 = const :label;
+        symbol [ label %tmp.21 192 19 24 const ];
+        %tmp.22 = "Hold";
+        %tmp.23 = dup %tmp.19;
+        %tmp.24 = aputv %tmp.23 %tmp.21 %tmp.22;
+        %tmp.26 = const :durationMs;
+        symbol [ durationMs %tmp.26 192 37 47 const ];
+        %tmp.27 = 4000;
+        %tmp.28 = dup %tmp.24;
+        %tmp.29 = aputv %tmp.28 %tmp.26 %tmp.27;
+        %tmp.30 = dup %tmp.18;
+        %tmp.31 = aputv %tmp.30 1 %tmp.29;
+        %tmp.32 = newd 2;
+        %tmp.34 = const :label;
+        symbol [ label %tmp.34 193 19 24 const ];
+        %tmp.35 = "Exhale";
+        %tmp.36 = dup %tmp.32;
+        %tmp.37 = aputv %tmp.36 %tmp.34 %tmp.35;
+        %tmp.39 = const :durationMs;
+        symbol [ durationMs %tmp.39 193 39 49 const ];
+        %tmp.40 = 4000;
+        %tmp.41 = dup %tmp.37;
+        %tmp.42 = aputv %tmp.41 %tmp.39 %tmp.40;
+        %tmp.43 = dup %tmp.31;
+        %tmp.44 = aputv %tmp.43 2 %tmp.42;
+        %tmp.45 = newd 2;
+        %tmp.47 = const :label;
+        symbol [ label %tmp.47 194 19 24 const ];
+        %tmp.48 = "Hold";
+        %tmp.49 = dup %tmp.45;
+        %tmp.50 = aputv %tmp.49 %tmp.47 %tmp.48;
+        %tmp.52 = const :durationMs;
+        symbol [ durationMs %tmp.52 194 37 47 const ];
+        %tmp.53 = 4000;
+        %tmp.54 = dup %tmp.50;
+        %tmp.55 = aputv %tmp.54 %tmp.52 %tmp.53;
+        %tmp.56 = dup %tmp.44;
+        %tmp.57 = aputv %tmp.56 3 %tmp.55;
+        ret %tmp.57;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_34_196_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_8_196_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_189_8_196_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 198 8 ]
+        %tmp.58 = newa 2;
+        %tmp.59 = newd 2;
+        %tmp.61 = const :label;
+        symbol [ label %tmp.61 199 15 20 const ];
+        %tmp.62 = "Inhale";
+        %tmp.63 = dup %tmp.59;
+        %tmp.64 = aputv %tmp.63 %tmp.61 %tmp.62;
+        %tmp.66 = const :durationMs;
+        symbol [ durationMs %tmp.66 199 35 45 const ];
+        %tmp.67 = 5000;
+        %tmp.68 = dup %tmp.64;
+        %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
+        %tmp.70 = dup %tmp.58;
+        %tmp.71 = aputv %tmp.70 0 %tmp.69;
+        %tmp.72 = newd 2;
+        %tmp.74 = const :label;
+        symbol [ label %tmp.74 200 15 20 const ];
+        %tmp.75 = "Exhale";
+        %tmp.76 = dup %tmp.72;
+        %tmp.77 = aputv %tmp.76 %tmp.74 %tmp.75;
+        %tmp.79 = const :durationMs;
+        symbol [ durationMs %tmp.79 200 35 45 const ];
+        %tmp.80 = 5000;
+        %tmp.81 = dup %tmp.77;
+        %tmp.82 = aputv %tmp.81 %tmp.79 %tmp.80;
+        %tmp.83 = dup %tmp.71;
+        %tmp.84 = aputv %tmp.83 1 %tmp.82;
+        ret %tmp.84;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_188_31_202_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 204; @symbol_functiondef = [getPlanCycles,204,13,26]; ]
+    function getPlanCycles() {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_204_29_209_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 205 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_8_207_8_if_stmt:
+        symbol [ _activePlan %tmp.2 205 12 23 ];
+        %tmp.2 = getv ? :_activePlan;
+        %tmp.3 = "box";
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_8_207_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_8_207_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_34_207_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 206 12 ]
+        %tmp.5 = 4;
+        ret %tmp.5;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_34_207_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_8_207_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_205_8_207_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc" 208 8 ]
+        %tmp.6 = 6;
+        ret %tmp.6;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_RegulationEngine_mc_204_29_209_4_stop:
+    }
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\RegulationEngine.mc"; @line = 1; ]
+<init> {
+}

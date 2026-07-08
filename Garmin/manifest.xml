@@ -1,16 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="http://www.garmin.com/xml/connectiq" id="com.claire.stressapp" name="StressApp" appType="watchapp" version="1.0.0" target="fr265">
-    <permissions/>
-    <languages>
-        <language>en</language>
-    </languages>
-    <products>
-        <product>fr265</product>
-    </products>
-    <sourceDirs>
-        <dir>Source</dir>
-    </sourceDirs>
-    <resourceDirs>
-        <dir>Resources</dir>
-    </resourceDirs>
-</application>
+﻿<?xml version="1.0"?>
+<iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
+    <iq:application
+        id="0123456789abcdef0123456789abcdef"
+        entry="StressApp"
+        type="watch-app"
+        name="@Strings.AppName"
+        launcherIcon="@Drawables.LauncherIcon"
+        minSdkVersion="4.0.0">
+
+        <iq:products>
+            <iq:product id="fr265" />
+        </iq:products>
+
+        <iq:permissions>
+            <iq:uses-permission id="Sensor" />
+        </iq:permissions>
+
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+    </iq:application>
+</iq:manifest>
