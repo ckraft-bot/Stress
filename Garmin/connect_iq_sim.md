@@ -26,5 +26,15 @@ Start-Process "C:\Users\Clair\AppData\Roaming\Garmin\ConnectIQ\Sdks\connectiq-sd
 taskkill /IM ConnectIQ.exe /F
 ```
 
+# Get into Garmin watch FR265
 
-
+1. Put the watch in developer mode.
+2. Install the Connect IQ app called CIQ Device Settings on your watch from the Garmin Connect IQ Store.
+3. Open CIQ Device Settings on the watch and enable Developer Mode.
+4. Add or trust your developer key using the same key you already use in your build script.
+5. In PowerShell, go to your Garmin project folder.
+6. Run your existing script:
+```
+.\run_garmin.ps1
+```
+7. This produces [stress.prg](bin/stress.prg), which you can copy to the watch for sideloading.
