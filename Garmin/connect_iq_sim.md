@@ -28,13 +28,10 @@ taskkill /IM ConnectIQ.exe /F
 
 # Get into Garmin watch FR265
 
-1. Put the watch in developer mode.
-2. Install the Connect IQ app called CIQ Device Settings on your watch from the Garmin Connect IQ Store.
-3. Open CIQ Device Settings on the watch and enable Developer Mode.
-4. Add or trust your developer key using the same key you already use in your build script.
-5. In PowerShell, go to your Garmin project folder.
-6. Run your existing script:
-```
-.\run_garmin.ps1
-```
-7. This produces [stress.prg](bin/stress.prg), which you can copy to the watch for sideloading.
+1. Build the app for the device so it generates a `.prg` file.
+2. Connect the FR265 to your PC.
+3. If Garmin Express opens automatically, close it.
+4. In the vs code type `ctrl + shift + p` > `Monkey C: Verify Installation` > `ctrl + shift + p` > `Monkey C: Build for Device` > `Forerunner 265
+5. Copy the generated `.prg` file into `GARMIN\APPS`.
+6. Safely eject the watch from the PC.
+7. Open the app on the watch.
