@@ -34,7 +34,7 @@ taskkill /IM ConnectIQ.exe /F
 
 1. Build the app for the device so it generates a `.prg` file.
 2. Connect the FR265 to your PC.
-3. If Garmin Express opens automatically, close it.
+3. If Garmin Express opens automatically, close it. Then reopen Garmin Express manually.
 4. In VS Code, run `Monkey C: Verify Installation`, then `Monkey C: Build for Device` and select `Forerunner 265`.
 5. Copy the newly generated `.prg` file into `GARMIN\APPS`. Remove any older copy of the app first.
 6. Safely eject the watch from the PC.
