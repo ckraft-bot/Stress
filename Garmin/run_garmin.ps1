@@ -37,7 +37,7 @@ if (-not (Test-Path $binDir)) {
 # Compile app
 # -------------------------------
 Write-Host "`n[BUILD] Compiling Stress app..."
-& $monkeyc -f $jungleFile -y $developerKey -o $outputPrg
+& $monkeyc -f $jungleFile -d $device -y $developerKey -o $outputPrg
 if ($LASTEXITCODE -ne 0) {
     Write-Error "[ERROR] Build failed: monkeyc exited with code $LASTEXITCODE"
     exit 1
@@ -59,7 +59,7 @@ Write-Host "[BUILD] Build successful: $prgFile"
 # Launch simulator
 # -------------------------------
 Write-Host "`n[INFO] Launching simulator..."
-& $simulator
+Start-Process -FilePath $simulator
 Start-Sleep -Seconds 2
 & $monkeydo $prgFile $device
 

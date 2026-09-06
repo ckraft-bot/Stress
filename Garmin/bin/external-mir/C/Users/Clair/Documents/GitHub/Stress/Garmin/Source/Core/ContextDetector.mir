@@ -1,0 +1,287 @@
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 1; @symbol_classdef = [ContextDetector,1,6,21]; ]
+class ContextDetector {
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 1; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 3; @position = 15; @symbol_vardef = [_recoveryWindowMs,3,15,32]; ]
+    protected
+    var _recoveryWindowMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 4; @position = 15; @symbol_vardef = [_inExercise,4,15,26]; ]
+    protected
+    var _inExercise;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 5; @position = 15; @symbol_vardef = [_lastExerciseEndMs,5,15,33]; ]
+    protected
+    var _lastExerciseEndMs;
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_7_26_11_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 8 8 ]
+        %tmp.1 = 20;
+        %tmp.2 = 60;
+        %tmp.3 = mul %tmp.1 %tmp.2;
+        %tmp.4 = 1000;
+        %tmp.5 = mul %tmp.3 %tmp.4;
+        symbol [ _recoveryWindowMs ? 8 8 25 ];
+        putv self :_recoveryWindowMs %tmp.5;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 9 8 ]
+        %tmp.6 = false;
+        symbol [ _inExercise ? 9 8 19 ];
+        putv self :_inExercise %tmp.6;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 10 8 ]
+        %tmp.7 = null;
+        symbol [ _lastExerciseEndMs ? 10 8 26 ];
+        putv self :_lastExerciseEndMs %tmp.7;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_7_26_11_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 13; @symbol_functiondef = [evaluate,13,13,21]; @symbol_param<0> = [nowMs,13,22,27]; @symbol_param<1> = [snapshot,13,29,37]; @symbol_param<2> = [baseline,13,39,47]; ]
+    function evaluate(nowMs, snapshot, baseline) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_13_49_47_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 14 8 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_13_49_47_4_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_13_49_47_4_stop" ]
+        %exercising.1 = local;
+        symbol [ exercising %exercising.1 14 12 22 ];
+        %tmp.1 = self;
+        symbol [ isLikelyExercise %tmp.2 14 25 41 ];
+        %tmp.2 = getv function %tmp.1 :isLikelyExercise;
+        %tmp.3 = lgetv %snapshot;
+        symbol [ snapshot %tmp.3 14 42 50 ];
+        %tmp.4 = lgetv %baseline;
+        symbol [ baseline %tmp.4 14 52 60 ];
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+        lputv %exercising.1 %tmp.5;
+        symbol [ exercising %exercising.1 14 12 22 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 16 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_8_23_8_if_stmt:
+        %tmp.6 = lgetv %exercising.1;
+        symbol [ exercising %tmp.6 16 12 22 ];
+        bf %tmp.6 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_8_23_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_8_23_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_24_23_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 17 12 ]
+        %tmp.7 = true;
+        symbol [ _inExercise ? 17 12 23 ];
+        putv self :_inExercise %tmp.7;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 18 12 ]
+        %tmp.8 = newd 3;
+        %tmp.10 = const :state;
+        symbol [ state %tmp.10 19 17 22 const ];
+        %tmp.11 = "exercise";
+        %tmp.12 = dup %tmp.8;
+        %tmp.13 = aputv %tmp.12 %tmp.10 %tmp.11;
+        %tmp.15 = const :suppress;
+        symbol [ suppress %tmp.15 20 17 25 const ];
+        %tmp.16 = true;
+        %tmp.17 = dup %tmp.13;
+        %tmp.18 = aputv %tmp.17 %tmp.15 %tmp.16;
+        %tmp.20 = const :reason;
+        symbol [ reason %tmp.20 21 17 23 const ];
+        %tmp.21 = "Exercise detected";
+        %tmp.22 = dup %tmp.18;
+        %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+        ret %tmp.23;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_24_23_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_8_23_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_16_8_23_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 25 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_8_28_8_if_stmt:
+        symbol [ _inExercise %tmp.25 25 12 23 ];
+        %tmp.25 = getv ? :_inExercise;
+        bf %tmp.25 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_8_28_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_8_28_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_25_28_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 26 12 ]
+        %tmp.26 = false;
+        symbol [ _inExercise ? 26 12 23 ];
+        putv self :_inExercise %tmp.26;
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 27 12 ]
+        %tmp.27 = lgetv %nowMs;
+        symbol [ nowMs %tmp.27 27 33 38 ];
+        symbol [ _lastExerciseEndMs ? 27 12 30 ];
+        putv self :_lastExerciseEndMs %tmp.27;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_25_28_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_8_28_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_25_8_28_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 30 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_8_40_8_if_stmt:
+        symbol [ _lastExerciseEndMs %tmp.29 30 12 30 ];
+        %tmp.29 = getv ? :_lastExerciseEndMs;
+        %tmp.30 = null;
+        %tmp.31 = ne %tmp.29 %tmp.30;
+        bf %tmp.31 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_8_40_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_8_40_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_40_40_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 31 12 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_40_40_8_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_40_40_8_stop" ]
+        %delta.2 = local;
+        symbol [ delta %delta.2 31 16 21 ];
+        %tmp.32 = lgetv %nowMs;
+        symbol [ nowMs %tmp.32 31 24 29 ];
+        symbol [ _lastExerciseEndMs %tmp.34 31 32 50 ];
+        %tmp.34 = getv ? :_lastExerciseEndMs;
+        %tmp.35 = as %tmp.34 { (!Null) };
+        %tmp.36 = sub %tmp.32 %tmp.35;
+        lputv %delta.2 %tmp.36;
+        symbol [ delta %delta.2 31 16 21 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 32 12 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_12_39_12_if_stmt:
+        %tmp.37 = lgetv %delta.2;
+        symbol [ delta %tmp.37 32 16 21 ];
+        symbol [ _recoveryWindowMs %tmp.39 32 24 41 ];
+        %tmp.39 = getv ? :_recoveryWindowMs;
+        %tmp.40 = lt %tmp.37 %tmp.39;
+        bf %tmp.40 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_12_39_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_12_39_12_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_43_39_12_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 33 16 ]
+        [ "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_43_39_12_start" "C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_43_39_12_stop" ]
+        %minsLeft.3 = local;
+        symbol [ minsLeft %minsLeft.3 33 20 28 ];
+        symbol [ _recoveryWindowMs %tmp.42 33 33 50 ];
+        %tmp.42 = getv ? :_recoveryWindowMs;
+        %tmp.43 = lgetv %delta.2;
+        symbol [ delta %tmp.43 33 53 58 ];
+        %tmp.44 = sub %tmp.42 %tmp.43;
+        %tmp.45 = 60000;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        symbol [ toNumber %tmp.47 33 69 77 ];
+        %tmp.47 = getv function %tmp.46 :toNumber;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        lputv %minsLeft.3 %tmp.48;
+        symbol [ minsLeft %minsLeft.3 33 20 28 ];
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 34 16 ]
+        %tmp.49 = newd 3;
+        %tmp.51 = const :state;
+        symbol [ state %tmp.51 35 21 26 const ];
+        %tmp.52 = "recovery";
+        %tmp.53 = dup %tmp.49;
+        %tmp.54 = aputv %tmp.53 %tmp.51 %tmp.52;
+        %tmp.56 = const :suppress;
+        symbol [ suppress %tmp.56 36 21 29 const ];
+        %tmp.57 = true;
+        %tmp.58 = dup %tmp.54;
+        %tmp.59 = aputv %tmp.58 %tmp.56 %tmp.57;
+        %tmp.61 = const :reason;
+        symbol [ reason %tmp.61 37 21 27 const ];
+        %tmp.62 = "Post-workout recovery ";
+        %tmp.63 = lgetv %minsLeft.3;
+        symbol [ minsLeft %tmp.63 37 58 66 ];
+        symbol [ format %tmp.64 37 67 73 ];
+        %tmp.64 = getv function %tmp.63 :format;
+        %tmp.65 = "%d";
+        %tmp.66 = invoke %tmp.63 %tmp.64(%tmp.65);
+        %tmp.67 = add %tmp.62 %tmp.66;
+        %tmp.68 = "m";
+        %tmp.69 = add %tmp.67 %tmp.68;
+        %tmp.70 = dup %tmp.59;
+        %tmp.71 = aputv %tmp.70 %tmp.61 %tmp.69;
+        ret %tmp.71;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_43_39_12_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_12_39_12_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_32_12_39_12_if_end:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_40_40_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_8_40_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_30_8_40_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 42 8 ]
+        %tmp.72 = newd 3;
+        %tmp.74 = const :state;
+        symbol [ state %tmp.74 43 13 18 const ];
+        %tmp.75 = "resting";
+        %tmp.76 = dup %tmp.72;
+        %tmp.77 = aputv %tmp.76 %tmp.74 %tmp.75;
+        %tmp.79 = const :suppress;
+        symbol [ suppress %tmp.79 44 13 21 const ];
+        %tmp.80 = false;
+        %tmp.81 = dup %tmp.77;
+        %tmp.82 = aputv %tmp.81 %tmp.79 %tmp.80;
+        %tmp.84 = const :reason;
+        symbol [ reason %tmp.84 45 13 19 const ];
+        %tmp.85 = "Resting context";
+        %tmp.86 = dup %tmp.82;
+        %tmp.87 = aputv %tmp.86 %tmp.84 %tmp.85;
+        ret %tmp.87;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_13_49_47_4_stop:
+    }
+    [ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 49; @symbol_functiondef = [isLikelyExercise,49,13,29]; @symbol_param<0> = [snapshot,49,30,38]; @symbol_param<1> = [baseline,49,40,48]; ]
+    function isLikelyExercise(snapshot, baseline) {
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_49_50_60_4_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 50 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_8_52_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_12_50_44_begin:
+        %tmp.1 = lgetv %snapshot;
+        symbol [ snapshot %tmp.1 50 12 20 ];
+        %tmp.2 = null;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bt %tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_8_52_8_if_true;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_32_50_44_false:
+        %tmp.4 = lgetv %baseline;
+        symbol [ baseline %tmp.4 50 32 40 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        push %tmp.6;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_32_50_44_end:
+        %tmp.7 = phi [%tmp.3 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_12_50_44_begin] [%tmp.6 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_32_50_44_false] [%tmp.7 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_32_50_44_end];
+        bf %tmp.7 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_8_52_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_8_52_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_50_52_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 51 12 ]
+        %tmp.8 = false;
+        ret %tmp.8;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_50_52_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_8_52_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_50_8_52_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 54 8 ]
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_8_56_8_if_stmt:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_12_54_54_begin:
+        %tmp.9 = lgetv %snapshot;
+        symbol [ snapshot %tmp.9 54 12 20 ];
+        %tmp.11 = const :hr;
+        symbol [ hr %tmp.11 54 22 24 const ];
+        %tmp.12 = agetv %tmp.9 %tmp.11;
+        %tmp.13 = null;
+        %tmp.14 = eq %tmp.12 %tmp.13;
+        bt %tmp.14 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_8_56_8_if_true;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_37_54_54_false:
+        %tmp.15 = lgetv %baseline;
+        symbol [ baseline %tmp.15 54 37 45 ];
+        %tmp.17 = const :hr;
+        symbol [ hr %tmp.17 54 47 49 const ];
+        %tmp.18 = agetv %tmp.15 %tmp.17;
+        %tmp.19 = null;
+        %tmp.20 = eq %tmp.18 %tmp.19;
+        push %tmp.20;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_37_54_54_end:
+        %tmp.21 = phi [%tmp.14 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_12_54_54_begin] [%tmp.20 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_37_54_54_false] [%tmp.21 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_37_54_54_end];
+        bf %tmp.21 @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_8_56_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_8_56_8_if_true:
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_60_56_8_start:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 55 12 ]
+        %tmp.22 = false;
+        ret %tmp.22;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_60_56_8_stop:
+        goto @C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_8_56_8_if_end;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_54_8_56_8_if_end:
+[ "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc" 59 8 ]
+        %tmp.23 = lgetv %snapshot;
+        symbol [ snapshot %tmp.23 59 15 23 ];
+        %tmp.25 = const :hr;
+        symbol [ hr %tmp.25 59 25 27 const ];
+        %tmp.26 = agetv %tmp.23 %tmp.25;
+        %tmp.27 = lgetv %baseline;
+        symbol [ baseline %tmp.27 59 33 41 ];
+        %tmp.29 = const :hr;
+        symbol [ hr %tmp.29 59 43 45 const ];
+        %tmp.30 = agetv %tmp.27 %tmp.29;
+        %tmp.31 = 30;
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = gte %tmp.26 %tmp.32;
+        ret %tmp.33;
+C__Users_Clair_Documents_GitHub_Stress_Garmin_Source_Core_ContextDetector_mc_49_50_60_4_stop:
+    }
+}
+[ @file = "C:\Users\Clair\Documents\GitHub\Stress\Garmin\Source\Core\ContextDetector.mc"; @line = 1; ]
+<init> {
+}
